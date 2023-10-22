@@ -1,6 +1,6 @@
 package hell0hd.gateway.block.custom;
 
-import hell0hd.gateway.sound.GatewaySounds;
+import hell0hd.gateway.sound.ModSounds;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -31,7 +31,7 @@ public class TheGatewayBlockZ extends Block {
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (random.nextInt(100) == 0) {
-            world.playSound((double)pos.getX() + 0.5, (double)pos.getY() + 0.5, (double)pos.getZ(), GatewaySounds.GATEWAY_AMBIENCE, SoundCategory.BLOCKS, 0.5f, random.nextFloat() * 0.4f + 0.8f, false);
+            world.playSound((double)pos.getX() + 0.5, (double)pos.getY() + 0.5, (double)pos.getZ(), ModSounds.GATEWAY_AMBIENCE, SoundCategory.BLOCKS, 0.5f, random.nextFloat() * 0.4f + 0.8f, false);
         }
         for (int i = 0; i < 4; ++i) {
             double d = (double)pos.getX() + random.nextDouble();

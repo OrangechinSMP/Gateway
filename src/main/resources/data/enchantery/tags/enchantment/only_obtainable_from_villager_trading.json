@@ -1,0 +1,17 @@
+{
+    "replace": true,
+    "values": [
+        "minecraft:punch",
+        "minecraft:piercing",
+        "minecraft:quick_charge",
+        "minecraft:protection",
+        "minecraft:knockback",
+        "minecraft:silk_touch",
+        "minecraft:sweeping",
+        "minecraft:depth_strider",
+        "minecraft:aqua_affinity",
+        "minecraft:loyalty",
+        "minecraft:sharpness",
+        "guarding:pummeling"
+    ]
+  }
