@@ -1,29 +1,20 @@
 {
     "replace": true,
     "values": [
+        "minecraft:sharpness",
+        "minecraft:protection",
         "enchantery:diffusion_curse",
         "enchantery:butterfinger_curse",
-        "extra_de:herbicide",
         "enchantery:leeching_curse",
         "minecraft:unbreaking",
         "enchantery:imprecision_curse",
         "enchantery:diminishing_curse",
-        "minecraft:impaling",
-        "minecraft:blast_protection",
         "enchantery:backbiting_curse",
         "enchantery:kickback_curse",
         "enchantery:devouring_curse",
         "minecraft:vanishing_curse",
-        "minecraft:smite",
         "minecraft:binding_curse",
-        "extra_de:rebel",
         "minecraft:efficiency",
-        "minecraft:bane_of_arthropods",
-        "extra_de:voidrender",
-        "minecraft:fire_protection",
-        "minecraft:projectile_protection",
-        "extra_de:unravel",
-        "extra_de:butcher",
         "minecraft:power"
     ]
-  }
+}

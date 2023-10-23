@@ -2,16 +2,25 @@
     "replace": true,
     "values": [
         "minecraft:punch",
+        "minecraft:impaling",
+        "minecraft:blast_protection",
+        "minecraft:smite",
+        "extra_de:rebel",
+        "minecraft:bane_of_arthropods",
+        "extra_de:voidrender",
+        "minecraft:fire_protection",
+        "minecraft:projectile_protection",
+        "extra_de:unravel",
+        "extra_de:butcher",
         "minecraft:piercing",
         "minecraft:quick_charge",
-        "minecraft:protection",
         "minecraft:knockback",
         "minecraft:silk_touch",
         "minecraft:sweeping",
         "minecraft:depth_strider",
         "minecraft:aqua_affinity",
         "minecraft:loyalty",
-        "minecraft:sharpness",
-        "guarding:pummeling"
+        "guarding:pummeling",
+        "extra_de:herbicide"
     ]
-  }
+}
