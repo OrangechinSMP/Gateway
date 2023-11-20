@@ -1,7 +1,6 @@
 package hell0hd.gateway.block;
 
 import hell0hd.gateway.Gateway;
-import hell0hd.gateway.block.custom.EyeCageBlock;
 import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
 import hell0hd.gateway.block.custom.TheGatewayBlockX;
 import hell0hd.gateway.block.custom.TheGatewayBlockZ;
@@ -28,9 +27,6 @@ public class ModBlocks {
 
     public static final Block REINFORCED_STONE = registerBlock("reinforced_stone",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE).resistance(-1.0f).strength(55.0f, 1200.0f)));
-
-    public static final Block EYE_CAGE = registerBlock("eye_cage",
-            new EyeCageBlock(FabricBlockSettings.copyOf(Blocks.GLASS).sounds(BlockSoundGroup.GLASS).strength(0.3f, 0f)));
 
     public static final Block STONE_PILLAR = registerBlock("stone_pillar",
     new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(1.5f, 6.0f)));
@@ -76,7 +72,6 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(entries -> {
             entries.add(ModBlocks.THE_GATEWAYX);
             entries.add(ModBlocks.THE_GATEWAYZ);
-            entries.add(ModBlocks.EYE_CAGE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(ModBlocks.REINFORCED_DEEPSLATE_FRAME);

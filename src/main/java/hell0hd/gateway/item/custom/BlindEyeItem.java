@@ -1,5 +1,6 @@
 package hell0hd.gateway.item.custom;
 
+import hell0hd.gateway.sound.ModSounds;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,6 +16,7 @@ import net.minecraft.registry.tag.StructureTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
@@ -42,12 +44,19 @@ public class BlindEyeItem extends Item {
             if (world.isClient) {
                 return ActionResult.SUCCESS;
             } else {
-                BlockState blockState2 = (BlockState)blockState.with(ReinforcedDeepslateFrameBlock.EYE, true);
+                BlockState blockState2 = blockState.with(ReinforcedDeepslateFrameBlock.EYE, true);
                 Block.pushEntitiesUpBeforeBlockChange(blockState, blockState2, world, blockPos);
                 world.setBlockState(blockPos, blockState2, 2);
                 world.updateComparators(blockPos, ModBlocks.REINFORCED_DEEPSLATE_FRAME);
                 context.getStack().decrement(1);
-                world.syncWorldEvent(1503, blockPos, 0);
+                world.playSound(
+                        null,
+                        blockPos,
+                        ModSounds.GATEWAY_AMBIENCE,
+                        SoundCategory.BLOCKS,
+                        2f,
+                        2f
+                );
                 BlockPattern.Result result = ReinforcedDeepslateFrameBlock.getCompletedFramePattern().searchAround(world, blockPos);
                 if (result != null) {
                     BlockPos blockPos2 = result.getFrontTopLeft().add(-3, 0, -3);
@@ -58,7 +67,14 @@ public class BlindEyeItem extends Item {
                         }
                     }
 
-                    world.syncGlobalEvent(1038, blockPos2.add(1, 0, 1), 0);
+                    world.playSound(
+                            null,
+                            blockPos,
+                            ModSounds.GATEWAY_AMBIENCE,
+                            SoundCategory.BLOCKS,
+                            2f,
+                            2f
+                    );
 
                 }
 
