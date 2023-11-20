@@ -2,6 +2,7 @@ package hell0hd.gateway.block;
 
 import hell0hd.gateway.Gateway;
 import hell0hd.gateway.block.custom.EyeCageBlock;
+import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
 import hell0hd.gateway.block.custom.TheGatewayBlockX;
 import hell0hd.gateway.block.custom.TheGatewayBlockZ;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -15,6 +16,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+
+import static net.minecraft.block.Blocks.END_PORTAL_FRAME;
 
 public class ModBlocks {
     public static final Block THE_GATEWAYX = registerBlock("the_gatewayx",
@@ -44,6 +47,9 @@ public class ModBlocks {
     public static final Block POLISHED_STONE_SLAB = registerBlock("polished_stone_slab",
             new SlabBlock(AbstractBlock.Settings.copy(POLISHED_STONE).strength(2.0f, 6.0f)));
 
+    public static final Block REINFORCED_DEEPSLATE_FRAME = registerBlock("reinforced_deepslate_frame",
+            new ReinforcedDeepslateFrameBlock(AbstractBlock.Settings.copy(END_PORTAL_FRAME).strength(-1.0F, 3600000.0F)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -71,6 +77,9 @@ public class ModBlocks {
             entries.add(ModBlocks.THE_GATEWAYX);
             entries.add(ModBlocks.THE_GATEWAYZ);
             entries.add(ModBlocks.EYE_CAGE);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(ModBlocks.REINFORCED_DEEPSLATE_FRAME);
         });
     }
 
