@@ -1,6 +1,7 @@
 package hell0hd.gateway;
 
 import hell0hd.gateway.block.ModBlocks;
+import hell0hd.gateway.item.ModItems;
 import hell0hd.gateway.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,5 +23,6 @@ public class Gateway implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModBlocks.registerItemGroups();
         ModSounds.initializeSounds();
+        ModItems.registerModItems();
     }
 }

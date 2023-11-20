@@ -19,11 +19,9 @@ public class ModItems {
     private static void addItemsToFunctionalItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLIND_EYE);
     }
-
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLIND_EYE);
     }
-
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLIND_EYE);
     }
@@ -41,9 +39,7 @@ public class ModItems {
         Gateway.LOGGER.info("Registering Mod Items for " + Gateway.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(ModItems::addItemsToFunctionalItemGroup);
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsItemGroup);
 
     }
