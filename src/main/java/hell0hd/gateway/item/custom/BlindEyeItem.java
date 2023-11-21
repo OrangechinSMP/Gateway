@@ -52,7 +52,7 @@ public class BlindEyeItem extends Item {
                 world.playSound(
                         null,
                         blockPos,
-                        ModSounds.GATEWAY_AMBIENCE,
+                        ModSounds.DEEP_DARK_PORTAL_FRAME_FILL,
                         SoundCategory.BLOCKS,
                         2f,
                         2f
@@ -70,7 +70,7 @@ public class BlindEyeItem extends Item {
                     world.playSound(
                             null,
                             blockPos,
-                            ModSounds.GATEWAY_AMBIENCE,
+                            ModSounds.DEEP_DARK_PORTAL_SPAWN,
                             SoundCategory.BLOCKS,
                             2f,
                             2f

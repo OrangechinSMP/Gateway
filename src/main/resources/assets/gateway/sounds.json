@@ -4,5 +4,19 @@
     "sounds": [
       "gateway:gateway_ambience"
     ]
+  },
+  "block.deep_dark_portal_frame.fill": {
+    "subtitle": "subtitles.gateway.block.deep_dark_portal.fill",
+    "sounds": [
+      "gateway:block/deep_dark_portal/eyeplace1",
+      "gateway:block/deep_dark_portal/eyeplace2",
+      "gateway:block/deep_dark_portal/eyeplace3"
+    ]
+  },
+  "block.deep_dark_portal.spawn": {
+    "subtitle": "subtitles.gateway.block.deep_dark_portal.spawn",
+    "sounds": [
+      "gateway:block/deep_dark_portal/deepdarkportal"
+    ]
   }
 }
