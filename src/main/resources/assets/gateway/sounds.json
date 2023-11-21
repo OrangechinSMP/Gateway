@@ -8,15 +8,27 @@
   "block.deep_dark_portal_frame.fill": {
     "subtitle": "subtitles.gateway.block.deep_dark_portal.fill",
     "sounds": [
-      "gateway:block/deep_dark_portal/eyeplace1",
-      "gateway:block/deep_dark_portal/eyeplace2",
-      "gateway:block/deep_dark_portal/eyeplace3"
+      {
+         "name": "gateway:block/deep_dark_portal/eyeplace1",
+        "pitch": 0.5
+      },
+      {
+        "name": "gateway:block/deep_dark_portal/eyeplace2",
+        "pitch": 0.5
+      },
+      {
+        "name": "gateway:block/deep_dark_portal/eyeplace3",
+        "pitch": 0.5
+      }
     ]
   },
   "block.deep_dark_portal.spawn": {
     "subtitle": "subtitles.gateway.block.deep_dark_portal.spawn",
     "sounds": [
-      "gateway:block/deep_dark_portal/deepdarkportal"
+      {
+        "name": "gateway:block/deep_dark_portal/deepdarkportal",
+        "pitch": 0.5
+      }
     ]
   }
 }
