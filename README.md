@@ -1,4 +1,4 @@
-# Gateway-1.19.2
+# Gateway
 Repository for Gateway, a mod made for OrangechinSMP.
 
 Hi Bro
