@@ -1,6 +1,7 @@
 package hell0hd.gateway.block.custom;
 
 import com.google.common.base.Predicates;
+import hell0hd.gateway.block.ModBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.pattern.BlockPattern;
 import net.minecraft.block.pattern.BlockPatternBuilder;
@@ -69,7 +70,11 @@ public class ReinforcedDeepslateFrameBlock extends Block {
 
     public static BlockPattern getCompletedFramePattern() {
         if (COMPLETED_FRAME == null) {
-            COMPLETED_FRAME = BlockPatternBuilder.start().aisle(new String[]{"?vvv?", ">???<", ">???<", ">???<", "?^^^?"}).where('?', CachedBlockPosition.matchesBlockState(BlockStatePredicate.ANY)).where('^', CachedBlockPosition.matchesBlockState(BlockStatePredicate.forBlock(Blocks.END_PORTAL_FRAME).with(EYE, Predicates.equalTo(true)).with(FACING, Predicates.equalTo(Direction.SOUTH)))).where('>', CachedBlockPosition.matchesBlockState(BlockStatePredicate.forBlock(Blocks.END_PORTAL_FRAME).with(EYE, Predicates.equalTo(true)).with(FACING, Predicates.equalTo(Direction.WEST)))).where('v', CachedBlockPosition.matchesBlockState(BlockStatePredicate.forBlock(Blocks.END_PORTAL_FRAME).with(EYE, Predicates.equalTo(true)).with(FACING, Predicates.equalTo(Direction.NORTH)))).where('<', CachedBlockPosition.matchesBlockState(BlockStatePredicate.forBlock(Blocks.END_PORTAL_FRAME).with(EYE, Predicates.equalTo(true)).with(FACING, Predicates.equalTo(Direction.EAST)))).build();
+            COMPLETED_FRAME = BlockPatternBuilder.start()
+                    .aisle("v?v?v?v")
+                    .where('?', CachedBlockPosition.matchesBlockState(BlockStatePredicate.ANY))
+                    .where('v', CachedBlockPosition.matchesBlockState(BlockStatePredicate.forBlock(ModBlocks.REINFORCED_DEEPSLATE_FRAME).with(EYE, Predicates.equalTo(true))))
+                    .build();
         }
 
         return COMPLETED_FRAME;
