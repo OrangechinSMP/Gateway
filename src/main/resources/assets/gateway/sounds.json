@@ -30,5 +30,11 @@
         "pitch": 0.5
       }
     ]
+  },
+  "origins.racckin.scurry": {
+    "subtitle": "subtitles.gateway.origins.racckin.scurry",
+    "sounds": [
+      "gateway:origins/racckin/scurry"
+    ]
   }
 }

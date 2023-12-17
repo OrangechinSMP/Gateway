@@ -25,6 +25,9 @@ public class ModBlocks {
     public static final Block THE_GATEWAYZ = registerBlock("the_gatewayz",
             new TheGatewayBlockZ(FabricBlockSettings.copyOf(Blocks.NETHER_PORTAL).noCollision().resistance(-1.0f).ticksRandomly().strength(50.0f, 1200.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).nonOpaque()));
 
+    public static final Block CHARGING_GATEWAY = registerBlock("charging_gateway",
+            new TheGatewayBlockZ(FabricBlockSettings.copyOf(Blocks.NETHER_PORTAL).noCollision().resistance(-1.0f).ticksRandomly().strength(50.0f, 1200.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).nonOpaque()));
+
     public static final Block REINFORCED_STONE = registerBlock("reinforced_stone",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE).resistance(-1.0f).strength(55.0f, 1200.0f)));
 
@@ -72,6 +75,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(entries -> {
             entries.add(ModBlocks.THE_GATEWAYX);
             entries.add(ModBlocks.THE_GATEWAYZ);
+            entries.add(ModBlocks.CHARGING_GATEWAY);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(ModBlocks.REINFORCED_DEEPSLATE_FRAME);
