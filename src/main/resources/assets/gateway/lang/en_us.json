@@ -8,5 +8,11 @@
   "block.gateway.polished_stone_stairs": "Polished Stone Stairs",
   "block.gateway.polished_stone_slab": "Polished Stone Slab",
   "block.gateway.polished_stone_wall": "Polished Stone Wall",
-  "subtitles.gateway.gateway_ambience": "Gateway whooshes"
+  "subtitles.gateway.gateway_ambience": "Gateway whooshes",
+  "subtitles.gateway.block.deep_dark_portal.fill": "Blind Eye attaches",
+  "subtitles.gateway.block.deep_dark_portal.spawn": "§kAnd so it begins",
+  "item.gateway.blind_eye": "Blind Eye",
+  "block.gateway.reinforced_deepslate_frame": "Reinforced Deepslate Frame",
+  "block.gateway.charging_gateway": "Charging Gateway",
+  "subtitles.gateway.origins.racckin.scurry": "Racckin scurries off"
 }
