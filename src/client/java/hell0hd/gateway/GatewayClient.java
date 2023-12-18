@@ -12,5 +12,6 @@ public class GatewayClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THE_GATEWAYX, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THE_GATEWAYZ, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHARGING_GATEWAY, RenderLayer.getTranslucent());
     }
 }
