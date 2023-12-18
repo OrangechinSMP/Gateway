@@ -62,8 +62,10 @@ public class BlindEyeItem extends Item {
                     BlockPos blockPos2 = result.getFrontTopLeft().add(6, 8, -12);
 
                     for(int i = 0; i < 1; ++i) {
-                        for(int j = 0; j < 20; ++j) {
-                            world.setBlockState(blockPos2.add(i, 0, j), ModBlocks.CHARGING_GATEWAY.getDefaultState(), 2);
+                        for (int j = 0; j < 6; ++j) {
+                            for (int k = 0; k < 20; ++k){
+                                world.setBlockState(blockPos2.add(i, j, k), ModBlocks.CHARGING_GATEWAY.getDefaultState(), 2);
+                            }
                         }
                     }
 
