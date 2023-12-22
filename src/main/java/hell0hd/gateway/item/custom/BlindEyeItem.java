@@ -71,8 +71,8 @@ public class BlindEyeItem extends Item {
                             blockPos,
                             ModSounds.DEEP_DARK_PORTAL_SPAWN,
                             SoundCategory.BLOCKS,
-                            2f,
-                            2f
+                            62.5f,
+                            1f
                     );
 
                 }
