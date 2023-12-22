@@ -1,16 +1,28 @@
 {
   "variants": {
-    "facing=north": {
+    "charged=true,facing=north": {
       "model": "gateway:block/the_gateway_ns"
     },
-    "facing=south": {
+    "charged=true,facing=south": {
       "model": "gateway:block/the_gateway_ns"
     },
-    "facing=east": {
+    "charged=true,facing=east": {
       "model": "gateway:block/the_gateway_ew"
     },
-    "facing=west": {
+    "charged=true,facing=west": {
       "model": "gateway:block/the_gateway_ew"
+    },
+    "charged=false,facing=north": {
+      "model": "gateway:block/charging_gateway_ns"
+    },
+    "charged=false,facing=south": {
+      "model": "gateway:block/charging_gateway_ns"
+    },
+    "charged=false,facing=east": {
+      "model": "gateway:block/charging_gateway_ew"
+    },
+    "charged=false,facing=west": {
+      "model": "gateway:block/charging_gateway_ew"
     }
   }
 }

@@ -1,11 +1,11 @@
 package hell0hd.gateway.item.custom;
 
+import hell0hd.gateway.block.ModBlocks;
+import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
 import hell0hd.gateway.sound.ModSounds;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.EndPortalFrameBlock;
 import net.minecraft.block.pattern.BlockPattern;
 import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,7 +16,6 @@ import net.minecraft.registry.tag.StructureTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
@@ -28,8 +27,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
-import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
-import hell0hd.gateway.block.ModBlocks;
 
 public class BlindEyeItem extends Item {
     public BlindEyeItem(Settings settings) {
@@ -64,7 +61,7 @@ public class BlindEyeItem extends Item {
                     for(int i = 0; i < 1; ++i) {
                         for (int j = 0; j < 6; ++j) {
                             for (int k = 0; k < 20; ++k){
-                                world.setBlockState(blockPos2.add(i, j, k), ModBlocks.CHARGING_GATEWAY.getDefaultState(), 2);
+                                world.setBlockState(blockPos2.add(i, j, k), ModBlocks.THE_GATEWAY.getDefaultState(), 2);
                             }
                         }
                     }
