@@ -10,8 +10,7 @@ import net.minecraft.client.render.RenderLayer;
 public class GatewayClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THE_GATEWAYX, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THE_GATEWAYZ, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THE_GATEWAY, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHARGING_GATEWAY, RenderLayer.getTranslucent());
     }
 }

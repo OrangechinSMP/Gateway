@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "gateway:block/the_gateway_ns"
+    },
+    "facing=south": {
+      "model": "gateway:block/the_gateway_ns"
+    },
+    "facing=east": {
+      "model": "gateway:block/the_gateway_ew"
+    },
+    "facing=west": {
+      "model": "gateway:block/the_gateway_ew"
+    }
+  }
+}

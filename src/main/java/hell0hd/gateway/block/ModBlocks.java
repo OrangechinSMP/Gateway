@@ -2,12 +2,14 @@ package hell0hd.gateway.block;
 
 import hell0hd.gateway.Gateway;
 import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
-import hell0hd.gateway.block.custom.TheGatewayBlockX;
-import hell0hd.gateway.block.custom.TheGatewayBlockZ;
+import hell0hd.gateway.block.custom.TheGatewayBlock;
+import hell0hd.gateway.block.custom.charging_gateway.ChargingGatewayBlockEntity;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -19,14 +21,18 @@ import net.minecraft.util.Identifier;
 import static net.minecraft.block.Blocks.END_PORTAL_FRAME;
 
 public class ModBlocks {
-    public static final Block THE_GATEWAYX = registerBlock("the_gatewayx",
-            new TheGatewayBlockX(FabricBlockSettings.copyOf(Blocks.NETHER_PORTAL).noCollision().resistance(-1.0f).ticksRandomly().strength(50.0f, 1200.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).nonOpaque()));
 
-    public static final Block THE_GATEWAYZ = registerBlock("the_gatewayz",
-            new TheGatewayBlockZ(FabricBlockSettings.copyOf(Blocks.NETHER_PORTAL).noCollision().resistance(-1.0f).ticksRandomly().strength(50.0f, 1200.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).nonOpaque()));
+    public static final Block THE_GATEWAY = registerBlock("the_gateway",
+            new TheGatewayBlock(FabricBlockSettings.copyOf(Blocks.NETHER_PORTAL).noCollision().resistance(-1.0f).ticksRandomly().strength(50.0f, 1200.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).nonOpaque()));
 
     public static final Block CHARGING_GATEWAY = registerBlock("charging_gateway",
-            new TheGatewayBlockZ(FabricBlockSettings.copyOf(Blocks.NETHER_PORTAL).noCollision().resistance(-1.0f).ticksRandomly().strength(50.0f, 1200.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).nonOpaque()));
+            new TheGatewayBlock(FabricBlockSettings.copyOf(Blocks.NETHER_PORTAL).noCollision().resistance(-1.0f).ticksRandomly().strength(50.0f, 1200.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).nonOpaque()));
+
+    public static final BlockEntityType<ChargingGatewayBlockEntity> CHARGING_GATEWAY_ENTITY = Registry.register(
+            Registries.BLOCK_ENTITY_TYPE,
+            new Identifier(Gateway.MOD_ID, "charging_gateway_block_entity"),
+            FabricBlockEntityTypeBuilder.create(ChargingGatewayBlockEntity::new, CHARGING_GATEWAY).build()
+    );
 
     public static final Block REINFORCED_STONE = registerBlock("reinforced_stone",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE).resistance(-1.0f).strength(55.0f, 1200.0f)));
@@ -57,9 +63,8 @@ public class ModBlocks {
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(Gateway.MOD_ID, name),
+        return Registry.register(Registries.ITEM, new Identifier(Gateway.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
-        return item;
     }
     public static void registerItemGroups() {
         // Example of adding to existing Item Group
@@ -73,8 +78,7 @@ public class ModBlocks {
             entries.add(ModBlocks.REINFORCED_STONE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(entries -> {
-            entries.add(ModBlocks.THE_GATEWAYX);
-            entries.add(ModBlocks.THE_GATEWAYZ);
+            entries.add(ModBlocks.THE_GATEWAY);
             entries.add(ModBlocks.CHARGING_GATEWAY);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
