@@ -9,16 +9,13 @@
     "subtitle": "subtitles.gateway.block.deep_dark_portal.fill",
     "sounds": [
       {
-         "name": "gateway:block/deep_dark_portal/eyeplace1",
-        "pitch": 0.5
+         "name": "gateway:block/deep_dark_portal/eyeplace1"
       },
       {
-        "name": "gateway:block/deep_dark_portal/eyeplace2",
-        "pitch": 0.5
+        "name": "gateway:block/deep_dark_portal/eyeplace2"
       },
       {
-        "name": "gateway:block/deep_dark_portal/eyeplace3",
-        "pitch": 0.5
+        "name": "gateway:block/deep_dark_portal/eyeplace3"
       }
     ]
   },
@@ -26,8 +23,7 @@
     "subtitle": "subtitles.gateway.block.deep_dark_portal.spawn",
     "sounds": [
       {
-        "name": "gateway:block/deep_dark_portal/deepdarkportal",
-        "pitch": 0.5
+        "name": "gateway:block/deep_dark_portal/deepdarkportal"
       }
     ]
   },

@@ -51,8 +51,8 @@ public class BlindEyeItem extends Item {
                         blockPos,
                         ModSounds.DEEP_DARK_PORTAL_FRAME_FILL,
                         SoundCategory.BLOCKS,
-                        2f,
-                        2f
+                        1f,
+                        1f
                 );
                 BlockPattern.Result result = ReinforcedDeepslateFrameBlock.getCompletedFramePattern().searchAround(world, blockPos);
                 if (result != null) {
