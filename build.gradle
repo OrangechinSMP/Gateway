@@ -24,6 +24,8 @@ repositories {
 
 	}
 
+	maven { url 'https://api.modrinth.com/maven' }
+
 }
 
 loom {
@@ -51,6 +53,8 @@ dependencies {
 
 	// Include Satin as a Jar-in-Jar dependency (optional)
 	include "org.ladysnake:satin:${satin_version}"
+
+	modImplementation "maven.modrinth:frozenlib:${project.frozenlib_version}"
 }
 
 processResources {
