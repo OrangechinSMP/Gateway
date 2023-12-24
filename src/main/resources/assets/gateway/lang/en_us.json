@@ -13,5 +13,8 @@
   "item.gateway.blind_eye": "Blind Eye",
   "block.gateway.reinforced_deepslate_frame": "Reinforced Deepslate Frame",
   "block.gateway.charging_gateway": "Charging Gateway",
-  "subtitles.gateway.origins.racckin.scurry": "Racckin scurries off"
+  "subtitles.gateway.origins.racckin.scurry": "Racckin scurries off",
+  "subtitles.gateway.origins.nature_god.vine_whack.vine_shoot": "Vine shot out",
+  "subtitles.gateway.origins.nature_god.vine_whack.vine_hit": "Vine hits something",
+  "subtitles.gateway.origins.nature_god.photosynthesis.heal": "Nature God heals"
 }

@@ -32,5 +32,23 @@
     "sounds": [
       "gateway:origins/racckin/scurry"
     ]
+  },
+  "origins.nature_god.vine_whack.vine_shoot": {
+    "subtitle": "subtitles.gateway.origins.nature_god.vine_whack.vine_shoot",
+    "sounds": [
+      "gateway:origins/nature_god/vine_whack/vine_shoot"
+    ]
+  },
+  "origins.nature_god.vine_whack.vine_hit": {
+    "subtitle": "subtitles.gateway.origins.nature_god.vine_whack.vine_hit",
+    "sounds": [
+      "gateway:origins/nature_god/vine_whack/vine_hit"
+    ]
+  },
+  "origins.nature_god.photosynthesis.heal": {
+    "subtitle": "subtitles.gateway.origins.nature_god.photosynthesis.heal",
+    "sounds": [
+      "gateway:origins/nature_god/photosynthesis/heal"
+    ]
   }
 }
