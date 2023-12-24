@@ -12,6 +12,10 @@ public class ModSounds {
     public static SoundEvent DEEP_DARK_PORTAL_FRAME_FILL = registerSoundEvent("block.deep_dark_portal_frame.fill");
     public static SoundEvent DEEP_DARK_PORTAL_SPAWN = registerSoundEvent("block.deep_dark_portal.spawn");
     public static SoundEvent RACCKIN_SCURRY = registerSoundEvent("origins.racckin.scurry");
+    public static SoundEvent NATURE_GOD_VINE_SHOOT = registerSoundEvent("origins.nature_god.vine_whack.vine_shoot");
+    public static SoundEvent NATURE_GOD_VINE_HIT = registerSoundEvent("origins.nature_god.vine_whack.vine_hit");
+
+    public static SoundEvent NATURE_GOD_PHOTOSYNTHESIS_HEAL = registerSoundEvent("origins.nature_god.photosynthesis.heal");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(Gateway.MOD_ID, name);
