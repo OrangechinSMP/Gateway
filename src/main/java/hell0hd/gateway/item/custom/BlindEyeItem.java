@@ -1,8 +1,10 @@
 package hell0hd.gateway.item.custom;
 
+import hell0hd.gateway.Gateway;
 import hell0hd.gateway.block.ModBlocks;
 import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
 import hell0hd.gateway.sound.ModSounds;
+import net.frozenblock.lib.screenshake.api.ScreenShakeManager;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -13,6 +15,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.registry.tag.StructureTags;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -45,7 +48,11 @@ public class BlindEyeItem extends Item {
                 Block.pushEntitiesUpBeforeBlockChange(blockState, blockState2, world, blockPos);
                 world.setBlockState(blockPos, blockState2, 2);
                 world.updateComparators(blockPos, ModBlocks.REINFORCED_DEEPSLATE_FRAME);
-                context.getStack().decrement(1);
+
+                if (!context.getPlayer().isCreative()) {
+                    context.getStack().decrement(1);
+                }
+
                 world.playSound(
                         null,
                         blockPos,
@@ -74,6 +81,18 @@ public class BlindEyeItem extends Item {
                             62.5f,
                             1f
                     );
+
+                    Gateway.INSTANCE.getPlayerManager().getPlayerList().forEach(player -> {
+                        ScreenShakeManager.addEntityScreenShake(
+                                player,
+                                2.0f,
+                                220,
+                                100,
+                                1000.0f
+                        );
+                    });
+
+
 
                 }
 
@@ -112,6 +131,7 @@ public class BlindEyeItem extends Item {
 
                     user.incrementStat(Stats.USED.getOrCreateStat(this));
                     user.swingHand(hand, true);
+
                     return TypedActionResult.success(itemStack);
                 }
             }

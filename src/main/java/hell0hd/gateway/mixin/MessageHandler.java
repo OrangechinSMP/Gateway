@@ -12,7 +12,7 @@ public class MessageHandler {
 
     @Inject(at = @At("HEAD"), method = "onChatMessage", cancellable = true)
     public void gateway$message(ChatMessageC2SPacket packet, CallbackInfo ci) {
-        ci.cancel();
+        return;
     }
 
 }
