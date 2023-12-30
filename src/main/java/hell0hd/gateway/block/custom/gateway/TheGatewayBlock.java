@@ -1,11 +1,17 @@
-package hell0hd.gateway.block.custom;
+package hell0hd.gateway.block.custom.gateway;
 
+import hell0hd.gateway.block.ModBlocks;
 import hell0hd.gateway.sound.ModSounds;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
@@ -17,7 +23,9 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 
-public class TheGatewayBlock extends HorizontalFacingBlock {
+public class TheGatewayBlock extends BlockWithEntity {
+
+    public static final DirectionProperty FACING;
 
     public static final BooleanProperty CHARGED = BooleanProperty.of("charged");
     protected static final VoxelShape X_SHAPE = Block.createCuboidShape(0.0, 0.0, 6.0, 16.0, 16.0, 10.0);
@@ -25,6 +33,18 @@ public class TheGatewayBlock extends HorizontalFacingBlock {
     public TheGatewayBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.EAST).with(CHARGED, false));
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new TheGatewayBlockEntity(pos, state);
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, ModBlocks.THE_GATEWAY_ENTITY, TheGatewayBlockEntity::tick);
     }
 
     @Override
@@ -77,4 +97,10 @@ public class TheGatewayBlock extends HorizontalFacingBlock {
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING, CHARGED);
     }
+
+    static {
+        FACING = Properties.HORIZONTAL_FACING;
+    }
+
+
 }
