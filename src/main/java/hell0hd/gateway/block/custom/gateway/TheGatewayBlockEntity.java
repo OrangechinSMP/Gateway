@@ -30,11 +30,11 @@ public class TheGatewayBlockEntity extends BlockEntity {
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, TheGatewayBlockEntity be) {
-        if (be.charge < 220) {
+        if (be.charge < 200) {
             be.charge++;
         }
 
-        if (be.charge >= 220) {
+        if (be.charge >= 200) {
             if (!state.get(TheGatewayBlock.CHARGED)) {
                 world.setBlockState(pos, state.with(TheGatewayBlock.CHARGED, true));
             }
