@@ -92,8 +92,6 @@ public class BlindEyeItem extends Item {
                         );
                     });
 
-
-
                 }
 
                 return ActionResult.CONSUME;
