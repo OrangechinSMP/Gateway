@@ -1,9 +1,12 @@
 package hell0hd.gateway.item.custom;
 
 import hell0hd.gateway.Gateway;
+import hell0hd.gateway.Scheduler;
 import hell0hd.gateway.block.ModBlocks;
 import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
 import hell0hd.gateway.sound.ModSounds;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.frozenblock.lib.screenshake.api.ScreenShakeManager;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Block;
@@ -23,6 +26,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -30,6 +34,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+
+import java.util.concurrent.TimeUnit;
 
 public class BlindEyeItem extends Item {
     public BlindEyeItem(Settings settings) {
@@ -90,7 +96,19 @@ public class BlindEyeItem extends Item {
                                 100,
                                 1000.0f
                         );
+
+                        ServerPlayNetworking.send(
+                            player, new Identifier(Gateway.MOD_ID, "yogurtstart"), PacketByteBufs.empty()
+                        );
+
+                        Scheduler.schedule(() -> {
+                            ServerPlayNetworking.send(
+                                    player, new Identifier(Gateway.MOD_ID, "yogurtend"), PacketByteBufs.empty()
+                            );
+                        }, 10, TimeUnit.SECONDS);
                     });
+
+
 
                 }
 
