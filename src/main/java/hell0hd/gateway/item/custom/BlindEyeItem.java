@@ -92,7 +92,7 @@ public class BlindEyeItem extends Item {
                         ScreenShakeManager.addEntityScreenShake(
                                 player,
                                 2.0f,
-                                220,
+                                300,
                                 100,
                                 1000.0f
                         );
