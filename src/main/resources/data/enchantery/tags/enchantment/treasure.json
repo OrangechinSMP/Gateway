@@ -5,24 +5,19 @@
       "minecraft:fire_aspect",
       "minecraft:infinity",
       "minecraft:lure",
-      "minecraft:frost_walker",
       "minecraft:looting",
       "minecraft:fortune",
       "minecraft:luck_of_the_sea",
       "minecraft:mending",
       "minecraft:multishot",
-      "minecraft:respiration",
-      "minecraft:feather_falling",
+
       "minecraft:thorns",
-      "minecraft:channeling",
       "minecraft:riptide",
       "minecraft:soul_speed",
       "minecraft:swift_sneak",
       "enchantery:soulbound",
       "enchancement:frostbite",
       "enchancement:chaos",
-      "supplementaries:stasis",
-      "enchancement:assimilation",
       "enchancement:brimstone",
       "enchancement:phasing",
       "origins:water_protection",
@@ -39,8 +34,17 @@
       "enchancement:veil",
       "enchancement:wardenspine",
       "enchancement:scatter",
-      "enchancement:torch"
+
+      "enchancement:perception",
+      "enchancement:buoy",
+      "enchancement:berserk",
+      "enchancement:bouncy",
+      "enchancement:strafe",
+      "enchancement:gale",
+      "enchancement:disarm",
+      "enchancement:grapple",
+      "enchancement:amphibious",
+      "enchancement:slide"
     ]
   }
 
-  

@@ -1,16 +1,6 @@
 {
     "replace": true,
     "values": [
-        "enchancement:dash",
-        "enchancement:strafe",
-        "enchancement:amphibious",
-        "enchancement:slide",
-        "enchancement:bouncy",
-        "enchancement:gale",
-        "enchancement:berserk",
-        "enchancement:buoy",
-        "enchancement:perception",
-        "enchancement:grapple",
-        "enchancement:disarm"
+      "supplementaries:stasis"
     ]
   }

@@ -21,6 +21,13 @@
         "minecraft:aqua_affinity",
         "minecraft:loyalty",
         "guarding:pummeling",
-        "extra_de:herbicide"
+        "extra_de:herbicide",
+        "enchancement:assimilation",
+        "minecraft:channeling",
+        "enchancement:dash",
+        "minecraft:feather_falling",
+        "minecraft:frost_walker",
+        "enchancement:torch",
+        "minecraft:respiration"
     ]
 }
