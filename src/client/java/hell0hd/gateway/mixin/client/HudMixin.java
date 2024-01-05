@@ -1,6 +1,5 @@
 package hell0hd.gateway.mixin.client;
 
-import hell0hd.gateway.GatewayClient;
 import net.minecraft.client.Keyboard;
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Final;

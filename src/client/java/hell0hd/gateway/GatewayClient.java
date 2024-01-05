@@ -1,20 +1,14 @@
 package hell0hd.gateway;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import hell0hd.gateway.block.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.minecraft.client.render.*;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import org.joml.Matrix4f;
-import org.lwjgl.opengl.GL11;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.concurrent.TimeUnit;
 
 import static hell0hd.gateway.Gateway.MOD_ID;
 
@@ -28,5 +22,12 @@ public class GatewayClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THE_GATEWAY, RenderLayer.getTranslucent());
 
 
+        ClientPlayNetworking.registerGlobalReceiver(
+                new Identifier(MOD_ID, "yogurt"),
+                (client, handler, buf, responseSender) -> {
+                    client.inGameHud.setTitleTicks(180, 0, 40);
+                    client.inGameHud.setTitle(Text.literal("\uE100"));
+                }
+        );
     }
 }

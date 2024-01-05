@@ -1,6 +1,5 @@
 package hell0hd.gateway.mixin.client;
 
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
@@ -9,6 +8,7 @@ import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
+import org.lwjgl.opengl.GL11;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -54,6 +54,7 @@ public abstract class InGameHudMixin {
                 context.getMatrices().push();
                 context.getMatrices().translate((float)(this.scaledWidth / 2), (float)(this.scaledHeight / 2), 0.0F);
                 RenderSystem.enableBlend();
+                RenderSystem.depthFunc(GL11.GL_ALWAYS);
                 context.getMatrices().push();
                 context.getMatrices().scale(4.0F, 4.0F, 4.0F);
                 int k = l << 24 & -16777216;
@@ -70,6 +71,7 @@ public abstract class InGameHudMixin {
                     context.getMatrices().pop();
                 }
 
+                RenderSystem.depthFunc(GL11.GL_LEQUAL);
                 RenderSystem.disableBlend();
                 context.getMatrices().pop();
             }
