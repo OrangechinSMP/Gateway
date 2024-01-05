@@ -25,7 +25,7 @@ public class GatewayClient implements ClientModInitializer {
         ClientPlayNetworking.registerGlobalReceiver(
                 new Identifier(MOD_ID, "yogurt"),
                 (client, handler, buf, responseSender) -> {
-                    client.inGameHud.setTitleTicks(180, 0, 40);
+                    client.inGameHud.setTitleTicks(50, 20, 100);
                     client.inGameHud.setTitle(Text.literal("\uE100"));
                 }
         );

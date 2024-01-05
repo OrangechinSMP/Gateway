@@ -1,6 +1,7 @@
 package hell0hd.gateway.item.custom;
 
 import hell0hd.gateway.Gateway;
+import hell0hd.gateway.Scheduler;
 import hell0hd.gateway.block.ModBlocks;
 import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
 import hell0hd.gateway.sound.ModSounds;
@@ -32,6 +33,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+
+import java.util.concurrent.TimeUnit;
 
 public class BlindEyeItem extends Item {
     public BlindEyeItem(Settings settings) {
@@ -93,9 +96,11 @@ public class BlindEyeItem extends Item {
                                 1000.0f
                         );
 
-                        ServerPlayNetworking.send(
-                            player, new Identifier(Gateway.MOD_ID, "yogurt"), PacketByteBufs.empty()
-                        );
+                        Scheduler.schedule(() -> {
+                            ServerPlayNetworking.send(
+                                    player, new Identifier(Gateway.MOD_ID, "yogurt"), PacketByteBufs.empty()
+                            );
+                        }, 7500, TimeUnit.MILLISECONDS);
                     });
 
 
