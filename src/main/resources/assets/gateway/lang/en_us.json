@@ -16,5 +16,7 @@
   "subtitles.gateway.origins.racckin.scurry": "Racckin scurries off",
   "subtitles.gateway.origins.nature_god.vine_whack.vine_shoot": "Vine shot out",
   "subtitles.gateway.origins.nature_god.vine_whack.vine_hit": "Vine hits something",
-  "subtitles.gateway.origins.nature_god.photosynthesis.heal": "Nature God heals"
+  "subtitles.gateway.origins.nature_god.photosynthesis.heal": "Nature God heals",
+  "item.gateway.sculk_powder": "Sculk Powder",
+  "subtitles.gateway.origins.glitch.random_tp.teleport": "§kGlitch teleports"
 }
