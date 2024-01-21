@@ -14,8 +14,8 @@ public class ModSounds {
     public static SoundEvent RACCKIN_SCURRY = registerSoundEvent("origins.racckin.scurry");
     public static SoundEvent NATURE_GOD_VINE_SHOOT = registerSoundEvent("origins.nature_god.vine_whack.vine_shoot");
     public static SoundEvent NATURE_GOD_VINE_HIT = registerSoundEvent("origins.nature_god.vine_whack.vine_hit");
-
     public static SoundEvent NATURE_GOD_PHOTOSYNTHESIS_HEAL = registerSoundEvent("origins.nature_god.photosynthesis.heal");
+    public static SoundEvent GLITCH_RANDOM_TP = registerSoundEvent("origins.glitch.random_tp.teleport");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(Gateway.MOD_ID, name);
