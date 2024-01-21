@@ -50,5 +50,19 @@
     "sounds": [
       "gateway:origins/nature_god/photosynthesis/heal"
     ]
+  },
+  "origins.glitch.random_tp.teleport": {
+    "subtitle": "subtitles.gateway.origins.glitch.random_tp.teleport",
+    "sounds": [
+      {
+        "name": "gateway:origins/glitch/random_tp/teleport1"
+      },
+      {
+        "name": "gateway:origins/glitch/random_tp/teleport2"
+      },
+      {
+        "name": "gateway:origins/glitch/random_tp/teleport3"
+      }
+    ]
   }
 }
