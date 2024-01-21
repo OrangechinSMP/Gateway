@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "minecraft:ender_eye"
+        },
+        {
+            "item": "gateway:sculk_powder"
+        }
+    ],
+    "result": {
+        "item": "gateway:blind_eye",
+        "count": 1
+    }
+}
