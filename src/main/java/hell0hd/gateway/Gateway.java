@@ -2,6 +2,7 @@ package hell0hd.gateway;
 
 import hell0hd.gateway.block.ModBlocks;
 import hell0hd.gateway.item.ModItems;
+import hell0hd.gateway.potion.ModPotions;
 import hell0hd.gateway.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
@@ -23,6 +24,7 @@ public class Gateway implements ModInitializer {
         ModBlocks.registerItemGroups();
         ModSounds.initializeSounds();
         ModItems.registerModItems();
+        ModPotions.registerPotions();
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             INSTANCE = server;
