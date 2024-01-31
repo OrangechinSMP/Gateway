@@ -16,6 +16,8 @@ public class ModSounds {
     public static SoundEvent NATURE_GOD_VINE_HIT = registerSoundEvent("origins.nature_god.vine_whack.vine_hit");
     public static SoundEvent NATURE_GOD_PHOTOSYNTHESIS_HEAL = registerSoundEvent("origins.nature_god.photosynthesis.heal");
     public static SoundEvent GLITCH_RANDOM_TP = registerSoundEvent("origins.glitch.random_tp.teleport");
+    public static SoundEvent BANDIT_STASH_OPEN = registerSoundEvent("origins.bandit.stash.open");
+    public static SoundEvent BANDIT_STASH_CLOSE = registerSoundEvent("origins.bandit.stash.close");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(Gateway.MOD_ID, name);
