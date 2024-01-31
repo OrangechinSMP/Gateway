@@ -26,5 +26,7 @@
   "item.minecraft.potion.effect.long_darkness_potion": "Potion of Obscurification",
   "item.minecraft.splash_potion.effect.long_darkness_potion": "Splash Potion of Obscurification",
   "item.minecraft.lingering_potion.effect.long_darkness_potion": "Lingering Potion of Obscurification",
-  "item.minecraft.tipped_arrow.effect.long_darkness_potion": "Arrow of Obscurification"
+  "item.minecraft.tipped_arrow.effect.long_darkness_potion": "Arrow of Obscurification",
+  "subtitles.gateway.origins.bandit.stash.open": "Bandit opens stash",
+  "subtitles.gateway.origins.bandit.stash.close": "Bandit closes stash"
 }
