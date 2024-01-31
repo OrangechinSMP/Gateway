@@ -64,5 +64,17 @@
         "name": "gateway:origins/glitch/random_tp/teleport3"
       }
     ]
+  },
+  "origins.bandit.stash.open": {
+    "subtitle": "subtitles.gateway.origins.bandit.stash.open",
+    "sounds": [
+      "gateway:origins/bandit/stash/open"
+    ]
+  },
+  "origins.bandit.stash.close": {
+    "subtitle": "subtitles.gateway.origins.bandit.stash.open",
+    "sounds": [
+      "gateway:origins/bandit/stash/close"
+    ]
   }
 }
