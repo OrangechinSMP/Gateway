@@ -29,5 +29,7 @@
   "item.minecraft.tipped_arrow.effect.long_darkness_potion": "Arrow of Obscurification",
   "subtitles.gateway.origins.bandit.stash.open": "Bandit opens stash",
   "subtitles.gateway.origins.bandit.stash.close": "Bandit closes stash",
-  "gui.gateway.origins.bandit.stash": "Stash"
+  "gui.gateway.origins.bandit.stash": "Stash",
+  "subtitles.gateway.origins.goose.hiss.hiss": "Goose hisses",
+  "subtitles.gateway.origins.goose.take_off.launch": "Goose takes off"
 }

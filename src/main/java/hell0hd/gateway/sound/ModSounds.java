@@ -18,6 +18,8 @@ public class ModSounds {
     public static SoundEvent GLITCH_RANDOM_TP = registerSoundEvent("origins.glitch.random_tp.teleport");
     public static SoundEvent BANDIT_STASH_OPEN = registerSoundEvent("origins.bandit.stash.open");
     public static SoundEvent BANDIT_STASH_CLOSE = registerSoundEvent("origins.bandit.stash.close");
+    public static SoundEvent GOOSE_HISS = registerSoundEvent("origins.goose.hiss.hiss");
+    public static SoundEvent GOOSE_TAKE_OFF_LAUNCH = registerSoundEvent("origins.take_off.launch");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(Gateway.MOD_ID, name);

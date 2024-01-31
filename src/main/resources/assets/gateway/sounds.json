@@ -76,5 +76,25 @@
     "sounds": [
       "gateway:origins/bandit/stash/close"
     ]
+  },
+  "origins.goose.hiss.hiss": {
+    "subtitle": "subtitles.gateway.origins.goose.hiss.hiss",
+    "sounds": [
+      {
+        "name": "gateway:origins/goose/hiss/hiss1"
+      },
+      {
+        "name": "gateway:origins/goose/hiss/hiss2"
+      },
+      {
+        "name": "gateway:origins/goose/hiss/hiss3"
+      }
+    ]
+  },
+  "origins.goose.take_off.launch": {
+    "subtitle": "subtitles.gateway.origins.goose.take_off.launch",
+    "sounds": [
+      "gateway:origins/goose/take_off/launch"
+    ]
   }
 }
