@@ -1,6 +1,7 @@
 package hell0hd.gateway;
 
 import hell0hd.gateway.block.ModBlocks;
+import hell0hd.gateway.entity.ModEntities;
 import hell0hd.gateway.item.ModItems;
 import hell0hd.gateway.potion.ModPotions;
 import hell0hd.gateway.sound.ModSounds;
@@ -25,6 +26,7 @@ public class Gateway implements ModInitializer {
         ModSounds.initializeSounds();
         ModItems.registerModItems();
         ModPotions.registerPotions();
+        ModEntities.registerModEntities();
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             INSTANCE = server;
