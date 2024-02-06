@@ -96,5 +96,23 @@
     "sounds": [
       "gateway:origins/goose/take_off/launch"
     ]
+  },
+  "origins.water_elemental.waterbolt.shoot": {
+    "subtitle": "subtitles.gateway.origins.water_elemental.waterbolt.shoot",
+    "sounds": [
+      "gateway:origins/water_elemental/waterbolt/shoot"
+    ]
+  },
+  "origins.water_elemental.waterbolt.hit": {
+    "subtitle": "subtitles.gateway.origins.water_elemental.waterbolt.hit",
+    "sounds": [
+      "gateway:origins/water_elemental/waterbolt/hit"
+    ]
+  },
+  "origins.water_elemental.propel.propel": {
+    "subtitle": "subtitles.gateway.origins.water_elemental.propel.propel",
+    "sounds": [
+      "gateway:origins/water_elemental/propel/propel"
+    ]
   }
 }

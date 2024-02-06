@@ -19,7 +19,12 @@ public class ModSounds {
     public static SoundEvent BANDIT_STASH_OPEN = registerSoundEvent("origins.bandit.stash.open");
     public static SoundEvent BANDIT_STASH_CLOSE = registerSoundEvent("origins.bandit.stash.close");
     public static SoundEvent GOOSE_HISS = registerSoundEvent("origins.goose.hiss.hiss");
-    public static SoundEvent GOOSE_TAKE_OFF_LAUNCH = registerSoundEvent("origins.take_off.launch");
+    public static SoundEvent GOOSE_TAKE_OFF_LAUNCH = registerSoundEvent("origins.goose.take_off.launch");
+    public static SoundEvent WATER_ELEMENTAL_WATERBOLT_SHOOT = registerSoundEvent("origins.water_elemental.waterbolt.shoot");
+    public static SoundEvent WATER_ELEMENTAL_WATERBOLT_HIT = registerSoundEvent("origins.water_elemental.waterbolt.hit");
+    public static SoundEvent WATER_ELEMENTAL_PROPEL_PROPEL = registerSoundEvent("origins.water_elemental.propel.propel");
+
+
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(Gateway.MOD_ID, name);
