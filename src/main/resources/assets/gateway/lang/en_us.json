@@ -31,5 +31,8 @@
   "subtitles.gateway.origins.bandit.stash.close": "Bandit closes stash",
   "gui.gateway.origins.bandit.stash": "Stash",
   "subtitles.gateway.origins.goose.hiss.hiss": "Goose hisses",
-  "subtitles.gateway.origins.goose.take_off.launch": "Goose takes off"
+  "subtitles.gateway.origins.goose.take_off.launch": "Goose takes off",
+  "subtitles.gateway.origins.water_elemental.propel.propel": "Water Elemental propels forward",
+  "subtitles.gateway.origins.water_elemental.waterbolt.shoot": "Waterbolt shot out",
+  "subtitles.gateway.origins.water_elemental.waterbolt.hit": "Waterbolt hits something"
 }
