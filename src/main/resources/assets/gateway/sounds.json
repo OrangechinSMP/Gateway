@@ -114,5 +114,31 @@
     "sounds": [
       "gateway:origins/water_elemental/propel/propel"
     ]
+  },
+  "origins.endborn.focused_teleport": {
+    "subtitle": "subtitles.gateway.origins.endborn.focused_teleport",
+    "sounds": [
+      "gateway:origins/endborn/focused_teleport/teleport1",
+      "gateway:origins/endborn/focused_teleport/teleport2"
+    ]
+  },
+  "origins.endborn.rage": {
+    "subtitle": "subtitles.gateway.origins.endborn.rage",
+    "sounds": [
+      "gateway:origins/endborn/rage/rage"
+    ]
+  },
+  "origins.endborn.zealot": {
+    "subtitle": "subtitles.gateway.origins.endborn.zealot",
+    "sounds": [
+      "gateway:origins/endborn/zealot/open"
+    ]
+  },
+  "origins.endborn.unfocused_teleport": {
+    "sounds": [
+      "minecraft:mob/endermen/portal",
+      "minecraft:mob/endermen/portal2"
+    ],
+    "subtitle": "subtitles.gateway.origins.endborn.unfocused_teleport"
   }
 }

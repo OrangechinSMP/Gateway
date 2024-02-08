@@ -23,6 +23,11 @@ public class ModSounds {
     public static SoundEvent WATER_ELEMENTAL_WATERBOLT_SHOOT = registerSoundEvent("origins.water_elemental.waterbolt.shoot");
     public static SoundEvent WATER_ELEMENTAL_WATERBOLT_HIT = registerSoundEvent("origins.water_elemental.waterbolt.hit");
     public static SoundEvent WATER_ELEMENTAL_PROPEL_PROPEL = registerSoundEvent("origins.water_elemental.propel.propel");
+    public static SoundEvent ENDBORN_FOCUSED_TELEPORT = registerSoundEvent("origins.endborn.focused_teleport");
+    public static SoundEvent ENDBORN_ZEALOT = registerSoundEvent("origins.endborn.zealot");
+    public static SoundEvent ENDBORN_RAGE = registerSoundEvent("origins.endborn.rage");
+    public static SoundEvent ENDBORN_UNFOCUSED_TELEPORT = registerSoundEvent("origins.endborn.unfocused_teleport");
+
 
 
 
