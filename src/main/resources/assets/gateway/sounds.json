@@ -143,9 +143,9 @@
   },
   "origins.dwarf.drill": {
     "sounds": [
-      "gateway:origins/drill/use1",
-      "gateway:origins/drill/use2",
-      "gateway:origins/drill/use3"
+      "gateway:origins/dwarf/drill/use1",
+      "gateway:origins/dwarf/drill/use2",
+      "gateway:origins/dwarf/drill/use3"
     ],
     "subtitle": "subtitles.gateway.origins.dwarf.drill"
   }
