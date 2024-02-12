@@ -27,6 +27,7 @@ public class ModSounds {
     public static SoundEvent ENDBORN_ZEALOT = registerSoundEvent("origins.endborn.zealot");
     public static SoundEvent ENDBORN_RAGE = registerSoundEvent("origins.endborn.rage");
     public static SoundEvent ENDBORN_UNFOCUSED_TELEPORT = registerSoundEvent("origins.endborn.unfocused_teleport");
+    public static SoundEvent DWARF_DRILL = registerSoundEvent("origins.dwarf.drill");
 
 
 

@@ -38,5 +38,6 @@
   "subtitles.gateway.origins.endborn.focused_teleport": "Endborn teleports",
   "subtitles.gateway.origins.endborn.unfocused_teleport": "Endborn randomly teleports",
   "subtitles.gateway.origins.endborn.zealot": "Endborn opens storage",
-  "subtitles.gateway.origins.endborn.rage": "Endborn freaks out"
+  "subtitles.gateway.origins.endborn.rage": "Endborn freaks out",
+  "subtitles.gateway.origins.dwarf.drill": "Dwarf activates drill"
 }

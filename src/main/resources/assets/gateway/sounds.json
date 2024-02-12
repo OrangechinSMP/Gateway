@@ -140,5 +140,13 @@
       "minecraft:mob/endermen/portal2"
     ],
     "subtitle": "subtitles.gateway.origins.endborn.unfocused_teleport"
+  },
+  "origins.dwarf.drill": {
+    "sounds": [
+      "gateway:origins/drill/use1",
+      "gateway:origins/drill/use2",
+      "gateway:origins/drill/use3"
+    ],
+    "subtitle": "subtitles.gateway.origins.dwarf.drill"
   }
 }
