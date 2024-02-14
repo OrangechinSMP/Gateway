@@ -1,9 +1,12 @@
 package hell0hd.gateway;
 
 import hell0hd.gateway.block.ModBlocks;
+import hell0hd.gateway.entity.ModEntities;
+import hell0hd.gateway.entity.render.OriginSkeletonRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -20,6 +23,7 @@ public class GatewayClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THE_GATEWAY, RenderLayer.getTranslucent());
+        EntityRendererRegistry.register(ModEntities.ORIGIN_SKELETON, OriginSkeletonRenderer::new);
 
 
         ClientPlayNetworking.registerGlobalReceiver(

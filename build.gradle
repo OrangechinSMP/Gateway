@@ -11,6 +11,25 @@ base {
 }
 
 repositories {
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	modImplementation "com.github.apace100:apoli:2.9.0"
+}
+
+repositories {
+	maven { url "https://maven.shedaniel.me/" }
+	maven { url "https://maven.terraformersmc.com/releases/" }
+}
+
+dependencies {
+	modApi("me.shedaniel.cloth:cloth-config-fabric:11.0.99") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+}
+
+repositories {
 
 	maven {
 
