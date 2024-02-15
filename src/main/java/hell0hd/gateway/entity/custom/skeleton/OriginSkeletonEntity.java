@@ -3,6 +3,7 @@ package hell0hd.gateway.entity.custom.skeleton;
 import hell0hd.gateway.Gateway;
 import hell0hd.gateway.entity.ModEntities;
 
+import hell0hd.gateway.sound.ModSounds;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -42,6 +43,7 @@ public class OriginSkeletonEntity extends SkeletonEntity {
     public static final String STRAY_CONVERSION_TIME_KEY = "StrayConversionTime";
     private int inPowderSnowTime;
     private int conversionTime;
+
 
     public OriginSkeletonEntity(EntityType<? extends OriginSkeletonEntity> entityType, World world) {
         super((EntityType<? extends SkeletonEntity>) ModEntities.ORIGIN_SKELETON, world);
@@ -204,7 +206,7 @@ public class OriginSkeletonEntity extends SkeletonEntity {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_SKELETON_AMBIENT;
+        return ModSounds.ORIGIN_SKELETON_EAT_IT;
     }
 
     @Override
