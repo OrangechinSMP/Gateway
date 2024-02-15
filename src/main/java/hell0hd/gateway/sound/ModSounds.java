@@ -28,6 +28,9 @@ public class ModSounds {
     public static SoundEvent ENDBORN_RAGE = registerSoundEvent("origins.endborn.rage");
     public static SoundEvent ENDBORN_UNFOCUSED_TELEPORT = registerSoundEvent("origins.endborn.unfocused_teleport");
     public static SoundEvent DWARF_DRILL = registerSoundEvent("origins.dwarf.drill");
+    public static SoundEvent UNDEAD_NECROMANCE = registerSoundEvent("origins.undead.necromance");
+
+    public static SoundEvent ORIGIN_SKELETON_EAT_IT = registerSoundEvent("origins.undead.necromance.skeletons.eat_it");
 
 
 

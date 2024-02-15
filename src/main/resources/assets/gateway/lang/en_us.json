@@ -39,5 +39,8 @@
   "subtitles.gateway.origins.endborn.unfocused_teleport": "Endborn randomly teleports",
   "subtitles.gateway.origins.endborn.zealot": "Endborn opens storage",
   "subtitles.gateway.origins.endborn.rage": "Endborn freaks out",
-  "subtitles.gateway.origins.dwarf.drill": "Dwarf activates drill"
+  "subtitles.gateway.origins.dwarf.drill": "Dwarf activates drill",
+  "subtitles.gateway.origins.undead.necromance": "King of the Undead raises the dead",
+  "entity.gateway.origin_skeleton": "Skeleton Minion",
+  "origins.undead.necromance.skeletons.eat_it": "Skeleton rattles"
 }
