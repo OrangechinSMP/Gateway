@@ -2,26 +2,29 @@ package hell0hd.gateway.item;
 
 import hell0hd.gateway.Gateway;
 import hell0hd.gateway.item.custom.BlindEyeItem;
+import hell0hd.gateway.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.datafixer.fix.BlockNameFix;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.MusicDiscItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
     public static final Item BLIND_EYE = registerItem("blind_eye", new BlindEyeItem(new FabricItemSettings()));
     public static final Item SCULK_POWDER = registerItem("sculk_powder", new Item(new FabricItemSettings()));
+    public static final Item MUSIC_DISC_DROOPY = registerItem("music_disc_droopy", new MusicDiscItem(11, ModSounds.MUSIC_DISC_DROOPY, new FabricItemSettings().maxCount(1).rarity(Rarity.RARE), 116));
 
     private static void addItemsToFunctionalItemGroup(FabricItemGroupEntries entries) {entries.add(BLIND_EYE);}
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLIND_EYE); entries.add(SCULK_POWDER);
     }
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
-        entries.add(BLIND_EYE);
+        entries.add(BLIND_EYE); entries.add(MUSIC_DISC_DROOPY);
     }
 
 

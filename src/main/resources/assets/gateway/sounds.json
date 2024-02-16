@@ -310,5 +310,13 @@
       "gateway:origins/undead/necromance/skeletons/eat_it"
     ],
     "subtitle": "origins.undead.necromance.skeletons.eat_it"
+  },
+  "music_disc.droopy": {
+    "sounds": [
+      {
+        "name": "gateway:records/droopy",
+        "stream": true
+      }
+    ]
   }
 }

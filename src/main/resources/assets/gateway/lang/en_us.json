@@ -42,5 +42,7 @@
   "subtitles.gateway.origins.dwarf.drill": "Dwarf activates drill",
   "subtitles.gateway.origins.undead.necromance": "King of the Undead raises the dead",
   "entity.gateway.origin_skeleton": "Skeleton Minion",
-  "origins.undead.necromance.skeletons.eat_it": "Skeleton rattles"
+  "origins.undead.necromance.skeletons.eat_it": "Skeleton rattles",
+  "item.gateway.music_disc_droopy.desc": "C418 - Droopy likes your Face",
+  "item.gateway.music_disc_droopy": "Music Disc"
 }
