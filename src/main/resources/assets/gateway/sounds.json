@@ -318,5 +318,13 @@
         "stream": true
       }
     ]
+  },
+  "music_disc.eighth": {
+    "sounds": [
+      {
+        "name": "gateway:records/eighth",
+        "stream": true
+      }
+    ]
   }
 }

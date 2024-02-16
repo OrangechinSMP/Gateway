@@ -31,6 +31,7 @@ public class ModSounds {
     public static SoundEvent UNDEAD_NECROMANCE = registerSoundEvent("origins.undead.necromance");
     public static SoundEvent ORIGIN_SKELETON_EAT_IT = registerSoundEvent("origins.undead.necromance.skeletons.eat_it");
     public static SoundEvent MUSIC_DISC_DROOPY = registerSoundEvent("music_disc.droopy");
+    public static SoundEvent MUSIC_DISC_EIGHTH = registerSoundEvent("music_disc.eighth");
 
 
 
