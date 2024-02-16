@@ -20,9 +20,6 @@
 		],
 		"client": [
 			"hell0hd.gateway.GatewayClient"
-		],
-		"fabric-datagen": [
-			"hell0hd.gateway.Gateway"
 		]
 	},
 	"mixins": [
