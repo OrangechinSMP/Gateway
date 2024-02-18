@@ -326,5 +326,13 @@
         "stream": true
       }
     ]
+  },
+  "music_disc.dog": {
+    "sounds": [
+      {
+        "name": "gateway:records/dog",
+        "stream": true
+      }
+    ]
   }
 }

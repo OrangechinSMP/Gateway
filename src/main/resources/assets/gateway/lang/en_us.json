@@ -45,6 +45,8 @@
   "origins.undead.necromance.skeletons.eat_it": "Skeleton rattles",
   "item.gateway.music_disc_droopy.desc": "C418 - Droopy likes your Face",
   "item.gateway.music_disc_droopy": "Music Disc",
-  "item.gateway.music_disc_eighth.desc": "Aaron Cherof - The Eighth House ",
-  "item.gateway.music_disc_eighth": "Music Disc"
+  "item.gateway.music_disc_eighth.desc": "Aaron Cherof - The Eighth House",
+  "item.gateway.music_disc_eighth": "Music Disc",
+  "item.gateway.music_disc_dog.desc": "C418 - Dog",
+  "item.gateway.music_disc_dog": "Music Disc"
 }
