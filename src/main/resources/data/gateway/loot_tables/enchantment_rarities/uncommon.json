@@ -1,0 +1,63 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "weight": 5,
+              "name": "minecraft:book",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_randomly",
+                  "enchantments": [
+                    "enchancement:amphibious",
+                    "guarding:barbed",
+                    "enchancement:bouncy",
+                    "enchancement:bury",
+                    "enchancement:disarm",
+                    "enchancement:frostbite",
+                    "enchancement:gale",
+                    "enchancement:grapple",
+                    "enchancement:molten",
+                    "minecraft:multishot",
+                    "enchancement:scatter",
+                    "enchancement:slide",
+                    "minecraft:soul_speed",
+                    "enchancement:strafe"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "weight": 1,
+              "name": "minecraft:book",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_randomly",
+                  "enchantments": [
+                    "enchancement:buoy",
+                    "enchancement:extracting",
+                    "minecraft:fire_aspect",
+                    "minecraft:flame",
+                    "minecraft:luck_of_the_sea",
+                    "enchancement:lumberjack",
+                    "minecraft:lure",
+                    "enchancement:perception",
+                    "minecraft:thorns",
+                    "enchancement:veil",
+                    "origins:water_protection"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
