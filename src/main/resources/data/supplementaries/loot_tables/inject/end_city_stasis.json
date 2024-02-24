@@ -15,8 +15,7 @@
                   "function": "minecraft:enchant_randomly",
                   "enchantments": [
                     "enchancement:strafe",
-                    "enchancement:leech",
-                    "enchancement:brimstone"
+                    "enchancement:leech"
                   ]
                 }
               ]

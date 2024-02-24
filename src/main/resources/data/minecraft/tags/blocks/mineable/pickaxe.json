@@ -4,6 +4,11 @@
     "gateway:stone_pillar",
     "gateway:polished_stone",
     "gateway:polished_stone_slab",
-    "gateway:polished_stone_stairs"
+    "gateway:polished_stone_stairs",
+    "minecraft:polished_tuff",
+    "minecraft:polished_tuff_slab",
+    "minecraft:polished_tuff_stairs",
+    "minecraft:tuff_slab",
+    "minecraft:tuff_stairs"
   ]
 }

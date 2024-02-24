@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "gateway:polished_stone_wall"
+    "gateway:polished_stone_wall",
+    "minecraft:polished_tuff_wall",
+    "minecraft:tuff_wall"
   ]
 }

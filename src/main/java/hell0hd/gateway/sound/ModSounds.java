@@ -1,6 +1,7 @@
 package hell0hd.gateway.sound;
 
 import hell0hd.gateway.Gateway;
+import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
@@ -33,6 +34,11 @@ public class ModSounds {
     public static SoundEvent MUSIC_DISC_DROOPY = registerSoundEvent("music_disc.droopy");
     public static SoundEvent MUSIC_DISC_EIGHTH = registerSoundEvent("music_disc.eighth");
     public static SoundEvent MUSIC_DISC_DOG = registerSoundEvent("music_disc.dog");
+    public static SoundEvent BLOCK_POLISHED_TUFF_BREAK = registerSoundEvent("block.polished_tuff.break");
+    public static SoundEvent BLOCK_POLISHED_TUFF_STEP = registerSoundEvent("block.polished_tuff.step");
+    public static SoundEvent BLOCK_POLISHED_TUFF_PLACE = registerSoundEvent("block.polished_tuff.place");
+    public static SoundEvent BLOCK_POLISHED_TUFF_HIT = registerSoundEvent("block.polished_tuff.hit");
+    public static SoundEvent BLOCK_POLISHED_TUFF_FALL = registerSoundEvent("block.polished_tuff.fall");
 
 
 
@@ -41,6 +47,7 @@ public class ModSounds {
         Identifier id = new Identifier(Gateway.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
+
 
     public static void initializeSounds() {
         Gateway.LOGGER.info("Registering " + Gateway.MOD_ID + " Sounds");

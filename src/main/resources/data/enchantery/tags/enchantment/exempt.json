@@ -1,6 +1,7 @@
 {
     "replace": true,
     "values": [
-      "supplementaries:stasis"
+      "supplementaries:stasis",
+      "enchancement:brimstone"
     ]
   }
