@@ -470,5 +470,18 @@
       }
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "origins.endborn.teleport_fail": {
+    "sounds": [
+      {
+        "name": "minecraft:mob/endermen/portal",
+        "pitch": 0.5
+      },
+      {
+        "name": "minecraft:mob/endermen/portal2",
+        "pitch": 0.5
+      }
+    ],
+    "subtitle": "subtitles.gateway.origins.endborn.teleport_fail"
   }
 }

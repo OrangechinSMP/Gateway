@@ -1,7 +1,6 @@
 package hell0hd.gateway.sound;
 
 import hell0hd.gateway.Gateway;
-import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
@@ -39,6 +38,7 @@ public class ModSounds {
     public static SoundEvent BLOCK_POLISHED_TUFF_PLACE = registerSoundEvent("block.polished_tuff.place");
     public static SoundEvent BLOCK_POLISHED_TUFF_HIT = registerSoundEvent("block.polished_tuff.hit");
     public static SoundEvent BLOCK_POLISHED_TUFF_FALL = registerSoundEvent("block.polished_tuff.fall");
+    public static SoundEvent ENBORN_TELEPORT_FAIL = registerSoundEvent("origins.endborn.teleport_fail");
 
 
 

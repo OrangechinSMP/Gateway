@@ -37,6 +37,7 @@
   "subtitles.gateway.origins.water_elemental.waterbolt.hit": "Waterbolt hits something",
   "subtitles.gateway.origins.endborn.focused_teleport": "Endborn teleports",
   "subtitles.gateway.origins.endborn.unfocused_teleport": "Endborn randomly teleports",
+  "subtitles.gateway.origins.endborn.teleport_fail": "Endborn fails to teleport",
   "subtitles.gateway.origins.endborn.zealot": "Endborn opens storage",
   "subtitles.gateway.origins.endborn.rage": "Endborn freaks out",
   "subtitles.gateway.origins.dwarf.drill": "Dwarf activates drill",
