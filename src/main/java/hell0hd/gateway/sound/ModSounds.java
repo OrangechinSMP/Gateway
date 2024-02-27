@@ -40,6 +40,16 @@ public class ModSounds {
     public static SoundEvent BLOCK_POLISHED_TUFF_FALL = registerSoundEvent("block.polished_tuff.fall");
     public static SoundEvent ENBORN_TELEPORT_FAIL = registerSoundEvent("origins.endborn.teleport_fail");
     public static SoundEvent ASSASSIN_DASH = registerSoundEvent("origins.assassin.dash");
+    public static final SoundEvent BLOCK_COPPER_GRATE_BREAK = registerSoundEvent("block.copper_grate.break");
+    public static final SoundEvent BLOCK_COPPER_GRATE_STEP = registerSoundEvent("block.copper_grate.step");
+    public static final SoundEvent BLOCK_COPPER_GRATE_PLACE = registerSoundEvent("block.copper_grate.place");
+    public static final SoundEvent BLOCK_COPPER_GRATE_HIT = registerSoundEvent("block.copper_grate.hit");
+    public static final SoundEvent BLOCK_COPPER_GRATE_FALL = registerSoundEvent("block.copper_grate.fall");
+    public static final SoundEvent BLOCK_TUFF_BRICKS_BREAK = registerSoundEvent("block.tuff_bricks.break");
+    public static final SoundEvent BLOCK_TUFF_BRICKS_FALL = registerSoundEvent("block.tuff_bricks.fall");
+    public static final SoundEvent BLOCK_TUFF_BRICKS_HIT = registerSoundEvent("block.tuff_bricks.hit");
+    public static final SoundEvent BLOCK_TUFF_BRICKS_PLACE = registerSoundEvent("block.tuff_bricks.place");
+    public static final SoundEvent BLOCK_TUFF_BRICKS_STEP = registerSoundEvent("block.tuff_bricks.step");
 
 
 

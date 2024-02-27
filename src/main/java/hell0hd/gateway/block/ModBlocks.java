@@ -22,8 +22,7 @@ import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-import static net.minecraft.block.Blocks.END_PORTAL_FRAME;
-import static net.minecraft.block.Blocks.TUFF;
+import static net.minecraft.block.Blocks.*;
 
 public class ModBlocks {
     public static final Block THE_GATEWAY = registerBlock("the_gateway",
@@ -70,6 +69,33 @@ public class ModBlocks {
     public static final Block TUFF_SLAB = registerMinecraftBlock(new Identifier("tuff_slab"), new SlabBlock(AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
     public static final Block TUFF_STAIRS = registerMinecraftBlock(new Identifier("tuff_stairs"), new StairsBlock(TUFF.getDefaultState(), AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
     public static final Block TUFF_WALL = registerMinecraftBlock(new Identifier("tuff_wall"), new WallBlock(AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block CHISELED_TUFF = registerMinecraftBlock(new Identifier("chiseled_tuff"), new Block(AbstractBlock.Settings.copy(TUFF)));
+    public static final Block CHISELED_COPPER = registerMinecraftBlock(new Identifier("chiseled_copper"), new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(COPPER_BLOCK)));
+
+    public static final Block EXPOSED_CHISELED_COPPER = registerMinecraftBlock(new Identifier("exposed_chiseled_copper"), new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(COPPER_BLOCK)));
+
+    public static final Block WEATHERED_CHISELED_COPPER = registerMinecraftBlock(new Identifier("weathered_chiseled_copper"), new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(COPPER_BLOCK)));
+
+    public static final Block OXIDIZED_CHISELED_COPPER = registerMinecraftBlock(new Identifier("oxidized_chiseled_copper"), new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(COPPER_BLOCK)));
+
+    public static final Block WAXED_CHISELED_COPPER = registerMinecraftBlock(new Identifier("waxed_chiseled_copper"), new Block(AbstractBlock.Settings.copy(CHISELED_COPPER)));
+
+    public static final Block WAXED_EXPOSED_CHISELED_COPPER = registerMinecraftBlock(new Identifier("waxed_exposed_chiseled_copper"), new Block(AbstractBlock.Settings.copy(EXPOSED_CHISELED_COPPER)));
+
+    public static final Block WAXED_WEATHERED_CHISELED_COPPER = registerMinecraftBlock(new Identifier("waxed_weathered_chiseled_copper"), new Block(AbstractBlock.Settings.copy(WEATHERED_CHISELED_COPPER)));
+
+    public static final Block WAXED_OXIDIZED_CHISELED_COPPER = registerMinecraftBlock(new Identifier("waxed_oxidized_chiseled_copper"), new Block(AbstractBlock.Settings.copy(OXIDIZED_CHISELED_COPPER)));
+
+    public static final Block TUFF_BRICKS = registerMinecraftBlock(new Identifier("tuff_bricks"), new Block(AbstractBlock.Settings.copy(TUFF).sounds(ModBlockSoundGroup.TUFF_BRICKS)));
+
+    public static final Block TUFF_BRICK_SLAB = registerMinecraftBlock(new Identifier("tuff_brick_slab"), new SlabBlock(AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block TUFF_BRICK_STAIRS = registerMinecraftBlock(new Identifier("tuff_brick_stairs"), new StairsBlock(TUFF.getDefaultState(), AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block TUFF_BRICK_WALL = registerMinecraftBlock(new Identifier("tuff_brick_wall"), new WallBlock(AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block CHISELED_TUFF_BRICKS = registerMinecraftBlock(new Identifier("chiseled_tuff_bricks"), new Block(AbstractBlock.Settings.copy(TUFF)));
+
+
+
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -108,6 +134,20 @@ public class ModBlocks {
             entries.add(ModBlocks.TUFF_SLAB);
             entries.add(ModBlocks.TUFF_STAIRS);
             entries.add(ModBlocks.TUFF_WALL);
+            entries.add(ModBlocks.CHISELED_COPPER);
+            entries.add(ModBlocks.EXPOSED_CHISELED_COPPER);
+            entries.add(ModBlocks.WEATHERED_CHISELED_COPPER);
+            entries.add(ModBlocks.OXIDIZED_CHISELED_COPPER);
+            entries.add(ModBlocks.WAXED_CHISELED_COPPER);
+            entries.add(ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
+            entries.add(ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
+            entries.add(ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
+            entries.add(ModBlocks.CHISELED_TUFF);
+            entries.add(ModBlocks.TUFF_BRICKS);
+            entries.add(ModBlocks.TUFF_BRICK_SLAB);
+            entries.add(ModBlocks.TUFF_BRICK_STAIRS);
+            entries.add(ModBlocks.TUFF_BRICK_WALL);
+            entries.add(ModBlocks.CHISELED_TUFF_BRICKS);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(entries -> {
             entries.add(ModBlocks.THE_GATEWAY);
