@@ -483,5 +483,25 @@
       }
     ],
     "subtitle": "subtitles.gateway.origins.endborn.teleport_fail"
+  },
+  "origins.assassin.dash": {
+    "sounds": [
+      {
+        "name": "block/sand/break1"
+      },
+      {
+        "name": "block/sand/break2"
+      },
+      {
+        "name": "block/sand/break3"
+      },
+      {
+        "name": "block/sand/break4"
+      },
+      {
+        "name": "block/sand/break5"
+      }
+    ],
+    "subtitle": "subtitles.gateway.origins.assassin.dash"
   }
 }

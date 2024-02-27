@@ -39,6 +39,7 @@ public class ModSounds {
     public static SoundEvent BLOCK_POLISHED_TUFF_HIT = registerSoundEvent("block.polished_tuff.hit");
     public static SoundEvent BLOCK_POLISHED_TUFF_FALL = registerSoundEvent("block.polished_tuff.fall");
     public static SoundEvent ENBORN_TELEPORT_FAIL = registerSoundEvent("origins.endborn.teleport_fail");
+    public static SoundEvent ASSASSIN_DASH = registerSoundEvent("origins.assassin.dash");
 
 
 
