@@ -88,10 +88,10 @@ public class ModBlocks {
 
     public static final Block TUFF_BRICKS = registerMinecraftBlock(new Identifier("tuff_bricks"), new Block(AbstractBlock.Settings.copy(TUFF).sounds(ModBlockSoundGroup.TUFF_BRICKS)));
 
-    public static final Block TUFF_BRICK_SLAB = registerMinecraftBlock(new Identifier("tuff_brick_slab"), new SlabBlock(AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
-    public static final Block TUFF_BRICK_STAIRS = registerMinecraftBlock(new Identifier("tuff_brick_stairs"), new StairsBlock(TUFF.getDefaultState(), AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
-    public static final Block TUFF_BRICK_WALL = registerMinecraftBlock(new Identifier("tuff_brick_wall"), new WallBlock(AbstractBlock.Settings.copy(TUFF).requiresTool().strength(1.5F, 6.0F)));
-    public static final Block CHISELED_TUFF_BRICKS = registerMinecraftBlock(new Identifier("chiseled_tuff_bricks"), new Block(AbstractBlock.Settings.copy(TUFF)));
+    public static final Block TUFF_BRICK_SLAB = registerMinecraftBlock(new Identifier("tuff_brick_slab"), new SlabBlock(AbstractBlock.Settings.copy(ModBlocks.TUFF_BRICKS).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block TUFF_BRICK_STAIRS = registerMinecraftBlock(new Identifier("tuff_brick_stairs"), new StairsBlock(ModBlocks.TUFF_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(ModBlocks.TUFF_BRICKS).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block TUFF_BRICK_WALL = registerMinecraftBlock(new Identifier("tuff_brick_wall"), new WallBlock(AbstractBlock.Settings.copy(ModBlocks.TUFF_BRICKS).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block CHISELED_TUFF_BRICKS = registerMinecraftBlock(new Identifier("chiseled_tuff_bricks"), new Block(AbstractBlock.Settings.copy(ModBlocks.TUFF_BRICKS)));
 
 
 
