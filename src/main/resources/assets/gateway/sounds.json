@@ -493,6 +493,14 @@
     ],
     "subtitle": "subtitles.gateway.origins.assassin.dash"
   },
+  "origins.assassin.grapple": {
+    "sounds": [
+      "gateway:origins/assassin/grapple/fire1",
+      "gateway:origins/assassin/grapple/fire2",
+      "gateway:origins/assassin/grapple/fire3"
+    ],
+    "subtitle": "subtitles.gateway.origins.assassin.grapple"
+  },
   "block.tuff_bricks.break": {
     "sounds": [
       "minecraft:block/tuff_bricks/place1",
