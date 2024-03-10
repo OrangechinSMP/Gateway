@@ -51,5 +51,9 @@
   "item.gateway.music_disc_dog.desc": "C418 - Dog",
   "item.gateway.music_disc_dog": "Music Disc",
   "subtitles.gateway.origins.assassin.dash": "Assassin dashes",
-  "subtitles.gateway.origins.assassin.grapple": "Assassin fires grapple"
+  "subtitles.gateway.origins.assassin.grapple": "Assassin fires grapple",
+  "subtitles.gateway.origins.feline.leap": "Fearless Feline leaps",
+  "subtitles.gateway.origins.feline.lives.last_life": "You're not living up to the legend, gata...",
+  "subtitles.gateway.origins.feline.lives.life_lost": "Fearless Feline loses a life",
+  "subtitles.gateway.origins.feline.revive.revive": "Fearless Feline returns from the dead"
 }

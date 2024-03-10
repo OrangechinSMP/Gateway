@@ -40,7 +40,6 @@ public class ModSounds {
     public static SoundEvent BLOCK_POLISHED_TUFF_FALL = registerSoundEvent("block.polished_tuff.fall");
     public static SoundEvent ENBORN_TELEPORT_FAIL = registerSoundEvent("origins.endborn.teleport_fail");
     public static SoundEvent ASSASSIN_DASH = registerSoundEvent("origins.assassin.dash");
-
     public static SoundEvent ASSASSIN_GRAPPLE = registerSoundEvent("origins.assassin.grapple");
     public static final SoundEvent BLOCK_COPPER_GRATE_BREAK = registerSoundEvent("block.copper_grate.break");
     public static final SoundEvent BLOCK_COPPER_GRATE_STEP = registerSoundEvent("block.copper_grate.step");
@@ -52,6 +51,11 @@ public class ModSounds {
     public static final SoundEvent BLOCK_TUFF_BRICKS_HIT = registerSoundEvent("block.tuff_bricks.hit");
     public static final SoundEvent BLOCK_TUFF_BRICKS_PLACE = registerSoundEvent("block.tuff_bricks.place");
     public static final SoundEvent BLOCK_TUFF_BRICKS_STEP = registerSoundEvent("block.tuff_bricks.step");
+    public static SoundEvent ORIGINS_FELINE_LIVES_LIFE_LOST = registerSoundEvent("origins.feline.lives.life_lost");
+    public static SoundEvent ORIGINS_FELINE_LIVES_LAST_LIFE = registerSoundEvent("origins.feline.lives.last_life");
+    public static SoundEvent ORIGINS_FELINE_LEAP = registerSoundEvent("origins.feline.leap");
+
+    public static SoundEvent ORIGINS_FELINE_REVIVE_REVIVE = registerSoundEvent("origins.feline.revive.revive");
 
 
 

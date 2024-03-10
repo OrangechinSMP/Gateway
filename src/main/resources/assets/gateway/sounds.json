@@ -552,5 +552,32 @@
       "minecraft:block/tuff_bricks/step6"
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "origins.feline.leap": {
+    "sounds": [
+      "dig/sand1",
+      "dig/sand2",
+      "dig/sand3",
+      "dig/sand4"
+    ],
+    "subtitle": "subtitles.gateway.origins.feline.leap"
+  },
+  "origins.feline.lives.last_life": {
+    "sounds": [
+      "gateway:origins/feline/lives/last_life"
+    ],
+    "subtitle": "subtitles.gateway.origins.feline.lives.last_life"
+  },
+  "origins.feline.lives.life_lost": {
+    "sounds": [
+      "gateway:origins/feline/lives/life_lost"
+    ],
+    "subtitle": "subtitles.gateway.origins.feline.lives.life_lost"
+  },
+  "origins.feline.revive.revive": {
+    "sounds": [
+      "gateway:origins/feline/revive/revive"
+    ],
+    "subtitle": "subtitles.gateway.origins.feline.revive.revive"
   }
 }
