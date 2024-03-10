@@ -579,5 +579,31 @@
       "gateway:origins/feline/revive/revive"
     ],
     "subtitle": "subtitles.gateway.origins.feline.revive.revive"
+  },
+  "origins.undead.phantomize": {
+    "sounds": [
+      {
+        "name": "mob/evocation_illager/cast1",
+        "pitch": 2.0
+      },
+      {
+        "name": "mob/evocation_illager/cast1",
+        "pitch": 2.0
+      }
+    ],
+    "subtitle": "subtitles.gateway.origins.undead.phantomize"
+  },
+  "origins.feline.phantomize": {
+    "sounds": [
+      {
+        "name": "mob/evocation_illager/cast1",
+        "pitch": 2.0
+      },
+      {
+        "name": "mob/evocation_illager/cast1",
+        "pitch": 2.0
+      }
+    ],
+    "subtitle": "subtitles.gateway.origins.feline.phantomize"
   }
 }
