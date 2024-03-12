@@ -57,6 +57,10 @@ public class ModSounds {
 
     public static SoundEvent ORIGINS_FELINE_REVIVE_REVIVE = registerSoundEvent("origins.feline.revive.revive");
 
+    public static SoundEvent ORIGINS_FELINE_PHANTOMIZE = registerSoundEvent("origins.feline.phantomize");
+
+    public static SoundEvent ORIGINS_UNDEAD_PHANTOMIZE = registerSoundEvent("origins.undead.phantomize");;
+
 
 
 
