@@ -57,5 +57,8 @@
   "subtitles.gateway.origins.feline.lives.life_lost": "Fearless Feline loses a life",
   "subtitles.gateway.origins.feline.revive.revive": "Fearless Feline returns from the dead",
   "subtitles.gateway.origins.feline.phantomize": "Undead Hero phantomizes",
-  "subtitles.gateway.origins.undead.phantomize": "King of the Undead phantomizes"
+  "subtitles.gateway.origins.undead.phantomize": "King of the Undead phantomizes",
+  "subtitles.gateway.origins.worm.splice": "Sandworm breaks through ground",
+  "subtitles.gateway.origins.worm.screech": "Sandworm screeches",
+  "subtitles.gateway.origins.speedster.zip": "Speedster zips"
 }

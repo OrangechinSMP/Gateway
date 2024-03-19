@@ -605,5 +605,27 @@
       }
     ],
     "subtitle": "subtitles.gateway.origins.feline.phantomize"
+  },
+  "origins.worm.splice": {
+    "sounds": [
+      "gateway:origins/worm/splicer/splice1",
+      "gateway:origins/worm/splicer/splice2",
+      "gateway:origins/worm/splicer/splice3"
+    ],
+    "subtitle": "subtitles.gateway.origins.worm.splice"
+  },
+  "origins.worm.screech": {
+    "sounds": [
+      "gateway:origins/worm/screech/scream1",
+      "gateway:origins/worm/screech/scream2",
+      "gateway:origins/worm/screech/scream3"
+    ],
+    "subtitle": "subtitles.gateway.origins.worm.screech"
+  },
+  "origins.speedster.zip": {
+    "sounds": [
+      "gateway:origins/speedster/zip"
+    ],
+    "subtitle": "subtitles.gateway.origins.speedster.zip"
   }
 }

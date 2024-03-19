@@ -59,7 +59,13 @@ public class ModSounds {
 
     public static SoundEvent ORIGINS_FELINE_PHANTOMIZE = registerSoundEvent("origins.feline.phantomize");
 
-    public static SoundEvent ORIGINS_UNDEAD_PHANTOMIZE = registerSoundEvent("origins.undead.phantomize");;
+    public static SoundEvent ORIGINS_UNDEAD_PHANTOMIZE = registerSoundEvent("origins.undead.phantomize");
+
+    public static SoundEvent ORIGINS_WORM_SPLICE = registerSoundEvent("origins.worm.splice");
+
+    public static SoundEvent ORIGINS_WORM_SCREECH = registerSoundEvent("origins.worm.screech");
+
+    public static SoundEvent ORIGINS_SPEEDSTER_ZIP = registerSoundEvent("origins.speedster.zip");
 
 
 
