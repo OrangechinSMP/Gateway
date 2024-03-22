@@ -60,5 +60,8 @@
   "subtitles.gateway.origins.undead.phantomize": "King of the Undead phantomizes",
   "subtitles.gateway.origins.worm.splice": "Sandworm breaks through ground",
   "subtitles.gateway.origins.worm.screech": "Sandworm screeches",
-  "subtitles.gateway.origins.speedster.zip": "Speedster zips"
+  "subtitles.gateway.origins.speedster.zip": "Speedster zips",
+  "subtitles.gateway.origins.skywarrior.time_stop": "Skywarrior stops time",
+  "subtitles.gateway.origins.skywarrior.cyromancer.shoot": "Ice Beam shot",
+  "subtitles.gateway.origins.skywarrior.cyromancer.hit": "Ice Beam hits something"
 }

@@ -627,5 +627,23 @@
       "gateway:origins/speedster/zip"
     ],
     "subtitle": "subtitles.gateway.origins.speedster.zip"
+  },
+  "origins.skywarrior.time_stop": {
+    "sounds": [
+      "gateway:origins/skywarrior/time_stop"
+    ],
+    "subtitle": "subtitles.gateway.origins.skywarrior.time_stop"
+  },
+  "origins.skywarrior.cyromancer.shoot": {
+    "sounds": [
+      "gateway:origins/skywarrior/cyromancer/shoot"
+    ],
+    "subtitle": "subtitles.gateway.origins.skywarrior.cyromancer.shoot"
+  },
+  "origins.skywarrior.cyromancer.hit": {
+    "sounds": [
+      "gateway:origins/skywarrior/cyromancer/hit"
+    ],
+    "subtitle": "subtitles.gateway.origins.skywarrior.cyromancer.hit"
   }
 }

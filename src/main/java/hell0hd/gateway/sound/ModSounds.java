@@ -54,18 +54,15 @@ public class ModSounds {
     public static SoundEvent ORIGINS_FELINE_LIVES_LIFE_LOST = registerSoundEvent("origins.feline.lives.life_lost");
     public static SoundEvent ORIGINS_FELINE_LIVES_LAST_LIFE = registerSoundEvent("origins.feline.lives.last_life");
     public static SoundEvent ORIGINS_FELINE_LEAP = registerSoundEvent("origins.feline.leap");
-
     public static SoundEvent ORIGINS_FELINE_REVIVE_REVIVE = registerSoundEvent("origins.feline.revive.revive");
-
     public static SoundEvent ORIGINS_FELINE_PHANTOMIZE = registerSoundEvent("origins.feline.phantomize");
-
     public static SoundEvent ORIGINS_UNDEAD_PHANTOMIZE = registerSoundEvent("origins.undead.phantomize");
-
     public static SoundEvent ORIGINS_WORM_SPLICE = registerSoundEvent("origins.worm.splice");
-
     public static SoundEvent ORIGINS_WORM_SCREECH = registerSoundEvent("origins.worm.screech");
-
     public static SoundEvent ORIGINS_SPEEDSTER_ZIP = registerSoundEvent("origins.speedster.zip");
+    public static SoundEvent ORIGINS_SKYWARRIOR_TIME_STOP = registerSoundEvent("origins.skywarrior.time_stop");
+    public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_SHOOT = registerSoundEvent("origins.skywarrior_cyromancer_shoot");
+    public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_HIT = registerSoundEvent("origins.skywarrior_cyromancer_hit");
 
 
 
