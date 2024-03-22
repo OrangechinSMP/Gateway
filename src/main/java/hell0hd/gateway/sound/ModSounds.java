@@ -61,8 +61,8 @@ public class ModSounds {
     public static SoundEvent ORIGINS_WORM_SCREECH = registerSoundEvent("origins.worm.screech");
     public static SoundEvent ORIGINS_SPEEDSTER_ZIP = registerSoundEvent("origins.speedster.zip");
     public static SoundEvent ORIGINS_SKYWARRIOR_TIME_STOP = registerSoundEvent("origins.skywarrior.time_stop");
-    public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_SHOOT = registerSoundEvent("origins.skywarrior_cyromancer_shoot");
-    public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_HIT = registerSoundEvent("origins.skywarrior_cyromancer_hit");
+    public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_SHOOT = registerSoundEvent("origins.skywarrior.cyromancer.shoot");
+    public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_HIT = registerSoundEvent("origins.skywarrior.cyromancer.hit");
 
 
 
