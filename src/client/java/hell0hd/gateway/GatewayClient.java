@@ -3,8 +3,10 @@ package hell0hd.gateway;
 import hell0hd.gateway.block.ModBlocks;
 import hell0hd.gateway.entity.ModEntities;
 import hell0hd.gateway.entity.render.OriginSkeletonRenderer;
+import hell0hd.gateway.item.ModItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
@@ -18,6 +20,8 @@ import static hell0hd.gateway.Gateway.MOD_ID;
 // heeeeelp theres a man in y house
 
 public class GatewayClient implements ClientModInitializer {
+    public static boolean render_chat = false;
+    public static boolean allow_chat_usage = false;
 
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     @Override
@@ -33,5 +37,10 @@ public class GatewayClient implements ClientModInitializer {
                     client.inGameHud.setTitle(Text.literal("\uE100"));
                 }
         );
+        ClientTickEvents.END_CLIENT_TICK.register((client) -> {
+            if (client.player != null) {
+                allow_chat_usage = render_chat = client.player.getMainHandStack().getItem() == ModItems.COMMUNICATOR || client.player.isCreative() || client.player.isSpectator();
+            }
+        });
     }
 }

@@ -63,5 +63,6 @@
   "subtitles.gateway.origins.speedster.zip": "Speedster zips",
   "subtitles.gateway.origins.skywarrior.time_stop": "Skywarrior stops time",
   "subtitles.gateway.origins.skywarrior.cyromancer.shoot": "Ice Beam shot",
-  "subtitles.gateway.origins.skywarrior.cyromancer.hit": "Ice Beam hits something"
+  "subtitles.gateway.origins.skywarrior.cyromancer.hit": "Ice Beam hits something",
+  "item.gateway.communicator": "Communicator"
 }

@@ -5,7 +5,9 @@
   "client": [
     "HudMixin",
     "InGameHudMixin",
-    "TitleMixin"
+    "TitleMixin",
+    "MinecraftClientMixin",
+    "ChatHudMixin"
   ],
   "injectors": {
     "defaultRequire": 1
