@@ -5,7 +5,8 @@
   "mixins": [
     "BrewingRecipeRegistryMixin",
     "ExampleMixin",
-    "PotionItemMixin"
+    "PotionItemMixin",
+    "AbstractMinecartEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
