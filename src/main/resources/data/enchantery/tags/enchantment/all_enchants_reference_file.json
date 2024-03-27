@@ -87,6 +87,11 @@
       "guarding:pummeling",
       "supplementaries:stasis",
       "origins:water_protection",
-      "enchancement:torch"
+      "enchancement:torch",
+      "charm:aerial_affinity",
+      "charm:collection",
+      "enchancement:adrenaline",
+      "moborigins:ground_spikes",
+      "moborigins:heat_protection"
     ]
   }

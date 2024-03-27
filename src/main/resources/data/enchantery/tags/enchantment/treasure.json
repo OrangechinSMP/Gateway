@@ -32,7 +32,7 @@
       "enchancement:veil",
       "enchancement:wardenspine",
       "enchancement:scatter",
-
+      "enchancement:brimstone",
       "enchancement:perception",
       "enchancement:buoy",
       "enchancement:berserk",
@@ -42,7 +42,8 @@
       "enchancement:disarm",
       "enchancement:grapple",
       "enchancement:amphibious",
-      "enchancement:slide"
+      "enchancement:slide",
+      "enchancement:adrenaline"
     ]
   }
 

@@ -162,7 +162,8 @@
                     "enchancement:molten",
                     "minecraft:flame",
                     "minecraft:fire_aspect",
-                    "origins:water_protection"
+                    "origins:water_protection",
+                    "enchancement:brimstone"
                   ]
                 }
               ]
@@ -188,7 +189,8 @@
                     "enchancement:scatter",
                     "enchancement:slide",
                     "minecraft:soul_speed",
-                    "enchancement:strafe"
+                    "enchancement:strafe",
+                    "enchancement:adrenaline"
                   ]
                 }
               ]

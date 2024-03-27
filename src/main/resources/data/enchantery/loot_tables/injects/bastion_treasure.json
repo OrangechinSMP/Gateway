@@ -15,7 +15,8 @@
                   "function": "minecraft:enchant_randomly",
                   "enchantments": [
                     "minecraft:flame",
-                    "minecraft:fire_aspect"
+                    "minecraft:fire_aspect",
+                    "enchancement:adrenaline"
                   ]
                 }
               ]

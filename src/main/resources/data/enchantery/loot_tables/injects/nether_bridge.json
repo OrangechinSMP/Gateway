@@ -16,7 +16,8 @@
                   "enchantments": [
                     "minecraft:flame",
                     "minecraft:fire_aspect",
-                    "minecraft:soul_speed"
+                    "minecraft:soul_speed",
+                    "enchancement:brimstone"
                   ]
                 }
               ]

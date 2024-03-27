@@ -394,7 +394,8 @@
                     "minecraft:fire_aspect",
                     "minecraft:flame",
                     "enchancement:molten",
-                    "minecraft:soul_speed"
+                    "minecraft:soul_speed",
+                    "enchancement:adrenaline"
                   ]
                 }
               ]
@@ -420,7 +421,8 @@
                     "enchancement:scatter",
                     "enchancement:slide",
                     "minecraft:soul_speed",
-                    "enchancement:strafe"
+                    "enchancement:strafe",
+                    "enchancement:adrenaline"
                   ]
                 }
               ]

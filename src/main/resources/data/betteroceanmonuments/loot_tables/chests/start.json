@@ -42,7 +42,8 @@
                     "enchantery:soulbound",
                     "enchancement:scooping",
                     "minecraft:riptide",
-                    "enchancement:phasing"
+                    "enchancement:phasing",
+                    "enchancement:brimstone"
                   ]
                 }
               ]
@@ -68,7 +69,8 @@
                     "enchancement:scatter",
                     "enchancement:slide",
                     "minecraft:soul_speed",
-                    "enchancement:strafe"
+                    "enchancement:strafe",
+                    "enchancement:adrenaline"
                   ]
                 }
               ]

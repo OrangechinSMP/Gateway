@@ -28,6 +28,8 @@
         "minecraft:feather_falling",
         "minecraft:frost_walker",
         "enchancement:torch",
-        "minecraft:respiration"
+        "minecraft:respiration",
+        "charm:collection",
+        "charm:aerial_affinity"
     ]
 }
