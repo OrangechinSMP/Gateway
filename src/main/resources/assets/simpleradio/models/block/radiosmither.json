@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"3": "simpleradio:block/radio_smither",
+		"4": "simpleradio:block/radio_smither_front",
+		"5": "simpleradio:block/radio_smither_side"
+	},
+	"elements": [
+		{
+			"from": [1, -1, 1],
+			"to": [15, 10, 15],
+			"faces": {
+				"north": {"uv": [1, 5, 15, 16], "texture": "#4"},
+				"east": {"uv": [16, 5, 0, 16], "texture": "#5"},
+				"south": {"uv": [15, 5, 1, 16], "texture": "#4"},
+				"west": {"uv": [0, 5, 16, 16], "texture": "#5"},
+				"up": {"uv": [15, 15, 1, 1], "texture": "#3"},
+				"down": {"uv": [15, 1, 1, 15], "texture": "#3"}
+			}
+		}
+	]
+}
