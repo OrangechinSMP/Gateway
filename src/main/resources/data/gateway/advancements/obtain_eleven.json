@@ -1,0 +1,41 @@
+{
+    "display": {
+        "title": {
+            "text": "Restoration Project"
+        },
+        "description": {
+            "text": "Restore the broken Eleven disc"
+        },
+        "icon": {
+            "item": "gateway:music_disc_eleven"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "requirements": [
+        [
+            "eleven"
+        ]
+    ],
+    "parent": "minecraft:adventure/root",
+    "criteria": {
+        "eleven": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "gateway:music_disc_eleven"
+                        ]
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "rewards": {
+        "experience": 3
+    }
+}
