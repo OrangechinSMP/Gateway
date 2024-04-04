@@ -33,6 +33,7 @@ public class ModSounds {
     public static SoundEvent MUSIC_DISC_DROOPY = registerSoundEvent("music_disc.droopy");
     public static SoundEvent MUSIC_DISC_EIGHTH = registerSoundEvent("music_disc.eighth");
     public static SoundEvent MUSIC_DISC_DOG = registerSoundEvent("music_disc.dog");
+    public static SoundEvent MUSIC_DISC_ELEVEN = registerSoundEvent("music_disc.eleven");
     public static SoundEvent BLOCK_POLISHED_TUFF_BREAK = registerSoundEvent("block.polished_tuff.break");
     public static SoundEvent BLOCK_POLISHED_TUFF_STEP = registerSoundEvent("block.polished_tuff.step");
     public static SoundEvent BLOCK_POLISHED_TUFF_PLACE = registerSoundEvent("block.polished_tuff.place");
@@ -63,6 +64,16 @@ public class ModSounds {
     public static SoundEvent ORIGINS_SKYWARRIOR_TIME_STOP = registerSoundEvent("origins.skywarrior.time_stop");
     public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_SHOOT = registerSoundEvent("origins.skywarrior.cyromancer.shoot");
     public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_HIT = registerSoundEvent("origins.skywarrior.cyromancer.hit");
+
+    public static SoundEvent ORIGINS_WIZARD_DOLPHIN = registerSoundEvent("origins.wizard.dolphin");
+
+    public static SoundEvent ORIGINS_WIZARD_ELDRITCH_SHOOT = registerSoundEvent("origins.wizard.eldritch.shoot");
+
+    public static SoundEvent ORIGINS_WIZARD_ELDRITCH_HIT = registerSoundEvent("origins.wizard.eldritch.hit");
+
+    public static SoundEvent ORIGINS_WIZARD_BOOST = registerSoundEvent("origins.wizard.boost");
+
+    public static SoundEvent ORIGINS_WIZARD_BLESSING = registerSoundEvent("origins.wizard.blessing");
 
 
 
