@@ -335,6 +335,14 @@
       }
     ]
   },
+  "music_disc.eleven": {
+    "sounds": [
+      {
+        "name": "gateway:records/eleven",
+        "stream": true
+      }
+    ]
+  },
   "block.polished_tuff.break": {
     "sounds": [
       {
@@ -645,5 +653,35 @@
       "gateway:origins/skywarrior/cyromancer/hit"
     ],
     "subtitle": "subtitles.gateway.origins.skywarrior.cyromancer.hit"
+  },
+  "origins.wizard.dolphin": {
+    "sounds": [
+      "gateway:origins/wizard/dolphin"
+    ],
+    "subtitle": "subtitles.gateway.origins.wizard.dolphin"
+  },
+  "origins.wizard.eldritch.shoot": {
+    "sounds": [
+      "gateway:origins/wizard/eldritch/shoot"
+    ],
+    "subtitle": "subtitles.gateway.origins.wizard.eldritch.shoot"
+  },
+  "origins.wizard.eldritch.hit": {
+    "sounds": [
+      "gateway:origins/wizard/eldritch/hit"
+    ],
+    "subtitle": "subtitles.gateway.origins.wizard.eldritch.hit"
+  },
+  "origins.wizard.boost": {
+    "sounds": [
+      "gateway:origins/wizard/boost"
+    ],
+    "subtitle": "subtitles.gateway.origins.wizard.boost"
+  },
+  "origins.wizard.blessing": {
+    "sounds": [
+      "gateway:origins/wizard/blessing"
+    ],
+    "subtitle": "subtitles.gateway.origins.wizard.blessing"
   }
 }

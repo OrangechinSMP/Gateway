@@ -50,6 +50,8 @@
   "item.gateway.music_disc_eighth": "Music Disc",
   "item.gateway.music_disc_dog.desc": "C418 - Dog",
   "item.gateway.music_disc_dog": "Music Disc",
+  "item.gateway.music_disc_eleven.desc": "C418 - Eleven",
+  "item.gateway.music_disc_eleven": "Music Disc",
   "subtitles.gateway.origins.assassin.dash": "Assassin dashes",
   "subtitles.gateway.origins.assassin.grapple": "Assassin fires grapple",
   "subtitles.gateway.origins.feline.leap": "Fearless Feline leaps",
@@ -64,5 +66,10 @@
   "subtitles.gateway.origins.skywarrior.time_stop": "Skywarrior stops time",
   "subtitles.gateway.origins.skywarrior.cyromancer.shoot": "Ice Beam shot",
   "subtitles.gateway.origins.skywarrior.cyromancer.hit": "Ice Beam hits something",
+  "subtitles.gateway.origins.wizard.dolphin": "Aspect of the Dolphin cast",
+  "subtitles.gateway.origins.wizard.eldritch.shoot": "Eldritch Blast cast",
+  "subtitles.gateway.origins.wizard.eldritch.hit": "Eldritch Blast decimates something",
+  "subtitles.gateway.origins.wizard.boost": "Unbalanced boost cast",
+  "subtitles.gateway.origins.wizard.blessing": "Farmers' Blessing cast",
   "item.gateway.communicator": "Communicator"
 }
