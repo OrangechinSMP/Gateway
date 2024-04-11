@@ -39,7 +39,7 @@ public class GatewayClient implements ClientModInitializer {
         );
         ClientTickEvents.END_CLIENT_TICK.register((client) -> {
             if (client.player != null) {
-                allow_chat_usage = render_chat = client.player.getMainHandStack().getItem() == ModItems.COMMUNICATOR || client.player.isCreative() || client.player.isSpectator();
+                allow_chat_usage = render_chat = client.player.getInventory().contains(ModItems.COMMUNICATOR.getDefaultStack()) || client.player.isCreative() || client.player.isSpectator();
             }
         });
     }
