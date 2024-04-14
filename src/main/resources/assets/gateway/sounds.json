@@ -683,5 +683,23 @@
       "gateway:origins/wizard/blessing"
     ],
     "subtitle": "subtitles.gateway.origins.wizard.blessing"
+  },
+  "origins.starborn.pull": {
+    "sounds": [
+      "gateway:origins/starborn/pull"
+    ]
+  },
+  "origins.starborn.eject": {
+    "sounds": [
+      "minecraft:mob/ghast/fireball4"
+    ]
+  },
+  "origins.starborn.furnace": {
+    "sounds": [
+      {
+        "name": "minecraft:random/fizz",
+        "pitch": 0
+      }
+    ]
   }
 }
