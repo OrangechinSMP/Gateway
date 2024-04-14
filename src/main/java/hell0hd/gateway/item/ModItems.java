@@ -22,7 +22,7 @@ public class ModItems {
     public static final Item MUSIC_DISC_DOG = registerItem("music_disc_dog", new MusicDiscItem(14,ModSounds.MUSIC_DISC_DOG, new FabricItemSettings().maxCount(1).rarity(Rarity.RARE), 147));
     public static final Item MUSIC_DISC_ELEVEN = registerItem("music_disc_eleven", new MusicDiscItem(11,ModSounds.MUSIC_DISC_ELEVEN, new FabricItemSettings().maxCount(1).rarity(Rarity.RARE), 72));
 
-    public static final Item COMMUNICATOR = registerItem("communicator", new Item(new FabricItemSettings()));
+    public static final Item COMMUNICATOR = registerItem("communicator", new Item(new FabricItemSettings().maxCount(1)));
     private static void addItemsToFunctionalItemGroup(FabricItemGroupEntries entries) {entries.add(BLIND_EYE);}
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLIND_EYE); entries.add(SCULK_POWDER);
