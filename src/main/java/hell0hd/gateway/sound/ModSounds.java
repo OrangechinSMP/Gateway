@@ -64,16 +64,14 @@ public class ModSounds {
     public static SoundEvent ORIGINS_SKYWARRIOR_TIME_STOP = registerSoundEvent("origins.skywarrior.time_stop");
     public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_SHOOT = registerSoundEvent("origins.skywarrior.cyromancer.shoot");
     public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_HIT = registerSoundEvent("origins.skywarrior.cyromancer.hit");
-
     public static SoundEvent ORIGINS_WIZARD_DOLPHIN = registerSoundEvent("origins.wizard.dolphin");
-
     public static SoundEvent ORIGINS_WIZARD_ELDRITCH_SHOOT = registerSoundEvent("origins.wizard.eldritch.shoot");
-
     public static SoundEvent ORIGINS_WIZARD_ELDRITCH_HIT = registerSoundEvent("origins.wizard.eldritch.hit");
-
     public static SoundEvent ORIGINS_WIZARD_BOOST = registerSoundEvent("origins.wizard.boost");
-
     public static SoundEvent ORIGINS_WIZARD_BLESSING = registerSoundEvent("origins.wizard.blessing");
+    public static SoundEvent ORIGINS_STARBORN_PULL = registerSoundEvent("origins.starborn.pull");
+    public static SoundEvent ORIGINS_STARBORN_EJECT = registerSoundEvent("origins.starborn.eject");
+    public static SoundEvent ORIGINS_STARBORN_FURNACE = registerSoundEvent("origins.starborn.furnace");
 
 
 
