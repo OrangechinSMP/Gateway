@@ -687,19 +687,22 @@
   "origins.starborn.pull": {
     "sounds": [
       "gateway:origins/starborn/pull"
-    ]
+    ],
+    "subtitle": "subtitles.gateway.origins.starborn.pull"
   },
   "origins.starborn.eject": {
     "sounds": [
       "minecraft:mob/ghast/fireball4"
-    ]
+    ],
+    "subtitle": "subtitles.gateway.origins.starborn.eject"
   },
   "origins.starborn.furnace": {
     "sounds": [
       {
-        "name": "minecraft:random/fizz",
-        "pitch": 0
+        "name": "random/fizz",
+        "pitch": 0.1
       }
-    ]
+    ],
+    "subtitle": "subtitles.gateway.origins.starborn.furnace"
   }
 }
