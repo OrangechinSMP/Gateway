@@ -69,7 +69,10 @@
   "subtitles.gateway.origins.wizard.dolphin": "Aspect of the Dolphin cast",
   "subtitles.gateway.origins.wizard.eldritch.shoot": "Eldritch Blast cast",
   "subtitles.gateway.origins.wizard.eldritch.hit": "Eldritch Blast decimates something",
-  "subtitles.gateway.origins.wizard.boost": "Unbalanced boost cast",
+  "subtitles.gateway.origins.wizard.boost": "Unbalanced Boost cast",
   "subtitles.gateway.origins.wizard.blessing": "Farmers' Blessing cast",
-  "item.gateway.communicator": "Communicator"
+  "item.gateway.communicator": "Communicator",
+  "subtitles.gateway.origins.starborn.furnace": "Item cooked by Starborn",
+  "subtitles.gateway.origins.starborn.eject": "Starborn ejects mass",
+  "subtitles.gateway.origins.starborn.pull": "Gravitional Pull draws in"
 }
