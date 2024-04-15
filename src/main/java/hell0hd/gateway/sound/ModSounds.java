@@ -72,6 +72,8 @@ public class ModSounds {
     public static SoundEvent ORIGINS_STARBORN_PULL = registerSoundEvent("origins.starborn.pull");
     public static SoundEvent ORIGINS_STARBORN_EJECT = registerSoundEvent("origins.starborn.eject");
     public static SoundEvent ORIGINS_STARBORN_FURNACE = registerSoundEvent("origins.starborn.furnace");
+    public static SoundEvent ORIGINS_STARBORN_SUPERNOVA = registerSoundEvent("origins.starborn.supernova");
+    public static SoundEvent ORIGINS_STARBORN_LIFECYCLE = registerSoundEvent("origins.starborn.lifecycle");
 
 
 

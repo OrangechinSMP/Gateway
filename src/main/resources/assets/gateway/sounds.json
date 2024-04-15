@@ -704,5 +704,17 @@
       }
     ],
     "subtitle": "subtitles.gateway.origins.starborn.furnace"
+  },
+  "origins.starborn.supernova": {
+    "sounds": [
+      "gateway:origins/starborn/supernova"
+    ],
+    "subtitle": "subtitles.gateway.origins.starborn.supernova"
+  },
+  "origins.starborn.lifecycle": {
+    "sounds": [
+      "gateway:origins/starborn/lifecycle"
+    ],
+    "subtitle": "subtitles.gateway.origins.starborn.lifecycle"
   }
 }

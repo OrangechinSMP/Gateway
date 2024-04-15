@@ -74,5 +74,7 @@
   "item.gateway.communicator": "Communicator",
   "subtitles.gateway.origins.starborn.furnace": "Item cooked by Starborn",
   "subtitles.gateway.origins.starborn.eject": "Starborn ejects mass",
-  "subtitles.gateway.origins.starborn.pull": "Gravitional Pull draws in"
+  "subtitles.gateway.origins.starborn.pull": "Gravitional Pull draws in",
+  "subtitles.gateway.origins.starborn.supernova": "Starborn goes supernova",
+  "subtitles.gateway.origins.starborn.lifecycle": "Starborn transforms"
 }
