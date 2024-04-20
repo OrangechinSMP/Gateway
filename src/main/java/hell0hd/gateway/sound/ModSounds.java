@@ -74,6 +74,10 @@ public class ModSounds {
     public static SoundEvent ORIGINS_STARBORN_FURNACE = registerSoundEvent("origins.starborn.furnace");
     public static SoundEvent ORIGINS_STARBORN_SUPERNOVA = registerSoundEvent("origins.starborn.supernova");
     public static SoundEvent ORIGINS_STARBORN_LIFECYCLE = registerSoundEvent("origins.starborn.lifecycle");
+    public static SoundEvent ORIGINS_INFERNIAN_FIREBALL = registerSoundEvent("origins.infernian.fireball");
+    public static SoundEvent ORIGINS_INFERNIAN_CHARGE = registerSoundEvent("origins.infernian.charge");
+    public static SoundEvent ORIGINS_INFERNIAN_CHARGE_LOST = registerSoundEvent("origins.infernian.charge_lost");
+    public static SoundEvent ORIGINS_INFERNIAN_FIRE_CHARGE = registerSoundEvent("origins.infernian.fire_charge");
 
 
 

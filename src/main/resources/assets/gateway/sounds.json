@@ -716,5 +716,29 @@
       "gateway:origins/starborn/lifecycle"
     ],
     "subtitle": "subtitles.gateway.origins.starborn.lifecycle"
+  },
+  "origins.infernian.fireball": {
+    "sounds": [
+      "minecraft:mob/ghast/fireball4"
+    ],
+    "subtitle": "subtitles.gateway.origins.infernian.fireball"
+  },
+  "origins.infernian.charge": {
+    "sounds": [
+      "gateway:origins/infernian/charge/charge"
+    ],
+    "subtitle": "subtitles.gateway.origins.infernian.charge"
+  },
+  "origins.infernian.charge_lost": {
+    "sounds": [
+      "gateway:origins/infernian/charge/charge_lost"
+    ],
+    "subtitle": "subtitles.gateway.origins.infernian.charge_lost"
+  },
+  "origins.infernian.fire_charge": {
+    "sounds": [
+      "minecraft:mob/ghast/fireball4"
+    ],
+    "subtitle": "subtitles.gateway.origins.infernian.fire_charge"
   }
 }

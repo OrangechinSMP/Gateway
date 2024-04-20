@@ -76,5 +76,9 @@
   "subtitles.gateway.origins.starborn.eject": "Starborn ejects mass",
   "subtitles.gateway.origins.starborn.pull": "Gravitional Pull draws in",
   "subtitles.gateway.origins.starborn.supernova": "Starborn goes supernova",
-  "subtitles.gateway.origins.starborn.lifecycle": "Starborn transforms"
+  "subtitles.gateway.origins.starborn.lifecycle": "Starborn transforms",
+  "subtitles.gateway.origins.infernian.fireball": "Infernian shoots fire charge",
+  "subtitles.gateway.origins.infernian.fire_charge": "Infernian shoots fire ball",
+  "subtitles.gateway.origins.infernian.charge": "Infernian charges fire ball",
+  "subtitles.gateway.origins.infernian.charge_lost": "Infernian loses charge"
 }
