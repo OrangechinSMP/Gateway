@@ -19,6 +19,8 @@
   "subtitles.gateway.origins.nature_god.photosynthesis.heal": "Nature God heals",
   "item.gateway.sculk_powder": "Sculk Powder",
   "subtitles.gateway.origins.glitch.random_tp.teleport": "§kGlitch teleports",
+  "subtitles.gateway.origins.glitch.random_tp.teleport_fail": "§kGlitch fails to teleport",
+  "subtitles.gateway.origins.glitch.crash": "§kGlitch crashes",
   "item.minecraft.potion.effect.darkness_potion": "Potion of Obscurification",
   "item.minecraft.splash_potion.effect.darkness_potion": "Splash Potion of Obscurification",
   "item.minecraft.lingering_potion.effect.darkness_potion": "Lingering Potion of Obscurification",
@@ -80,5 +82,6 @@
   "subtitles.gateway.origins.infernian.fireball": "Infernian shoots fire charge",
   "subtitles.gateway.origins.infernian.fire_charge": "Infernian shoots fire ball",
   "subtitles.gateway.origins.infernian.charge": "Infernian charges fire ball",
-  "subtitles.gateway.origins.infernian.charge_lost": "Infernian loses charge"
+  "subtitles.gateway.origins.infernian.charge_lost": "Infernian loses charge",
+  "subtitles.gateway.origins.sluggian.echolocation": "Sluggian echolocates"
 }

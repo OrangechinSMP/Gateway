@@ -65,6 +65,22 @@
       }
     ]
   },
+  "origins.glitch.random_tp.teleport_fail": {
+    "subtitle": "subtitles.gateway.origins.glitch.random_tp.teleport_fail",
+    "sounds": [
+      {
+        "name": "gateway:origins/glitch/random_tp/teleport_fail"
+      }
+    ]
+  },
+  "origins.glitch.crash": {
+    "subtitle": "subtitles.gateway.origins.glitch.crash",
+    "sounds": [
+      {
+        "name": "gateway:origins/glitch/crash"
+      }
+    ]
+  },
   "origins.bandit.stash.open": {
     "subtitle": "subtitles.gateway.origins.bandit.stash.open",
     "sounds": [
@@ -636,6 +652,11 @@
     ],
     "subtitle": "subtitles.gateway.origins.speedster.zip"
   },
+  "origins.speedster.peggle": {
+    "sounds": [
+      "gateway:origins/speedster/peggle"
+    ],
+  },
   "origins.skywarrior.time_stop": {
     "sounds": [
       "gateway:origins/skywarrior/time_stop"
@@ -740,5 +761,11 @@
       "minecraft:mob/ghast/fireball4"
     ],
     "subtitle": "subtitles.gateway.origins.infernian.fire_charge"
+  },
+  "origins.sluggian.echolocation": {
+    "sounds": [
+      "gateway:origins/sluggian/echolocation"
+    ],
+    "subtitle": "subtitles.gateway.origins.sluggian.echolocation"
   }
 }

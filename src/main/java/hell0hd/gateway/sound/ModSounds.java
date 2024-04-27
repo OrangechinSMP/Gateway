@@ -16,6 +16,8 @@ public class ModSounds {
     public static SoundEvent NATURE_GOD_VINE_HIT = registerSoundEvent("origins.nature_god.vine_whack.vine_hit");
     public static SoundEvent NATURE_GOD_PHOTOSYNTHESIS_HEAL = registerSoundEvent("origins.nature_god.photosynthesis.heal");
     public static SoundEvent GLITCH_RANDOM_TP = registerSoundEvent("origins.glitch.random_tp.teleport");
+    public static SoundEvent GLITCH_RANDOM_TP_FAIL = registerSoundEvent("origins.glitch.random_tp.teleport_fail");
+    public static SoundEvent GLITCH_CRASH = registerSoundEvent("origins.glitch.crash");
     public static SoundEvent BANDIT_STASH_OPEN = registerSoundEvent("origins.bandit.stash.open");
     public static SoundEvent BANDIT_STASH_CLOSE = registerSoundEvent("origins.bandit.stash.close");
     public static SoundEvent GOOSE_HISS = registerSoundEvent("origins.goose.hiss.hiss");
@@ -61,6 +63,7 @@ public class ModSounds {
     public static SoundEvent ORIGINS_WORM_SPLICE = registerSoundEvent("origins.worm.splice");
     public static SoundEvent ORIGINS_WORM_SCREECH = registerSoundEvent("origins.worm.screech");
     public static SoundEvent ORIGINS_SPEEDSTER_ZIP = registerSoundEvent("origins.speedster.zip");
+    public static SoundEvent ORIGINS_SPEEDSTER_PEGGLE = registerSoundEvent("origins.speedster.peggle");
     public static SoundEvent ORIGINS_SKYWARRIOR_TIME_STOP = registerSoundEvent("origins.skywarrior.time_stop");
     public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_SHOOT = registerSoundEvent("origins.skywarrior.cyromancer.shoot");
     public static SoundEvent ORIGINS_SKYWARRIOR_CYROMANCER_HIT = registerSoundEvent("origins.skywarrior.cyromancer.hit");
@@ -78,6 +81,7 @@ public class ModSounds {
     public static SoundEvent ORIGINS_INFERNIAN_CHARGE = registerSoundEvent("origins.infernian.charge");
     public static SoundEvent ORIGINS_INFERNIAN_CHARGE_LOST = registerSoundEvent("origins.infernian.charge_lost");
     public static SoundEvent ORIGINS_INFERNIAN_FIRE_CHARGE = registerSoundEvent("origins.infernian.fire_charge");
+    public static SoundEvent ORIGINS_SLUGGIAN_ECHOLOCATION = registerSoundEvent("origins.sluggian.echolocation");
 
 
 
