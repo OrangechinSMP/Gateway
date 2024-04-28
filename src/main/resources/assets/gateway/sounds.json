@@ -77,7 +77,7 @@
     "subtitle": "subtitles.gateway.origins.glitch.crash",
     "sounds": [
       {
-        "name": "gateway:origins/glitch/crash"
+        "name": "gateway:origins/glitch/crash_new"
       }
     ]
   },
@@ -655,7 +655,7 @@
   "origins.speedster.peggle": {
     "sounds": [
       "gateway:origins/speedster/peggle"
-    ],
+    ]
   },
   "origins.skywarrior.time_stop": {
     "sounds": [
