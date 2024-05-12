@@ -767,5 +767,47 @@
       "gateway:origins/sluggian/echolocation"
     ],
     "subtitle": "subtitles.gateway.origins.sluggian.echolocation"
+  },
+  "origins.ghost.screech": {
+    "sounds": [
+      "gateway:origins/ghost/screech"
+    ],
+    "subtitle": "subtitles.gateway.origins.ghost.screech"
+  },
+  "origins.ghost.form_switch": {
+    "sounds": [
+      "gateway:origins/ghost/form_switch"
+    ],
+    "subtitle": "subtitles.gateway.origins.ghost.form_switch"
+  },
+  "origins.sparkborn.charge": {
+    "sounds": [
+      "gateway:origins/sparkborn/charge"
+    ],
+    "subtitle": "subtitles.gateway.origins.sparkborn.charge"
+  },
+  "origins.sparkborn.electro": {
+    "sounds": [
+      "gateway:origins/sparkborn/electro"
+    ],
+    "subtitle": "subtitles.gateway.origins.sparkborn.electro"
+  },
+  "origins.sparkborn.shock": {
+    "sounds": [
+      "gateway:origins/sparkborn/shock"
+    ],
+    "subtitle": "subtitles.gateway.origins.sparkborn.shock"
+  },
+  "origins.sparkborn.electroshock.shoot": {
+    "sounds": [
+      "gateway:origins/sparkborn/electroshock/shoot"
+    ],
+    "subtitle": "subtitles.gateway.origins.sparkborn.electroshock.shoot"
+  },
+  "origins.formicidian.silk_shot": {
+    "sounds": [
+      "gateway:origins/formicidian/silk_shot"
+    ],
+    "subtitle": "subtitles.gateway.origins.formicidian.silk_shot"
   }
 }

@@ -83,5 +83,11 @@
   "subtitles.gateway.origins.infernian.fire_charge": "Infernian shoots fire ball",
   "subtitles.gateway.origins.infernian.charge": "Infernian charges fire ball",
   "subtitles.gateway.origins.infernian.charge_lost": "Infernian loses charge",
-  "subtitles.gateway.origins.sluggian.echolocation": "Sluggian echolocates"
+  "subtitles.gateway.origins.sluggian.echolocation": "Sluggian echolocates",
+  "subtitles.gateway.origins.ghost.screech": "Ghost screeches",
+  "subtitles.gateway.origins.ghost.form_switch": "Ghost phantomizes",
+  "subtitles.gateway.origins.sparkborn.charge": "Sparkborn charges up",
+  "subtitles.gateway.origins.sparkborn.electro": "Sparkborn zips away",
+  "subtitles.gateway.origins.sparkborn.shock": "Something was shocked",
+  "subtitles.gateway.origins.formicidian.silk_shot": "Formicidian shoots silk shot"
 }

@@ -82,6 +82,13 @@ public class ModSounds {
     public static SoundEvent ORIGINS_INFERNIAN_CHARGE_LOST = registerSoundEvent("origins.infernian.charge_lost");
     public static SoundEvent ORIGINS_INFERNIAN_FIRE_CHARGE = registerSoundEvent("origins.infernian.fire_charge");
     public static SoundEvent ORIGINS_SLUGGIAN_ECHOLOCATION = registerSoundEvent("origins.sluggian.echolocation");
+    public static SoundEvent ORIGINS_GHOST_SCREECH = registerSoundEvent("origins.ghost.screech");
+    public static SoundEvent ORIGINS_GHOST_FORM_SWITCH = registerSoundEvent("origins.ghost.form_switch");
+    public static SoundEvent ORIGINS_SPARKBORN_CHARGE= registerSoundEvent("origins.sparkborn.charge");
+    public static SoundEvent ORIGINS_SPARKBORN_ELECTRO = registerSoundEvent("origins.sparkborn.electro");
+    public static SoundEvent ORIGINS_SPARKBORN_SHOCK = registerSoundEvent("origins.sparkborn.shock");
+    public static SoundEvent ORIGINS_SPARKBORN_ELECTROSHOCK_SHOOT = registerSoundEvent("origins.sparkborn.electroshock.shoot");
+    public static SoundEvent ORIGINS_FORMICIDIAN_SILK_SHOT = registerSoundEvent("origins.formicidian.silk_shot");
 
 
 
