@@ -54,6 +54,7 @@
   "item.gateway.music_disc_dog": "Music Disc",
   "item.gateway.music_disc_eleven.desc": "C418 - Eleven",
   "item.gateway.music_disc_eleven": "Music Disc",
+  "item.gateway.guitar": "Guitar",
   "subtitles.gateway.origins.assassin.dash": "Assassin dashes",
   "subtitles.gateway.origins.assassin.grapple": "Assassin fires grapple",
   "subtitles.gateway.origins.feline.leap": "Fearless Feline leaps",
@@ -89,5 +90,6 @@
   "subtitles.gateway.origins.sparkborn.charge": "Sparkborn charges up",
   "subtitles.gateway.origins.sparkborn.electro": "Sparkborn zips away",
   "subtitles.gateway.origins.sparkborn.shock": "Something was shocked",
-  "subtitles.gateway.origins.formicidian.silk_shot": "Formicidian shoots silk shot"
+  "subtitles.gateway.origins.formicidian.silk_shot": "Formicidian shoots silk shot",
+  "subtitles.gateway.item.guitar.mississippi_queen": "Guitar plays"
 }

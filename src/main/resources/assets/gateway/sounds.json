@@ -809,5 +809,23 @@
       "gateway:origins/formicidian/silk_shot"
     ],
     "subtitle": "subtitles.gateway.origins.formicidian.silk_shot"
+  },
+  "item.guitar.mississippi_queen": {
+    "sounds": [
+      "gateway:item/guitar/mississippi_queen"
+    ],
+    "subtitle": "subtitles.gateway.item.guitar.mississippi_queen"
+  },
+  "item.guitar.free_bird": {
+    "sounds": [
+      "gateway:item/guitar/free_bird"
+    ],
+    "subtitle": "subtitles.gateway.item.guitar.mississippi_queen"
+  },
+  "item.guitar.buddy_holly": {
+    "sounds": [
+      "gateway:item/guitar/buddy_holly"
+    ],
+    "subtitle": "subtitles.gateway.item.guitar.mississippi_queen"
   }
 }

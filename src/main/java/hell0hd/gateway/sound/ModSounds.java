@@ -89,6 +89,9 @@ public class ModSounds {
     public static SoundEvent ORIGINS_SPARKBORN_SHOCK = registerSoundEvent("origins.sparkborn.shock");
     public static SoundEvent ORIGINS_SPARKBORN_ELECTROSHOCK_SHOOT = registerSoundEvent("origins.sparkborn.electroshock.shoot");
     public static SoundEvent ORIGINS_FORMICIDIAN_SILK_SHOT = registerSoundEvent("origins.formicidian.silk_shot");
+    public static SoundEvent ITEM_GUITAR_BUDDY_HOLLY = registerSoundEvent("item.guitar.buddy_holly");
+    public static SoundEvent ITEM_GUITAR_MISSISSIPPI_QUEEN = registerSoundEvent("item.guitar.mississippi_queen");
+    public static SoundEvent ITEM_GUITAR_FREE_BIRD = registerSoundEvent("item.guitar.free_bird");
 
 
 
