@@ -92,7 +92,10 @@ public class ModSounds {
     public static SoundEvent ITEM_GUITAR_BUDDY_HOLLY = registerSoundEvent("item.guitar.buddy_holly");
     public static SoundEvent ITEM_GUITAR_MISSISSIPPI_QUEEN = registerSoundEvent("item.guitar.mississippi_queen");
     public static SoundEvent ITEM_GUITAR_FREE_BIRD = registerSoundEvent("item.guitar.free_bird");
-
+    public static SoundEvent ORIGINS_ROCKSTAR_ASH = registerSoundEvent("origins.rockstar.ash");
+    public static SoundEvent ORIGINS_ROCKSTAR_CHORD = registerSoundEvent("origins.rockstar.chord");
+    public static SoundEvent ORIGINS_ROCKSTAR_ENCORE = registerSoundEvent("origins.rockstar.encore");
+    public static SoundEvent ORIGINS_ROCKSTAR_HELL = registerSoundEvent("origins.rockstar.hell");
 
 
 

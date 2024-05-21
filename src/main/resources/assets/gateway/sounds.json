@@ -827,5 +827,29 @@
       "gateway:item/guitar/buddy_holly"
     ],
     "subtitle": "subtitles.gateway.item.guitar.mississippi_queen"
+  },
+  "origins.rockstar.ash": {
+    "sounds": [
+      "gateway:origins/rockstar/ash"
+    ],
+    "subtitle": "subtitles.gateway.origins.rockstar.ash"
+  },
+  "origins.rockstar.chord": {
+    "sounds": [
+      "gateway:origins/rockstar/chord"
+    ],
+    "subtitle": "subtitles.gateway.origins.rockstar.chord"
+  },
+  "origins.rockstar.encore": {
+    "sounds": [
+      "gateway:origins/rockstar/encore"
+    ],
+    "subtitle": "subtitles.gateway.origins.rockstar.encore"
+  },
+  "origins.rockstar.hell": {
+    "sounds": [
+      "gateway:origins/rockstar/hell"
+    ],
+    "subtitle": "subtitles.gateway.origins.rockstar.hell"
   }
 }

@@ -91,5 +91,9 @@
   "subtitles.gateway.origins.sparkborn.electro": "Sparkborn zips away",
   "subtitles.gateway.origins.sparkborn.shock": "Something was shocked",
   "subtitles.gateway.origins.formicidian.silk_shot": "Formicidian shoots silk shot",
-  "subtitles.gateway.item.guitar.mississippi_queen": "Guitar plays"
+  "subtitles.gateway.item.guitar.mississippi_queen": "Guitar plays",
+  "subtitles.gateway.origins.rockstar.ash": "Rockstar burns something",
+  "subtitles.gateway.origins.rockstar.chord": "Rockstar shoots note",
+  "subtitles.gateway.origins.rockstar.encore": "Rockstar starts the encore",
+  "subtitles.gateway.origins.rockstar.hell": "Rockstar teleports to nether"
 }
