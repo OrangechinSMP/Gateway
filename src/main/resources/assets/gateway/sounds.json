@@ -851,5 +851,17 @@
       "gateway:origins/rockstar/hell"
     ],
     "subtitle": "subtitles.gateway.origins.rockstar.hell"
+  },
+  "origins.gremlin.rush": {
+    "sounds": [
+      "gateway:origins/gremlin/rush"
+    ],
+    "subtitle": "subtitles.gateway.origins.gremlin.rush"
+  },
+  "origins.gremlin.rush_end": {
+    "sounds": [
+      "gateway:origins/gremlin/rush_end"
+    ],
+    "subtitle": "subtitles.gateway.origins.gremlin.rush_end"
   }
 }

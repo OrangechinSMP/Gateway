@@ -97,6 +97,9 @@ public class ModSounds {
     public static SoundEvent ORIGINS_ROCKSTAR_ENCORE = registerSoundEvent("origins.rockstar.encore");
     public static SoundEvent ORIGINS_ROCKSTAR_HELL = registerSoundEvent("origins.rockstar.hell");
 
+    public static SoundEvent ORIGINS_GREMLIN_RUSH = registerSoundEvent("origins.gremlin.rush");
+    public static SoundEvent ORIGINS_GREMLIN_RUSH_END = registerSoundEvent("origins.gremlin.rush_end");
+
 
 
     private static SoundEvent registerSoundEvent(String name) {
