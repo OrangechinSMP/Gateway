@@ -98,5 +98,7 @@
   "subtitles.gateway.origins.rockstar.encore": "Rockstar starts the encore",
   "subtitles.gateway.origins.rockstar.hell": "Rockstar teleports to nether",
   "subtitles.gateway.origins.gremlin.rush": "Sugar Rush starts",
-  "subtitles.gateway.origins.gremlin.rush_end": "Sugar Rush ends"
+  "subtitles.gateway.origins.gremlin.rush_end": "Sugar Rush ends",
+  "subtitles.gateway.entity.blindeye.launch": "Blind Eye shoots",
+  "subtitles.gateway.entity.blindeye.death": "Blind Eye drops"
 }

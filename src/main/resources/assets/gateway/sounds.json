@@ -868,6 +868,14 @@
     "sounds": [
       "gateway:entity/blindeye/launch1",
       "gateway:entity/blindeye/launch2"
-    ]
+    ],
+    "subtitle": "subtitles.gateway.entity.blindeye.launch"
+  },
+  "entity.blindeye.death": {
+    "sounds": [
+      "gateway:entity/blindeye/death1",
+      "gateway:entity/blindeye/death2"
+    ],
+    "subtitle": "subtitles.gateway.entity.blindeye.death"
   }
 }

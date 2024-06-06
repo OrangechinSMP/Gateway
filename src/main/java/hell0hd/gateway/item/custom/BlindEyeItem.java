@@ -14,16 +14,13 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.pattern.BlockPattern;
-import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.registry.tag.StructureTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -127,17 +124,16 @@ public class BlindEyeItem extends Item {
                 ServerWorld serverWorld = (ServerWorld)world;
                 BlockPos blockPos = serverWorld.locateStructure(ModTags.Structures.ANCIENT_CITIES, user.getBlockPos(), 100, false);
                 if (blockPos != null) {
-                    EyeOfEnderEntity eyeOfEnderEntity = new BlindEyeEntity(world, user.getX(), user.getBodyY(0.5), user.getZ());
-                    eyeOfEnderEntity.setItem(itemStack);
-                    eyeOfEnderEntity.initTargetPos(blockPos);
-                    world.emitGameEvent(GameEvent.PROJECTILE_SHOOT, eyeOfEnderEntity.getPos(), GameEvent.Emitter.of(user));
-                    world.spawnEntity(eyeOfEnderEntity);
+                    BlindEyeEntity blindEyeEntity = new BlindEyeEntity(world, user.getX(), user.getBodyY(0.5), user.getZ());
+                    blindEyeEntity.setItem(itemStack);
+                    blindEyeEntity.initTargetPos(blockPos);
+                    world.emitGameEvent(GameEvent.PROJECTILE_SHOOT, blindEyeEntity.getPos(), GameEvent.Emitter.of(user));
+                    world.spawnEntity(blindEyeEntity);
                     if (user instanceof ServerPlayerEntity) {
                         Criteria.USED_ENDER_EYE.trigger((ServerPlayerEntity)user, blockPos);
                     }
 
                     world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), ModSounds.ENTITY_BLINDEYE_LAUNCH, SoundCategory.NEUTRAL, 1.0F, 1.0f / (world.getRandom().nextFloat() * 0.4F + 0.8F));
-                    world.syncWorldEvent((PlayerEntity)null, 1003, user.getBlockPos(), 0);
                     if (!user.getAbilities().creativeMode) {
                         itemStack.decrement(1);
                     }
