@@ -1,12 +1,13 @@
 package hell0hd.gateway.entity;
 
 import hell0hd.gateway.Gateway;
+import hell0hd.gateway.entity.custom.blindeye.BlindEyeEntity;
 import hell0hd.gateway.entity.custom.skeleton.OriginSkeletonEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
@@ -21,6 +22,15 @@ public class ModEntities {
             FabricEntityTypeBuilder.<OriginSkeletonEntity>create(SpawnGroup.MONSTER, OriginSkeletonEntity::new)
                     .dimensions(EntityDimensions.fixed(0.6f,1.99f))
                     .trackRangeBlocks(8)
+                    .build()
+    );
+    public static EntityType<BlindEyeEntity> BLIND_EYE = Registry.register(
+            Registries.ENTITY_TYPE,
+            new Identifier(Gateway.MOD_ID, "blind_eye"),
+            FabricEntityTypeBuilder.<BlindEyeEntity>create(SpawnGroup.MISC, BlindEyeEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.25f, 0.25f))
+                    .trackRangeBlocks(4)
+                    .trackedUpdateRate(4)
                     .build()
     );
     public static void init() {

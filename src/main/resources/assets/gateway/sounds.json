@@ -863,5 +863,11 @@
       "gateway:origins/gremlin/rush_end"
     ],
     "subtitle": "subtitles.gateway.origins.gremlin.rush_end"
+  },
+  "entity.blindeye.launch": {
+    "sounds": [
+      "gateway:entity/blindeye/launch1",
+      "gateway:entity/blindeye/launch2"
+    ]
   }
 }

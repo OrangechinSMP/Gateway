@@ -99,6 +99,8 @@ public class ModSounds {
 
     public static SoundEvent ORIGINS_GREMLIN_RUSH = registerSoundEvent("origins.gremlin.rush");
     public static SoundEvent ORIGINS_GREMLIN_RUSH_END = registerSoundEvent("origins.gremlin.rush_end");
+    public static SoundEvent ENTITY_BLINDEYE_LAUNCH = registerSoundEvent("entity.blindeye.launch");
+    public static SoundEvent ENTITY_BLINDEYE_DEATH = registerSoundEvent("entity.blindeye.death");
 
 
 

@@ -4,7 +4,9 @@ import hell0hd.gateway.Gateway;
 import hell0hd.gateway.Scheduler;
 import hell0hd.gateway.block.ModBlocks;
 import hell0hd.gateway.block.custom.ReinforcedDeepslateFrameBlock;
+import hell0hd.gateway.entity.custom.blindeye.BlindEyeEntity;
 import hell0hd.gateway.sound.ModSounds;
+import hell0hd.gateway.util.ModTags;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.frozenblock.lib.screenshake.api.ScreenShakeManager;
@@ -123,9 +125,9 @@ public class BlindEyeItem extends Item {
             user.setCurrentHand(hand);
             if (world instanceof ServerWorld) {
                 ServerWorld serverWorld = (ServerWorld)world;
-                BlockPos blockPos = serverWorld.locateStructure(StructureTags.EYE_OF_ENDER_LOCATED, user.getBlockPos(), 100, false);
+                BlockPos blockPos = serverWorld.locateStructure(ModTags.Structures.ANCIENT_CITIES, user.getBlockPos(), 100, false);
                 if (blockPos != null) {
-                    EyeOfEnderEntity eyeOfEnderEntity = new EyeOfEnderEntity(world, user.getX(), user.getBodyY(0.5), user.getZ());
+                    EyeOfEnderEntity eyeOfEnderEntity = new BlindEyeEntity(world, user.getX(), user.getBodyY(0.5), user.getZ());
                     eyeOfEnderEntity.setItem(itemStack);
                     eyeOfEnderEntity.initTargetPos(blockPos);
                     world.emitGameEvent(GameEvent.PROJECTILE_SHOOT, eyeOfEnderEntity.getPos(), GameEvent.Emitter.of(user));
@@ -134,7 +136,7 @@ public class BlindEyeItem extends Item {
                         Criteria.USED_ENDER_EYE.trigger((ServerPlayerEntity)user, blockPos);
                     }
 
-                    world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_EYE_LAUNCH, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+                    world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), ModSounds.ENTITY_BLINDEYE_LAUNCH, SoundCategory.NEUTRAL, 1.0F, 1.0f / (world.getRandom().nextFloat() * 0.4F + 0.8F));
                     world.syncWorldEvent((PlayerEntity)null, 1003, user.getBlockPos(), 0);
                     if (!user.getAbilities().creativeMode) {
                         itemStack.decrement(1);

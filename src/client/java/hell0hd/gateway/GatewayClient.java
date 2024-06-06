@@ -10,6 +10,8 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.entity.EntityRenderer;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -28,6 +30,7 @@ public class GatewayClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THE_GATEWAY, RenderLayer.getTranslucent());
         EntityRendererRegistry.register(ModEntities.ORIGIN_SKELETON, OriginSkeletonRenderer::new);
+        EntityRendererRegistry.register(ModEntities.BLIND_EYE, FlyingItemEntityRenderer::new);
 
 
         ClientPlayNetworking.registerGlobalReceiver(

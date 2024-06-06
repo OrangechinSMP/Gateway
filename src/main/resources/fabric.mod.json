@@ -22,6 +22,7 @@
 			"hell0hd.gateway.GatewayClient"
 		]
 	},
+	"accessWidener" : "gateway.accesswidener",
 	"mixins": [
 		"gateway.mixins.json",
 		{
