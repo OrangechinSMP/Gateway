@@ -67,11 +67,11 @@ public class BlindEyeItem extends Item {
                 );
                 BlockPattern.Result result = ReinforcedDeepslateFrameBlock.getCompletedFramePattern().searchAround(world, blockPos);
                 if (result != null) {
-                    BlockPos blockPos2 = result.getFrontTopLeft().add(6, 8, -12);
+                    BlockPos blockPos2 = result.getFrontTopLeft().add(-12, 8, -6);
 
-                    for(int i = 0; i < 1; ++i) {
+                    for(int i = 0; i < 20; ++i) {
                         for (int j = 0; j < 6; ++j) {
-                            for (int k = 0; k < 20; ++k){
+                            for (int k = 0; k < 1; ++k){
                                 world.setBlockState(blockPos2.add(i, j, k), ModBlocks.THE_GATEWAY.getDefaultState(), 2);
                             }
                         }

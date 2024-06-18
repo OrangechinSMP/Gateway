@@ -32,7 +32,7 @@ public class TheGatewayBlock extends BlockWithEntity {
     protected static final VoxelShape Z_SHAPE = Block.createCuboidShape(6.0, 0.0, 0.0, 10.0, 16.0, 16.0);
     public TheGatewayBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.EAST).with(CHARGED, false));
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(CHARGED, false));
     }
 
 
