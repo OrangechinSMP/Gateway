@@ -5,6 +5,7 @@ import hell0hd.gateway.entity.ModEntities;
 
 import hell0hd.gateway.sound.ModSounds;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
@@ -48,6 +49,12 @@ public class OriginSkeletonEntity extends SkeletonEntity {
     public OriginSkeletonEntity(EntityType<? extends OriginSkeletonEntity> entityType, World world) {
         super((EntityType<? extends SkeletonEntity>) ModEntities.ORIGIN_SKELETON, world);
     }
+
+    @Override
+    public EntityGroup getGroup() {
+        return EntityGroup.DEFAULT;
+    }
+
     protected void initGoals() {
         this.goalSelector.add(3, new FleeEntityGoal<WolfEntity>(this, WolfEntity.class, 6.0f, 1.0, 1.2));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
