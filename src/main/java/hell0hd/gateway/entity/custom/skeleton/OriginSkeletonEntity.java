@@ -49,8 +49,6 @@ public class OriginSkeletonEntity extends SkeletonEntity {
         super((EntityType<? extends SkeletonEntity>) ModEntities.ORIGIN_SKELETON, world);
     }
     protected void initGoals() {
-        this.goalSelector.add(2, new AvoidSunlightGoal(this));
-        this.goalSelector.add(3, new EscapeSunlightGoal(this, 1.0));
         this.goalSelector.add(3, new FleeEntityGoal<WolfEntity>(this, WolfEntity.class, 6.0f, 1.0, 1.2));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
         this.goalSelector.add(6, new LookAroundGoal(this));
