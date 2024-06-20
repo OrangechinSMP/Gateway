@@ -7,7 +7,10 @@ import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 
 public class SummonSkeletonAction {
     public static ActionFactory<Entity> createFactory() {
@@ -20,6 +23,7 @@ public class SummonSkeletonAction {
         OriginSkeletonEntity originSkeletonEntity = new OriginSkeletonEntity(entity.getWorld(), entity.getX(), entity.getY(), entity.getZ());
         if (entity instanceof PlayerEntity playerEntity) {
             originSkeletonEntity.setOwner(playerEntity);
+            originSkeletonEntity.getItemsEquipped();
         }
         entity.getWorld().spawnEntity(originSkeletonEntity);
     }
