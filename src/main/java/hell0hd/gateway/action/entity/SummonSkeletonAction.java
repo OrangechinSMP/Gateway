@@ -9,8 +9,10 @@ import io.github.apace100.calio.data.SerializableDataTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.util.Hand;
 
 public class SummonSkeletonAction {
     public static ActionFactory<Entity> createFactory() {
@@ -23,7 +25,12 @@ public class SummonSkeletonAction {
         OriginSkeletonEntity originSkeletonEntity = new OriginSkeletonEntity(entity.getWorld(), entity.getX(), entity.getY(), entity.getZ());
         if (entity instanceof PlayerEntity playerEntity) {
             originSkeletonEntity.setOwner(playerEntity);
-            originSkeletonEntity.getItemsEquipped();
+            originSkeletonEntity.setStackInHand(Hand.MAIN_HAND, new ItemStack(Items.GOLDEN_SWORD));
+            originSkeletonEntity.setStackInHand(Hand.OFF_HAND, new ItemStack(Items.SHIELD));
+            originSkeletonEntity.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.GOLDEN_HELMET));
+            originSkeletonEntity.setEquipmentDropChance(EquipmentSlot.MAINHAND, 0);
+            originSkeletonEntity.setEquipmentDropChance(EquipmentSlot.OFFHAND, 0);
+            originSkeletonEntity.setEquipmentDropChance(EquipmentSlot.HEAD, 0);
         }
         entity.getWorld().spawnEntity(originSkeletonEntity);
     }
