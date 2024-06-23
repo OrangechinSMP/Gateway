@@ -40,10 +40,5 @@ public class GatewayClient implements ClientModInitializer {
                     client.inGameHud.setTitle(Text.literal("\uE100"));
                 }
         );
-        ClientTickEvents.END_CLIENT_TICK.register((client) -> {
-            if (client.player != null) {
-                allow_chat_usage = render_chat = client.player.getInventory().contains(ModItems.COMMUNICATOR.getDefaultStack()) || client.player.isCreative() || client.player.isSpectator();
-            }
-        });
     }
 }
