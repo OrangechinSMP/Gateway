@@ -94,7 +94,21 @@
           "name": "minecraft:golden_sword",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency"
+              ]
             }
           ]
         },
@@ -104,7 +118,21 @@
           "name": "minecraft:golden_axe",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency"
+              ]
             }
           ]
         },
@@ -114,7 +142,21 @@
           "name": "minecraft:golden_hoe",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency"
+              ]
             }
           ]
         },
@@ -124,7 +166,21 @@
           "name": "minecraft:golden_shovel",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency"
+              ]
             }
           ]
         },
@@ -134,7 +190,21 @@
           "name": "minecraft:golden_pickaxe",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency"
+              ]
             }
           ]
         },
@@ -144,7 +214,20 @@
           "name": "minecraft:golden_boots",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse"
+              ]
             }
           ]
         },
@@ -154,7 +237,20 @@
           "name": "minecraft:golden_chestplate",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse"
+              ]
             }
           ]
         },
@@ -164,7 +260,20 @@
           "name": "minecraft:golden_helmet",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse"
+              ]
             }
           ]
         },
@@ -174,7 +283,20 @@
           "name": "minecraft:golden_leggings",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse"
+              ]
             }
           ]
         },

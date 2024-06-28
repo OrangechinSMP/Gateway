@@ -68,7 +68,23 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency",
+                "minecraft:power"
+              ]
             }
           ]
         },
@@ -87,7 +103,23 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency",
+                "minecraft:power"
+              ]
             }
           ]
         },
@@ -106,7 +138,23 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency",
+                "minecraft:power"
+              ]
             }
           ]
         },
@@ -125,7 +173,23 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency",
+                "minecraft:power"
+              ]
             }
           ]
         },
@@ -144,7 +208,23 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:sharpness",
+                "minecraft:protection",
+                "enchantery:diffusion_curse",
+                "enchantery:butterfinger_curse",
+                "enchantery:leeching_curse",
+                "minecraft:unbreaking",
+                "enchantery:imprecision_curse",
+                "enchantery:diminishing_curse",
+                "enchantery:backbiting_curse",
+                "enchantery:devouring_curse",
+                "minecraft:vanishing_curse",
+                "minecraft:binding_curse",
+                "minecraft:efficiency",
+                "minecraft:power"
+              ]
             }
           ]
         },
