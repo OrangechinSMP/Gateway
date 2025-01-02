@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
 @Environment(EnvType.CLIENT)
-public class CarmapoModel<T extends Entity> extends AnimalModel<T> {
+public class CarmapoModel<T extends Entity> extends SmallBipedalModel<T> {
     public static final EntityModelLayer CARMAPO = new EntityModelLayer(Identifier.of(Orangechin.MOD_ID, "carmapo"), "main");
     private final ModelPart head;
     private final ModelPart body;
@@ -34,13 +34,10 @@ public class CarmapoModel<T extends Entity> extends AnimalModel<T> {
         this.rightArm = root.getChild("rightArm");
         this.leftArm = root.getChild("leftArm");
     }
-
-
-
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData head = modelPartData.addChild("head", ModelPartBuilder.create().uv(8, 0).cuboid(-3.0F, -6.0F, -3.0F, 6.0F, 6.0F, 6.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 12.0F, 0.0F));
+        ModelPartData head = modelPartData.addChild("head", ModelPartBuilder.create().uv(0, 0).cuboid(-2.0F, -5.0F, -2.0F, 4.0F, 4.0F, 4.0F, new Dilation(1.0F)), ModelTransform.pivot(0.0F, 12.0F, 0.0F));
 
         ModelPartData body = modelPartData.addChild("body", ModelPartBuilder.create().uv(8, 16).cuboid(-2.0F, 0.0F, -1.0F, 4.0F, 6.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 12.0F, 0.0F));
 
