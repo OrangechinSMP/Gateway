@@ -1,0 +1,43 @@
+{
+    "entity.carmapo.ambient": {
+      "replace": true,
+    "sounds": [
+      "mob/carmapo/say1",
+      "mob/carmapo/say2",
+      "mob/carmapo/say3",
+      "mob/carmapo/say4"
+    ],
+    "subtitle": "subtitles.entity.carmapo.ambient"
+  },
+  "entity.carmapo.death": {
+    "replace": true,
+    "sounds": [
+      "mob/carmapo/death1",
+      "mob/carmapo/death2",
+      "mob/carmapo/death3",
+      "mob/carmapo/death4",
+      "mob/carmapo/death5"
+    ],
+    "subtitle": "subtitles.entity.carmapo.death"
+  },
+  "entity.carmapo.hurt": {
+    "replace": true,
+    "sounds": [
+      "mob/carmapo/hurt1",
+      "mob/carmapo/hurt2",
+      "mob/carmapo/hurt3"
+    ],
+    "subtitle": "subtitles.entity.carmapo.hurt"
+  },
+  "entity.carmapo.step": {
+    "replace": true,
+    "sounds": [
+      "mob/piglin_brute/step1",
+      "mob/piglin_brute/step2",
+      "mob/piglin_brute/step3",
+      "mob/piglin_brute/step4",
+      "mob/piglin_brute/step5"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  }
+}
