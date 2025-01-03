@@ -37,7 +37,7 @@ public abstract class SmallBipedalModel<E extends Entity> extends EntityModel<E>
     }
 
     protected SmallBipedalModel() {
-        this(false, 5.0F, 2.0F);
+        this(false, 6.0F, 0.0F);
     }
 
     public void render(MatrixStack matrices, VertexConsumer vertices, int light, int overlay, int color) {

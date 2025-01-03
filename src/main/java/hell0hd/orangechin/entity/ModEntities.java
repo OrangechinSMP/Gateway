@@ -12,7 +12,7 @@ public class ModEntities {
     public static final EntityType<CarmapoEntity> CARMAPO = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(Orangechin.MOD_ID, "carmapo"),
             EntityType.Builder.create(CarmapoEntity::new, SpawnGroup.AMBIENT)
-                    .dimensions(0.4f,0.7f).build());
+                    .dimensions(0.4f,1.1f).build());
 
     public static void registerModEntities() {
         Orangechin.LOGGER.info("carmapo lice, a rest, this man");
