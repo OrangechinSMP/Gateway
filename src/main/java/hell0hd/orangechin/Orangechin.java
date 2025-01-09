@@ -3,6 +3,7 @@ package hell0hd.orangechin;
 import hell0hd.orangechin.entity.ModEntities;
 import hell0hd.orangechin.entity.custom.CarmapoEntity;
 import hell0hd.orangechin.item.ModItems;
+import hell0hd.orangechin.sounds.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -17,6 +18,7 @@ public class Orangechin implements ModInitializer {
 	public void onInitialize() {
 		ModEntities.registerModEntities();
 		ModItems.registerModItems();
+		ModSounds.registerSounds();
 
 		LOGGER.info("my stupid chud son");
 
