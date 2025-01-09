@@ -1,14 +1,12 @@
 {
   "entity.orangechin.carmapo": "Carmapo",
   "item.orangechin.carmapo_spawn_egg": "Carmapo Spawn Egg",
-  "comment": {
-    "item.minecraft.chicken": "Raw Carmapo",
-    "item.minecraft.chicken_spawn_egg": "Carmapo Spawn Egg",
-    "item.minecraft.cooked_chicken": "Cooked Carmapo",
-    "item.minecraft.egg": "Suspicious Mass",
-    "subtitles.entity.chicken.ambient": "Carmapo chirps",
-    "subtitles.entity.chicken.death": "Carmapo dies",
-    "subtitles.entity.chicken.egg": "Carmapo plops",
-    "subtitles.entity.chicken.hurt": "Carmapo hurts"
-  }
+  "item.orangechin.paux": "Raw Paux",
+  "item.orangechin.cooked_paux": "Cooked Paux",
+  "item.orangechin.suspicious_mass": "Suspicious Mass",
+  "subtitles.entity.carmapo.ambient": "Carmapo chirps",
+  "subtitles.entity.carmapo.death": "Carmapo dies",
+  "subtitles.entity.carmapo.mass": "Carmapo squeaks",
+  "subtitles.entity.carmapo.hurt": "Carmapo hurts",
+  "subtitles.entity.carmapo.growl": "Carmapo growls"
 }
