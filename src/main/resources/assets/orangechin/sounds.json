@@ -1,43 +1,53 @@
 {
     "entity.carmapo.ambient": {
-      "replace": true,
     "sounds": [
-      "mob/carmapo/say1",
-      "mob/carmapo/say2",
-      "mob/carmapo/say3",
-      "mob/carmapo/say4"
+      "orangechin:mob/carmapo/say1",
+      "orangechin:mob/carmapo/say2",
+      "orangechin:mob/carmapo/say3",
+      "orangechin:mob/carmapo/say4"
     ],
     "subtitle": "subtitles.entity.carmapo.ambient"
   },
   "entity.carmapo.death": {
-    "replace": true,
     "sounds": [
-      "mob/carmapo/death1",
-      "mob/carmapo/death2",
-      "mob/carmapo/death3",
-      "mob/carmapo/death4",
-      "mob/carmapo/death5"
+      "orangechin:mob/carmapo/death1",
+      "orangechin:mob/carmapo/death2",
+      "orangechin:mob/carmapo/death3",
+      "orangechin:mob/carmapo/death4",
+      "orangechin:mob/carmapo/death5"
     ],
     "subtitle": "subtitles.entity.carmapo.death"
   },
   "entity.carmapo.hurt": {
-    "replace": true,
     "sounds": [
-      "mob/carmapo/hurt1",
-      "mob/carmapo/hurt2",
-      "mob/carmapo/hurt3"
+      "orangechin:mob/carmapo/hurt1",
+      "orangechin:mob/carmapo/hurt2",
+      "orangechin:mob/carmapo/hurt3"
     ],
     "subtitle": "subtitles.entity.carmapo.hurt"
   },
-  "entity.carmapo.step": {
-    "replace": true,
+  "entity.carmapo.growl": {
     "sounds": [
-      "mob/piglin_brute/step1",
-      "mob/piglin_brute/step2",
-      "mob/piglin_brute/step3",
-      "mob/piglin_brute/step4",
-      "mob/piglin_brute/step5"
+      "orangechin:mob/carmapo/growl1",
+      "orangechin:mob/carmapo/growl2",
+      "orangechin:mob/carmapo/growl3"
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "entity.carmapo.mass": {
+    "sounds": [
+      "orangechin:mob/carmapo/plop"
+    ],
+    "subtitle": "subtitles.entity.carmapo.mass"
+  },
+  "subtitles.entity.carmapo.growl": {
+    "sounds": [
+      "orangechin:mob/carmapo/death1",
+      "orangechin:mob/carmapo/death2",
+      "orangechin:mob/carmapo/death3",
+      "orangechin:mob/carmapo/death4",
+      "orangechin:mob/carmapo/death5"
+    ],
+    "subtitle": "subtitles.entity.carmapo.death"
   }
 }
