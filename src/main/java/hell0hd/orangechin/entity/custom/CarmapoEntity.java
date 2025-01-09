@@ -2,13 +2,13 @@ package hell0hd.orangechin.entity.custom;
 
 
 import hell0hd.orangechin.entity.ModEntities;
+import hell0hd.orangechin.sounds.ModSounds;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
@@ -25,8 +25,10 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.Identifier;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.TimeHelper;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
@@ -39,10 +41,6 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     private static final UniformIntProvider ANGER_TIME_RANGE = TimeHelper.betweenSeconds(20, 39);
     @Nullable
     private UUID angryAt;
-    private static final Identifier ATTACKING_SPEED_MODIFIER_ID = Identifier.ofVanilla("attacking");
-    private static final EntityAttributeModifier ATTACKING_SPEED_BOOST = new EntityAttributeModifier(
-            ATTACKING_SPEED_MODIFIER_ID, 0.05, EntityAttributeModifier.Operation.ADD_VALUE
-    );
     private int angerPassingCooldown;
     private static final UniformIntProvider ANGER_PASSING_COOLDOWN_RANGE = TimeHelper.betweenSeconds(0, 0);
 
@@ -61,7 +59,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         this.goalSelector.add(8, new WanderAroundFarGoal(this, 1.0));
         this.goalSelector.add(6, new LookAroundGoal(this));
 
-        this.goalSelector.add(5, new MeleeAttackGoal(this, 1.0, false));
+        this.goalSelector.add(5, new MeleeAttackGoal(this, 1.35, false));
         this.targetSelector.add(8, new UniversalAngerGoal<>(this, true));
         this.targetSelector.add(4, new ActiveTargetGoal<>(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
 
@@ -69,27 +67,10 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, (double) 4)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, (double) 0.25f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 4)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 28);
-    }
-
-    @Override
-    protected void mobTick() {
-        EntityAttributeInstance entityAttributeInstance = this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED);
-        if (this.hasAngerTime()) {
-            if (!this.isBaby() && !entityAttributeInstance.hasModifier(ATTACKING_SPEED_MODIFIER_ID)) {
-                entityAttributeInstance.addTemporaryModifier(ATTACKING_SPEED_BOOST);
-            }
-        }
-
-        if (this.hasAngerTime()) {
-            this.playerHitTimer = this.age;
-        }
-        
-
-        super.mobTick();
     }
 
     private void tickAngerPassing() {
@@ -107,7 +88,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         double d = this.getAttributeValue(EntityAttributes.GENERIC_FOLLOW_RANGE);
         Box box = Box.from(this.getPos()).expand(d, 10.0, d);
         this.getWorld()
-                .getEntitiesByClass(CarmapoEntity.class, box, EntityPredicates.EXCEPT_SPECTATOR)
+                .getEntitiesByClass(CarmapoEntity.class, box, EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR)
                 .stream()
                 .filter(carmapo -> carmapo != this)
                 .filter(carmapo -> carmapo.getTarget() == null)
@@ -212,6 +193,35 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.CARMAPO.create(world);
+    }
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        if (this.hasAngerTime()) {
+            return ModSounds.ENTITY_CARMAPO_GROWL;
+        } else {
+            return ModSounds.ENTITY_CARMAPO_AMBIENT;
+        }
+    }
+
+    @Override
+    protected void playStepSound(BlockPos pos, BlockState state) {
+        this.playSound(SoundEvents.ENTITY_PIGLIN_BRUTE_STEP, 0.15F, 1.0F);
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return ModSounds.ENTITY_CARMAPO_HURT;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.ENTITY_CARMAPO_DEATH;
+    }
+
+    @Override
+    protected float getSoundVolume() {
+        return 0.4F;
     }
 
 
