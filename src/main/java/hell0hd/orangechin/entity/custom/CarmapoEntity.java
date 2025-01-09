@@ -2,10 +2,15 @@ package hell0hd.orangechin.entity.custom;
 
 
 import hell0hd.orangechin.entity.ModEntities;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributeInstance;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -17,9 +22,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.TimeHelper;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -31,6 +39,12 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     private static final UniformIntProvider ANGER_TIME_RANGE = TimeHelper.betweenSeconds(20, 39);
     @Nullable
     private UUID angryAt;
+    private static final Identifier ATTACKING_SPEED_MODIFIER_ID = Identifier.ofVanilla("attacking");
+    private static final EntityAttributeModifier ATTACKING_SPEED_BOOST = new EntityAttributeModifier(
+            ATTACKING_SPEED_MODIFIER_ID, 0.05, EntityAttributeModifier.Operation.ADD_VALUE
+    );
+    private int angerPassingCooldown;
+    private static final UniformIntProvider ANGER_PASSING_COOLDOWN_RANGE = TimeHelper.betweenSeconds(0, 0);
 
     public CarmapoEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -47,9 +61,9 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         this.goalSelector.add(8, new WanderAroundFarGoal(this, 1.0));
         this.goalSelector.add(6, new LookAroundGoal(this));
 
-        this.goalSelector.add(5, new MeleeAttackGoal(this, 1.0, true));
+        this.goalSelector.add(5, new MeleeAttackGoal(this, 1.0, false));
         this.targetSelector.add(8, new UniversalAngerGoal<>(this, true));
-        this.targetSelector.add(0, new ActiveTargetGoal<>(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
+        this.targetSelector.add(4, new ActiveTargetGoal<>(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
 
     }
 
@@ -58,7 +72,60 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, (double) 4)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, (double) 0.25f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 1);
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 28);
+    }
+
+    @Override
+    protected void mobTick() {
+        EntityAttributeInstance entityAttributeInstance = this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED);
+        if (this.hasAngerTime()) {
+            if (!this.isBaby() && !entityAttributeInstance.hasModifier(ATTACKING_SPEED_MODIFIER_ID)) {
+                entityAttributeInstance.addTemporaryModifier(ATTACKING_SPEED_BOOST);
+            }
+        }
+
+        if (this.hasAngerTime()) {
+            this.playerHitTimer = this.age;
+        }
+        
+
+        super.mobTick();
+    }
+
+    private void tickAngerPassing() {
+        if (this.angerPassingCooldown > 0) {
+            this.angerPassingCooldown--;
+        } else {
+            if (this.getVisibilityCache().canSee(this.getTarget())) {
+                this.angerNearbyCarmapos();
+            }
+
+            this.angerPassingCooldown = ANGER_PASSING_COOLDOWN_RANGE.get(this.random);
+        }
+    }
+    private void angerNearbyCarmapos() {
+        double d = this.getAttributeValue(EntityAttributes.GENERIC_FOLLOW_RANGE);
+        Box box = Box.from(this.getPos()).expand(d, 10.0, d);
+        this.getWorld()
+                .getEntitiesByClass(CarmapoEntity.class, box, EntityPredicates.EXCEPT_SPECTATOR)
+                .stream()
+                .filter(carmapo -> carmapo != this)
+                .filter(carmapo -> carmapo.getTarget() == null)
+                .filter(carmapo -> !carmapo.isTeammate(this.getTarget()))
+                .forEach(carmapo -> carmapo.setTarget(this.getTarget()));
+    }
+
+    @Override
+    public void setTarget(@Nullable LivingEntity target) {
+        if (this.getTarget() == null && target != null) {
+            this.angerPassingCooldown = ANGER_PASSING_COOLDOWN_RANGE.get(this.random);
+        }
+
+        if (target instanceof PlayerEntity) {
+            this.setAttacking((PlayerEntity)target);
+        }
+
+        super.setTarget(target);
     }
 
     protected void initDataTracker(DataTracker.Builder builder) {
@@ -83,6 +150,9 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         super.tickMovement();
         if (!this.getWorld().isClient) {
             this.tickAngerLogic((ServerWorld)this.getWorld(), true);
+            if (this.getTarget() != null) {
+                this.tickAngerPassing();
+            }
         }
     }
 
@@ -112,7 +182,26 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         this.angryAt = angryAt;
     }
 
+    @Override
+    public boolean damage(DamageSource source, float amount) {
+        if (super.damage(source, amount)) {
+            Entity attacker = source.getAttacker();
+            if (attacker instanceof LivingEntity livingAttacker && !this.getWorld().isClient) {
+                this.setAngryAt(livingAttacker.getUuid());
+                this.chooseRandomAngerTime();
+            }
+            return true;
+        }
+        return false;
+    }
 
+    @Override
+    public boolean shouldAngerAt(LivingEntity entity) {
+        if (!this.canTarget(entity)) {
+            return false;
+        }
+        return entity.getUuid().equals(this.getAngryAt());
+    }
 
 
     @Override
