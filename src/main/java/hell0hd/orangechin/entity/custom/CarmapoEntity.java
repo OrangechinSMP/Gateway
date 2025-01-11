@@ -26,9 +26,11 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.TimeHelper;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
@@ -44,6 +46,9 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     private int angerPassingCooldown;
     private static final UniformIntProvider ANGER_PASSING_COOLDOWN_RANGE = TimeHelper.betweenSeconds(0, 0);
     private static final TrackedData<Boolean> AGGRESSIVE = DataTracker.registerData(CarmapoEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+
+    private static final TrackedData<Integer> DATA_ID_TYPE_VARIANT =
+            DataTracker.registerData(CarmapoEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public CarmapoEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -87,10 +92,13 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     }
 
     @Nullable
+    @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
-        net.minecraft.util.math.random.Random random = world.getRandom();
-        entityData = super.initialize(world, difficulty, spawnReason, entityData);
+        CarmapoVariant variant = Util.getRandom(CarmapoVariant.values(), this.random);
+        setVariant(variant);
+        Random random = world.getRandom();
         if (entityData == null) {
+            System.out.println("test");
             entityData = new CarmapoEntity.CarmapoData(shouldBeAggressive(random));
         }
 
@@ -99,7 +107,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
                 this.setAggressive(true);
             }
         }
-        return entityData;
+        return super.initialize(world, difficulty, spawnReason, entityData);
     }
 
 
@@ -122,6 +130,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
                     .stream()
                     .filter(carmapo -> carmapo != this)
                     .filter(carmapo -> carmapo.getTarget() == null)
+                    .filter(carmapo -> carmapo.isAggressive())
                     .filter(carmapo -> !carmapo.isTeammate(this.getTarget()))
                     .forEach(carmapo -> carmapo.setTarget(this.getTarget()));
     }
@@ -143,6 +152,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         super.initDataTracker(builder);
         builder.add(ANGER_TIME, 0);
         builder.add(AGGRESSIVE, false);
+        builder.add(DATA_ID_TYPE_VARIANT, 0);
     }
 
     @Override
@@ -150,6 +160,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         super.writeCustomDataToNbt(nbt);
         this.writeAngerToNbt(nbt);
         nbt.putBoolean("isAggressive", this.isAggressive());
+        nbt.putInt("Variant", this.getTypeVariant());
     }
 
     public void setAggressive(boolean aggressive) {
@@ -160,7 +171,8 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
         this.readAngerFromNbt(this.getWorld(), nbt);
-        this.setAggressive(nbt.getBoolean("IsAggressive"));
+        this.setAggressive(nbt.getBoolean("isAggressive"));
+        this.dataTracker.set(DATA_ID_TYPE_VARIANT, nbt.getInt("Variant"));
     }
 
     @Override
@@ -204,7 +216,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     public boolean damage(DamageSource source, float amount) {
         if (super.damage(source, amount)) {
             Entity attacker = source.getAttacker();
-            if (attacker instanceof LivingEntity livingAttacker && !this.getWorld().isClient && !this.isAggressive()) {
+            if (attacker instanceof LivingEntity livingAttacker && !this.getWorld().isClient && this.isAggressive()){
                 this.setAngryAt(livingAttacker.getUuid());
                 this.chooseRandomAngerTime();
             }
@@ -229,7 +241,12 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
 
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return ModEntities.CARMAPO.create(world);
+        CarmapoEntity baby = ModEntities.CARMAPO.create(world);
+        CarmapoVariant variant = Util.getRandom(CarmapoVariant.values(), this.random);
+        baby.setVariant(variant);
+
+
+        return baby;
     }
 
     @Override
@@ -240,6 +257,8 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
             return ModSounds.ENTITY_CARMAPO_AMBIENT;
         }
     }
+
+
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState state) {
@@ -259,6 +278,18 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     @Override
     protected float getSoundVolume() {
         return 0.4F;
+    }
+
+    public CarmapoVariant getVariant() {
+        return CarmapoVariant.byId(this.getTypeVariant() & 255);
+    }
+
+    private int getTypeVariant() {
+        return this.dataTracker.get(DATA_ID_TYPE_VARIANT);
+    }
+
+    private void setVariant(CarmapoVariant variant) {
+        this.dataTracker.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
     }
 
 
