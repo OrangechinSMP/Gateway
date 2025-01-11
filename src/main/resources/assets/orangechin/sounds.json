@@ -48,6 +48,6 @@
       "orangechin:mob/carmapo/death4",
       "orangechin:mob/carmapo/death5"
     ],
-    "subtitle": "subtitles.entity.carmapo.death"
+    "subtitle": "subtitles.entity.carmapo.growl"
   }
 }
