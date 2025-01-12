@@ -15,6 +15,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.Angerable;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -29,13 +30,16 @@ import net.minecraft.util.TimeHelper;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Random;
 import java.util.UUID;
 
 public class CarmapoEntity extends AnimalEntity implements Angerable {
@@ -46,6 +50,13 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     private int angerPassingCooldown;
     private static final UniformIntProvider ANGER_PASSING_COOLDOWN_RANGE = TimeHelper.betweenSeconds(0, 0);
     private static final TrackedData<Boolean> AGGRESSIVE = DataTracker.registerData(CarmapoEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    private float animationProgress = 1f;
+    public float flapProgress;
+    public float maxWingDeviation;
+    public float prevMaxWingDeviation;
+    public float prevFlapProgress;
+    public float flapSpeed = 1.0F;
+    public int eggLayTime = this.random.nextInt(6000) + 6000;
 
     private static final TrackedData<Integer> DATA_ID_TYPE_VARIANT =
             DataTracker.registerData(CarmapoEntity.class, TrackedDataHandlerRegistry.INTEGER);
@@ -96,18 +107,16 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
         CarmapoVariant variant = Util.getRandom(CarmapoVariant.values(), this.random);
         setVariant(variant);
-        Random random = world.getRandom();
-        if (entityData == null) {
-            System.out.println("test");
-            entityData = new CarmapoEntity.CarmapoData(shouldBeAggressive(random));
-        }
+        net.minecraft.util.math.random.Random random = world.getRandom();
+        entityData = super.initialize(world, difficulty, spawnReason, entityData);
+        entityData = new CarmapoEntity.CarmapoData(shouldBeAggressive(random));
 
         if (entityData instanceof CarmapoData(boolean aggressive)) {
             if (aggressive) {
                 this.setAggressive(true);
             }
         }
-        return super.initialize(world, difficulty, spawnReason, entityData);
+        return entityData;
     }
 
 
@@ -122,6 +131,17 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
             this.angerPassingCooldown = ANGER_PASSING_COOLDOWN_RANGE.get(this.random);
         }
     }
+
+    @Override
+    protected boolean isFlappingWings() {
+        return this.speed > this.animationProgress;
+    }
+
+    @Override
+    protected void addFlapEffects() {
+        this.animationProgress = this.speed + this.maxWingDeviation / 2.0F;
+    }
+
     private void angerNearbyCarmapos() {
         double d = this.getAttributeValue(EntityAttributes.GENERIC_FOLLOW_RANGE);
         Box box = Box.from(this.getPos()).expand(d, 10.0, d);
@@ -184,6 +204,25 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
                 this.tickAngerPassing();
             }
         }
+        this.prevFlapProgress = this.flapProgress;
+        this.prevMaxWingDeviation = this.maxWingDeviation;
+        this.maxWingDeviation = this.maxWingDeviation + (this.isOnGround() ? -1.0F : 4.0F) * 0.3F;
+        this.maxWingDeviation = MathHelper.clamp(this.maxWingDeviation, 0.0F, 1.0F);
+        if (!this.isOnGround() && this.flapSpeed < 1.0F) {
+            this.flapSpeed = 1.0F;
+        }
+        this.flapSpeed *= 0.9F;
+        Vec3d vec3d = this.getVelocity();
+        if (!this.isOnGround() && vec3d.y < 0.0) {
+            this.setVelocity(vec3d.multiply(1.0, 0.6, 1.0));
+        }
+        this.flapProgress = this.flapProgress + this.flapSpeed * 2.0F;
+        if (!this.getWorld().isClient && this.isAlive() && !this.isBaby() && --this.eggLayTime <= 0) {
+            this.playSound(SoundEvents.ENTITY_CHICKEN_EGG, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
+            this.dropItem(Items.EGG);
+            this.emitGameEvent(GameEvent.ENTITY_PLACE);
+            this.eggLayTime = this.random.nextInt(6000) + 6000;
+        }
     }
 
     @Override
@@ -239,11 +278,18 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         return stack.isOf(Items.WHEAT_SEEDS);
     }
 
+
     @Override
-    public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+    public @Nullable AnimalEntity createChild(ServerWorld world, PassiveEntity entity) {
+        Random rnd = new Random();
+        int i = rnd.nextInt(100);
         CarmapoEntity baby = ModEntities.CARMAPO.create(world);
         CarmapoVariant variant = Util.getRandom(CarmapoVariant.values(), this.random);
         baby.setVariant(variant);
+        if(i < 5){
+            baby.setAggressive(true);
+        }
+
 
 
         return baby;
