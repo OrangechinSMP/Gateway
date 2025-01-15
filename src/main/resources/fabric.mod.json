@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
-	"id": "orangechin",
+	"id": "gateway",
 	"version": "${version}",
-	"name": "orangechin",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Gateway",
+	"description": "Accesspoint.",
 	"authors": [
-		"Me!"
+		"Hell0HD"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
