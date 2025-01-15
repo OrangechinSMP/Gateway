@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/orangechin/icon.png",
+	"icon": "assets/gateway/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"hell0hd.orangechin.Orangechin"
+			"hell0hd.gateway.Gateway"
 		],
 		"fabric-datagen": [
-			"hell0hd.orangechin.OrangechinDataGenerator"
+			"hell0hd.gateway.GatewayDataGenerator"
 		],
 		"client": [
-			"hell0hd.orangechin.OrangechinClient"
+			"hell0hd.gateway.GatewayClient"
 		]
 	},
 	"mixins": [
-		"orangechin.mixins.json"
+		"gateway.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",

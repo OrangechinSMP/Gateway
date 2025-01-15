@@ -1,0 +1,53 @@
+{
+    "entity.carmapo.ambient": {
+    "sounds": [
+      "gateway:mob/carmapo/say1",
+      "gateway:mob/carmapo/say2",
+      "gateway:mob/carmapo/say3",
+      "gateway:mob/carmapo/say4"
+    ],
+    "subtitle": "subtitles.entity.carmapo.ambient"
+  },
+  "entity.carmapo.death": {
+    "sounds": [
+      "gateway:mob/carmapo/death1",
+      "gateway:mob/carmapo/death2",
+      "gateway:mob/carmapo/death3",
+      "gateway:mob/carmapo/death4",
+      "gateway:mob/carmapo/death5"
+    ],
+    "subtitle": "subtitles.entity.carmapo.death"
+  },
+  "entity.carmapo.hurt": {
+    "sounds": [
+      "gateway:mob/carmapo/hurt1",
+      "gateway:mob/carmapo/hurt2",
+      "gateway:mob/carmapo/hurt3"
+    ],
+    "subtitle": "subtitles.entity.carmapo.hurt"
+  },
+  "entity.carmapo.growl": {
+    "sounds": [
+      "gateway:mob/carmapo/growl1",
+      "gateway:mob/carmapo/growl2",
+      "gateway:mob/carmapo/growl3"
+    ],
+    "subtitle": "subtitles.entity.carmapo.growl"
+  },
+  "entity.carmapo.mass": {
+    "sounds": [
+      "gateway:mob/carmapo/plop"
+    ],
+    "subtitle": "subtitles.entity.carmapo.mass"
+  },
+  "subtitles.entity.carmapo.growl": {
+    "sounds": [
+      "gateway:mob/carmapo/death1",
+      "gateway:mob/carmapo/death2",
+      "gateway:mob/carmapo/death3",
+      "gateway:mob/carmapo/death4",
+      "gateway:mob/carmapo/death5"
+    ],
+    "subtitle": "subtitles.entity.carmapo.growl"
+  }
+}

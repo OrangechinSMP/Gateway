@@ -1,0 +1,12 @@
+{
+  "entity.gateway.carmapo": "Carmapo",
+  "item.gateway.carmapo_spawn_egg": "Carmapo Spawn Egg",
+  "item.gateway.paux": "Raw Paux",
+  "item.gateway.cooked_paux": "Cooked Paux",
+  "item.gateway.suspicious_mass": "Suspicious Mass",
+  "subtitles.entity.carmapo.ambient": "Carmapo chirps",
+  "subtitles.entity.carmapo.death": "Carmapo dies",
+  "subtitles.entity.carmapo.mass": "Carmapo squeaks",
+  "subtitles.entity.carmapo.hurt": "Carmapo hurts",
+  "subtitles.entity.carmapo.growl": "Carmapo growls"
+}
