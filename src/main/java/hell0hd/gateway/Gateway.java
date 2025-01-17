@@ -4,6 +4,7 @@ import hell0hd.gateway.entity.ModEntities;
 import hell0hd.gateway.entity.custom.CarmapoEntity;
 import hell0hd.gateway.item.ModItems;
 import hell0hd.gateway.sounds.ModSounds;
+import hell0hd.gateway.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class Gateway implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModItems.registerModItems();
 		ModSounds.registerSounds();
+		ModWorldGeneration.generateModWorldGen();
 
 		LOGGER.info("my stupid chud son");
 
