@@ -76,7 +76,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 4)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 28);
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16);
     }
 
 
@@ -84,24 +84,15 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         return this.getDataTracker().get(AGGRESSIVE);
     }
 
-    public static boolean shouldBeAggressive(net.minecraft.util.math.random.Random random) {
-        return random.nextFloat() < 0.05F;
-    }
-
-    public record CarmapoData(boolean aggressive) implements EntityData {
-    }
 
     @Nullable
     @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
-        net.minecraft.util.math.random.Random random = world.getRandom();
+        Random rnd = new Random();
+        int i = rnd.nextInt(100);
         entityData = super.initialize(world, difficulty, spawnReason, entityData);
-        entityData = new CarmapoEntity.CarmapoData(shouldBeAggressive(random));
-
-        if (entityData instanceof CarmapoData(boolean aggressive)) {
-            if (aggressive) {
-                this.setAggressive(true);
-            }
+        if(i < 5){
+            this.setAggressive(true);
         }
         return entityData;
     }
@@ -128,7 +119,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
                     .stream()
                     .filter(carmapo -> carmapo != this)
                     .filter(carmapo -> carmapo.getTarget() == null)
-                    .filter(carmapo -> carmapo.isAggressive())
+                    .filter(CarmapoEntity::isAggressive)
                     .filter(carmapo -> !carmapo.isTeammate(this.getTarget()))
                     .forEach(carmapo -> carmapo.setTarget(this.getTarget()));
     }
@@ -251,6 +242,7 @@ public class CarmapoEntity extends AnimalEntity implements Angerable {
         int i = rnd.nextInt(100);
         CarmapoEntity baby = ModEntities.CARMAPO.create(world);
         if(i < 5){
+            assert baby != null;
             baby.setAggressive(true);
         }
 
