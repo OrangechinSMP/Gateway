@@ -40,14 +40,19 @@
     ],
     "subtitle": "subtitles.entity.carmapo.mass"
   },
-  "subtitles.entity.carmapo.growl": {
+  "music_disc.droopy": {
     "sounds": [
-      "gateway:mob/carmapo/death1",
-      "gateway:mob/carmapo/death2",
-      "gateway:mob/carmapo/death3",
-      "gateway:mob/carmapo/death4",
-      "gateway:mob/carmapo/death5"
-    ],
-    "subtitle": "subtitles.entity.carmapo.growl"
+      "gateway:records/droopy"
+    ]
+  },
+  "music_disc.eleven": {
+    "sounds": [
+      "gateway:records/eleven"
+    ]
+  },
+  "music_disc.tears": {
+    "sounds": [
+      "gateway:records/tears"
+    ]
   }
 }
