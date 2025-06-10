@@ -13,7 +13,7 @@ import net.minecraft.world.Heightmap;
 public class ModEntitySpawns {
     public static void addSpawns() {
         BiomeModifications.addSpawn(BiomeSelectors.spawnsOneOf(EntityType.CHICKEN),
-                SpawnGroup.CREATURE, ModEntities.CARMAPO, 10, 4, 4);
+                SpawnGroup.CREATURE, ModEntities.CARMAPO, 10, 1, 2);
 
         SpawnRestriction.register(ModEntities.CARMAPO, SpawnLocationTypes.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
