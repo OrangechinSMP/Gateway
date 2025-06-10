@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#M#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:diamond"
+        },
+        "M": {
+            "item": "minecraft:music_disc_11"
+        }
+    },
+    "result": {
+        "id": "gateway:music_disc_eleven",
+        "count": 1
+    }
+}
