@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gateway:block/carmapellet_block"
+    }
+  }
+}
