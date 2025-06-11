@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_carmapellets": {
+      "conditions": {
+        "items": [
+          {
+            "items": "gateway:carmapellets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:magenta_dye_from_carmapellets"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_carmapellets"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:magenta_dye_from_carmapellets"
+    ]
+  }
+}
