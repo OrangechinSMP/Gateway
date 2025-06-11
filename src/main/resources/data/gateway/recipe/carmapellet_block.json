@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "gateway:carmapellets"
+        }
+    },
+    "result": {
+        "id": "gateway:carmapellet_block",
+        "count": 1
+    }
+}
