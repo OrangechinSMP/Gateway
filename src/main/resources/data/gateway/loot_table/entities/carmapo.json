@@ -8,6 +8,33 @@
           "type": "minecraft:item",
           "functions": [
             {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "gateway:carmapellets"
+        }
+      ],
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.425
+        }
+      ]
+    },
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -58,5 +85,6 @@
       ],
       "rolls": 1
     }
-  ]
+  ],
+  "random_sequence": "gateway:entities/carmapo"
 }
