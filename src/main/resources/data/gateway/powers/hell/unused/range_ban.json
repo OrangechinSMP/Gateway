@@ -1,0 +1,11 @@
+{
+    "name": "Close Combat",
+    "description": "You aren't able to use ranged weapons.",
+    "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "gateway:hell/ranged_weapons"
+            }
+        }
+}

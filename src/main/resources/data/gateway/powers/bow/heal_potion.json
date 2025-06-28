@@ -1,0 +1,41 @@
+{
+    "name": "Novice Cleric",
+    "description": "You're able to throw splash potions of healing at will.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:fire_projectile",
+                "entity_type": "minecraft:potion",
+                "tag": "{Item:{id:\"minecraft:splash_potion\",count:1,components:{\"minecraft:potion_contents\":{potion:\"minecraft:healing\"}}}}",
+                "count": 1,
+                "speed": 0.51
+            },
+            {
+                "comment": "sound done",
+                "type": "origins:play_sound",
+                "sound": "gateway:origins.bow.throw"
+            },
+            {
+                "comment": "sound done",
+                "type": "origins:delay",
+                "ticks": 1000,
+                "action": {
+                    "type": "origins:play_sound",
+                    "sound": "gateway:origins.bow.recharge"
+                }
+            }
+        ]
+    },
+    "cooldown": 1000,
+    "hud_render": {
+        "comment": "bar done",
+        "should_render": true,
+        "sprite_location": "gateway:textures/gui/origins/resource_bar.png",
+        "bar_index": 3
+    },
+    "key": {
+        "key": "key.origins.secondary_active"
+    }
+}

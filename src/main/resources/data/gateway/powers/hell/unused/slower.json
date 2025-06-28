@@ -1,0 +1,11 @@
+{
+    "name": "Heavyweight",
+    "description": "You move slower than others.",
+    "type": "origins:attribute",
+	"modifier": {
+		"id": "*:*",
+		"attribute": "minecraft:generic.movement_speed",
+		"amount": -0.085,
+		"operation": "add_multiplied_total"
+	}
+}

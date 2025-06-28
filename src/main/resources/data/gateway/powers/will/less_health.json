@@ -1,0 +1,38 @@
+{
+	"name": "Fragile",
+	"description": "You have half the hearts of a normal person.",
+	"type": "origins:multiple",
+	"modify": {
+		"type": "origins:attribute",
+		"modifier": {
+			"id": "*:*",
+			"attribute": "minecraft:generic.max_health",
+			"amount": -10,
+			"operation": "add_value"
+		}
+	},
+	"death_revoke": {
+		"type": "origins:action_on_death",
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:revoke_power",
+						"power": "gateway:will/less_health",
+						"source": "gateway:bugkin"
+					}
+				}
+			]
+		}
+	},
+	"respawn_grant": {
+		"type": "origins:action_on_callback",
+		"entity_action_respawned": {
+			"type": "origins:revoke_power",
+			"power": "gateway:will/less_health",
+			"source": "gateway:zombiehare"
+		}
+	}
+}

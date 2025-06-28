@@ -1,0 +1,17 @@
+{
+    "name": "Brawler",
+    "description": "Countless fights have made your hands stronger than most, allowing you to apply techniques that others can only hope to understand.",
+    "impact": 1,
+    "order": 9,
+    "icon": {
+        "id": "friendsandfoes:crab_claw"
+    },
+    "powers": [
+        "gateway:hell/strong_hands",
+        "gateway:hell/knockback_hit",
+        "gateway:hell/natural_armor",
+        "gateway:hell/break_stone",
+        "gateway:hell/less_weapon_damage",
+        "gateway:hell/exhaust_faster"
+    ]
+}

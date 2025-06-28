@@ -1,0 +1,6 @@
+{
+    "name": "Pesticide",
+    "description": "When a weapon with Bane of Arthropods hits you, you take extra damage and are slowed down.",
+	"type": "origins:modify_type_tag",
+	"tag": "minecraft:arthropod"
+}

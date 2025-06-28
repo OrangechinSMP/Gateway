@@ -1,0 +1,11 @@
+{
+    "name": "Fast Metabolism",
+    "description": "Being in bat form causes you to become hungry.",
+	"type": "origins:exhaust",
+	"interval": 8.5,
+	"exhaustion": 0.812,
+	"condition": {
+		"type": "origins:power_active",
+		"power": "gateway:ruli/bat_switch"
+	}
+}

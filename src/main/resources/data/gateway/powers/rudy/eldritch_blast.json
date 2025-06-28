@@ -1,0 +1,56 @@
+{
+    "name": "Eldritch Blast",
+    "description": "A beam of crackling energy streaks towards a creature within range, dealing damage and knockback.",
+    "comment": "ADD CASTING SOUND",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:raycast",
+                "entity": true,
+                "shape_type": "collider",
+                "distance": 120,
+                "command_along_ray": "particle dust_color_transition{from_color:[0.000,1.000,0.898],scale:2,to_color:[0.000,0.000,0.000]}",
+                "command_step": 0.1,
+                "command_along_ray_only_on_hit": false,
+                "bientity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:add_velocity",
+                            "z": -0.75,
+                            "space": "local"
+                        },
+                        {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:damage",
+                                "amount": 5,
+                                "damage_type": "minecraft:magic"
+                            }
+                        },
+                        {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "function gateway:rudy/blast/hit_particles"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "gateway:origins.rudy.eldritch_blast.cast"
+            }
+        ]
+    },
+    "cooldown": 120,
+    "hud_render": {
+        "comment": "bar done",
+        "should_render": true,
+        "sprite_location": "gateway:textures/gui/origins/resource_bar.png",
+        "bar_index": 5
+    }
+}

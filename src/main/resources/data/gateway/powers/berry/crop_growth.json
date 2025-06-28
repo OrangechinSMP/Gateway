@@ -1,0 +1,39 @@
+{
+    "comment": "SOUND AND BAR DONE",
+    "name": "Floral Essence",
+    "description": "You're able to fertilize plants around you when exposed to sunlight.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:block_action_at",
+                "block_action": {
+                    "type": "origins:area_of_effect",
+                    "radius": 2,
+                    "shape": "sphere",
+                    "block_action": {
+                        "type": "origins:bonemeal",
+                        "effects": true
+                    }
+                }
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:happy_villager ~ ~ ~ 1 .25 1 1 75 force"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "gateway:origins.berry.fertilize"
+            }
+        ]
+    },
+    "cooldown": 900,
+    "hud_render": {
+        "sprite_location": "gateway:textures/gui/origins/resource_bar.png",
+        "bar_index": 2
+    },
+    "condition": {
+        "type": "origins:exposed_to_sun"
+    }
+}

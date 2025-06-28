@@ -1,0 +1,26 @@
+{
+    "name": "Vampirian",
+    "description": "Being children of the fearsome Alucard, Vampirians are able to transform into creatures of the night, while having to hide themselves away from the day.",
+    "impact": 3,
+    "order": 2,
+    "icon": {
+        "id": "minecraft:beetroot_soup"
+    },
+    "powers": [
+        "gateway:ruli/bloodsucker",
+        "gateway:ruli/bat_switch",
+        "gateway:ruli/switch_bat",
+        "gateway:ruli/fly",
+        "gateway:ruli/night_vision",
+        "gateway:ruli/fall",
+        "gateway:ruli/batty",
+        "gateway:ruli/smaller",
+        "gateway:ruli/fragile",
+        "gateway:ruli/burn_in_sun",
+        "gateway:ruli/dark_sleep",
+        "origins:carnivore",
+        "gateway:ruli/metabolism",
+        "gateway:ruli/wooden_tools",
+        "gateway:ruli/overlay"
+    ]
+}

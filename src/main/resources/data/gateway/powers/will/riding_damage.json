@@ -1,0 +1,152 @@
+{
+    "name": "Pincers",
+    "description": "You can use your mandibles to latch onto mobs, hurting them while you're attached.",
+    "type": "origins:multiple",
+    "biting": {
+        "comment": "SOUND done",
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:mount"
+                },
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:play_sound",
+                        "sound": "gateway:origins.will.bite",
+                        "pitch": 1
+                    }
+                },
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:trigger_cooldown",
+                        "power": "*:*_cooldown"
+                    }
+                },
+                {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:damage",
+                            "amount": 1,
+                            "damage_type": "gateway:bite"
+                        },
+                        {
+                            "type": "origins:delay",
+                            "ticks": 20,
+                            "action": {
+                                "type": "origins:if_else",
+                                "condition": {
+                                    "type": "origins:riding"
+                                },
+                                "if_action": {
+                                    "type": "origins:damage",
+                                    "amount": 1,
+                                    "damage_type": "gateway:bite"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:delay",
+                            "ticks": 40,
+                            "action": {
+                                "type": "origins:if_else",
+                                "condition": {
+                                    "type": "origins:riding"
+                                },
+                                "if_action": {
+                                    "type": "origins:damage",
+                                    "amount": 1,
+                                    "damage_type": "gateway:bite"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:delay",
+                            "ticks": 60,
+                            "action": {
+                                "type": "origins:if_else",
+                                "condition": {
+                                    "type": "origins:riding"
+                                },
+                                "if_action": {
+                                    "type": "origins:damage",
+                                    "amount": 1,
+                                    "damage_type": "gateway:bite"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:delay",
+                            "ticks": 80,
+                            "action": {
+                                "type": "origins:if_else",
+                                "condition": {
+                                    "type": "origins:riding"
+                                },
+                                "if_action": {
+                                    "type": "origins:damage",
+                                    "amount": 1,
+                                    "damage_type": "gateway:bite"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 80,
+                    "action": {
+                        "type": "origins:if_else",
+                        "condition": {
+                            "type": "origins:riding"
+                        },
+                        "if_action": {
+                            "type": "origins:actor_action",
+                            "action": {
+                                "type": "origins:dismount"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_cooldown",
+                        "comparison": "<=",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:sneaking",
+                        "inverted": true
+                    }
+                ]
+            }
+        },
+        "item_condition": {
+            "type": "origins:empty"
+        },
+        "hands": [
+            "main_hand"
+        ]
+    },
+    "cooldown": {
+        "comment": "bar done",
+        "type": "origins:cooldown",
+        "cooldown": 500,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "gateway:textures/gui/origins/resource_bar.png",
+            "bar_index": 1
+        }
+    }
+}

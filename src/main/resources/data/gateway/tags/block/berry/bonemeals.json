@@ -1,0 +1,20 @@
+{
+    "values": [
+        "#minecraft:saplings",
+        "azalea",
+        "flowering_azalea",
+        "#minecraft:tall_flowers",
+        "short_grass",
+        "fern",
+        "seagrass",
+        "red_mushroom",
+        "brown_mushroom",
+        "crimson_fungus",
+        "warped_fungus",
+        "glow_lichen",
+        "moss_block",
+        "small_dripleaf",
+        "mangrove_leaves",
+        "rooted_dirt"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Iron Stomach",
+    "description": "You've built up an immunity to foodborne iilnesses due to your poor diet.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "minecraft:hunger"
+    ]
+}

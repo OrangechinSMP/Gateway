@@ -1,0 +1,29 @@
+{
+    "name": "Iron Fists",
+    "description": "Your strong fists are able to break through natural stones with ease.",
+    "type": "origins:multiple",
+    "break": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:natural_stone"
+        }
+    },
+    "speed": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:natural_stone"
+        },
+        "condition": {
+            "type": "origins:using_effective_tool",
+            "inverted": true
+        },
+        "modifier": {
+            "amount": 0.06,
+            "operation": "add_base_early"
+        },
+        "hidden": true
+    }
+}

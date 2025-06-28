@@ -1,0 +1,110 @@
+{
+    "name": "Force Palm",
+    "description": "Your hits have a chance to deal extra knockback to your target.",
+    "type": "origins:multiple",
+    "hit_tracker": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "hit_thingamabob": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:chance",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:add_velocity",
+                            "z": -0.75,
+                            "space": "local"
+                        },
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "gateway:origins.hell.knockback",
+                            "pitch": 1.2
+                        }
+                    ]
+                },
+                "chance": 0.5
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_hit_tracker",
+                        "comparison": "==",
+                        "compare_to": 2
+                    },
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "gateway:hell/weapons"
+                            },
+                            "inverted": true
+                        }
+                    }
+                ]
+            }
+        },
+        "damage_condition": {
+            "type": "origins:projectile",
+            "inverted": true
+        }
+    },
+    "the_other_one": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_hit_tracker",
+                            "comparison": "<",
+                            "compare_to": 2
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "gateway:hell/weapons"
+                                },
+                                "inverted": true
+                            }
+                        }
+                    ]
+                },
+                "if_action": {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_hit_tracker",
+                    "operation": "add",
+                    "change": 1
+                },
+                "else_action": {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_hit_tracker",
+                    "operation": "set",
+                    "change": 0
+                }
+            }
+        }
+    }
+}

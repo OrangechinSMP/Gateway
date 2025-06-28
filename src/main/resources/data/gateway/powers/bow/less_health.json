@@ -1,0 +1,38 @@
+{
+	"name": "Shell-less Mollusk",
+	"description": "You have 2 less hearts than usual.",
+	"type": "origins:multiple",
+	"modifier": {
+		"type": "origins:attribute",
+		"modifier": {
+			"id": "*:*",
+			"attribute": "minecraft:generic.max_health",
+			"amount": -4,
+			"operation": "add_value"
+		}
+	},
+	"death_revoke": {
+		"type": "origins:action_on_death",
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:revoke_power",
+						"power": "gateway:bow/less_health",
+						"source": "gateway:nudibranch"
+					}
+				}
+			]
+		}
+	},
+	"respawn_grant": {
+		"type": "origins:action_on_callback",
+		"entity_action_respawned": {
+			"type": "origins:grant_power",
+			"power": "gateway:bow/less_health",
+			"source": "gateway:nudibranch"
+		}
+	}
+}

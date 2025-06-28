@@ -1,0 +1,105 @@
+{
+    "name": "Ailurophobia",
+    "description": "Being around cats will make you weaker and nauseous.",
+    "type": "origins:multiple",
+    "effects": {
+        "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "id": "minecraft:weakness",
+                "duration": 90,
+                "ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "id": "minecraft:nausea",
+                "duration": 90,
+                "ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    },
+    "interval": 20,
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:command",
+                "command": "execute if entity @e[type=cat,distance=..6]",
+                "comparison": ">=",
+                "compare_to": 1
+            },
+            {
+                "type": "origins:command",
+                "command": "execute if entity @e[type=ocelot,distance=..6]",
+                "comparison": ">=",
+                "compare_to": 1
+            }
+        ]
+    }
+    },
+    "hissing_cat": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:nothing"
+        },
+    "rising_action": {
+        "type": "origins:execute_command",
+        "command": "execute at @e[type=cat,distance=..6] run playsound minecraft:entity.cat.hiss neutral @a ~ ~ ~ 0.4"
+    },
+    "interval": 20,
+    "condition": {
+        "type": "origins:command",
+        "command": "execute if entity @e[type=cat,distance=..6]",
+        "comparison": ">=",
+        "compare_to": 1
+    }
+    },
+    "hissing_ocelot": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:nothing"
+        },
+    "rising_action": {
+        "type": "origins:execute_command",
+        "command": "execute at @e[type=ocelot,distance=..6] run playsound minecraft:entity.cat.hiss neutral @a ~ ~ ~ 0.4"
+    },
+    "interval": 20,
+    "condition": {
+        "type": "origins:command",
+        "command": "execute if entity @e[type=ocelot,distance=..6]",
+        "comparison": ">=",
+        "compare_to": 1
+    }
+    },
+    "no_feed": {
+        "type": "origins:prevent_entity_use",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "title @s actionbar {\"text\": \"You are unable interact with cats or ocelots\"}"
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                "entity_type": "minecraft:cat"
+                    },
+                    {
+                        "type": "origins:entity_type",
+                "entity_type": "minecraft:ocelot"
+                    }
+                ]
+            }
+        }
+    }
+}

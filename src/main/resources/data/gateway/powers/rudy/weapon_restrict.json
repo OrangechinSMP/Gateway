@@ -1,0 +1,42 @@
+{
+    "name": "Weapon Proficiency",
+    "description": "You are unable to wield shields or melee weapons heavier than iron.",
+    "type": "origins:multiple",
+    "use": {
+        "name": "Weapon Proficiency",
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "gateway:rudy/weapon_restrict"
+            }
+        }
+    },
+    "damage": {
+        "type": "origins:modify_damage_dealt",
+        "modifiers": [
+            {
+                "operation": "set_total",
+                "amount": -100
+            }
+        ],
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "gateway:rudy/weapon_restrict"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Runny Makeup",
+    "description": "You're blinded while underwater.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 2,
+    "duration_per_stack": 30,
+    "effects": [
+        {
+            "id": "minecraft:blindness",
+            "ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ],
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "minecraft:water"
+    }
+}

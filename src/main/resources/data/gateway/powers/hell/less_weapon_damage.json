@@ -1,0 +1,37 @@
+{
+    "name": "Weapon Deficiency",
+    "description": "You aren't as proficient with weapons as you are with your hands, dealing less damage with them.",
+    "type": "origins:multiple",
+    "everything_else": {
+        "type": "origins:modify_damage_dealt",
+        "modifiers": [
+            {
+                "operation": "add_base_early",
+                "amount": -11.2
+            }
+        ],
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "gateway:hell/weapons"
+                    }
+                }
+            }
+        }
+    },
+    "projectiles": {
+        "type": "origins:modify_projectile_damage",
+        "modifier": {
+            "operation": "add_base_early",
+            "amount": -14.2
+        },
+        "damage_condition": {
+            "type": "origins:projectile"
+        }
+    }
+}

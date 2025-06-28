@@ -1,0 +1,38 @@
+{
+	"name": "Dead Tissue",
+	"description": "Your flesh is easier to pierce.",
+	"type": "origins:multiple",
+	"modify": {
+		"type": "origins:attribute",
+		"modifier": {
+			"id": "*:*",
+			"attribute": "minecraft:generic.max_health",
+			"amount": -4,
+			"operation": "add_value"
+		}
+	},
+	"death_revoke": {
+		"type": "origins:action_on_death",
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:revoke_power",
+						"power": "gateway:jax/less_health",
+						"source": "gateway:zombiehare"
+					}
+				}
+			]
+		}
+	},
+	"respawn_grant": {
+		"type": "origins:action_on_callback",
+		"entity_action_respawned": {
+			"type": "origins:grant_power",
+			"power": "gateway:jax/less_health",
+			"source": "gateway:zombiehare"
+		}
+	}
+}

@@ -54,5 +54,105 @@
     "sounds": [
       "gateway:records/tears"
     ]
+  },
+  "origins.rudy.eldritch_blast.cast": {
+    "sounds": [
+      "gateway:origins/rudy/eldritch_blast/cast"
+    ],
+    "subtitle": "subtitles.gateway.origins.rudy.eldritch_blast.cast"
+  },
+  "origins.rudy.dagger_cloud.cast": {
+    "sounds": [
+      "gateway:origins/rudy/dagger_cloud/cast"
+    ],
+    "subtitle": "subtitles.gateway.origins.rudy.dagger_cloud.cast"
+  },
+  "origins.berry.fertilize": {
+    "sounds": [
+      "gateway:origins/berry/fertilize"
+    ],
+    "subtitle": "subtitles.gateway.origins.berry.fertilize"
+  },
+  "origins.genez.fake_death": {
+    "sounds": [
+      "gateway:origins/genez/fake_death"
+    ],
+    "subtitle": "subtitles.gateway.origins.genez.fake_death"
+  },
+  "origins.hell.knockback": {
+    "sounds": [
+      "gateway:origins/hell/knockback"
+    ],
+    "subtitle": "subtitles.gateway.origins.hell.knockback"
+  },
+  "origins.milkyz.launch": {
+    "sounds": [
+      "gateway:origins/milkyz/launch"
+    ],
+    "subtitle": "subtitles.gateway.origins.milkyz.launch"
+  },
+  "origins.jax.bite": {
+    "sounds": [
+      {
+        "name": "minecraft:mob/fox/bite1",
+        "pitch": 0.6
+      },
+      {
+        "name": "minecraft:mob/fox/bite2",
+        "pitch": 0.6
+      },
+      {
+        "name": "minecraft:mob/fox/bite3",
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.gateway.origins.jax.bite"
+  },
+  "origins.ruli.transform": {
+    "sounds": [
+      "gateway:origins/ruli/transform"
+    ],
+    "subtitle": "subtitles.gateway.origins.ruli.transform"
+  },
+  "origins.ruli.untransform": {
+    "sounds": [
+      "gateway:origins/ruli/untransform"
+    ],
+    "subtitle": "subtitles.gateway.origins.ruli.transform"
+  },
+  "origins.ruli.bloodsucker": {
+    "sounds": [
+      "gateway:origins/ruli/bloodsucker"
+    ],
+    "subtitle": "subtitles.gateway.origins.ruli.bloodsucker"
+  },
+  "origins.bow.throw": {
+    "sounds": [
+      {
+        "name": "minecraft:random/bow",
+        "pitch": 0.1
+      }
+    ],
+    "subtitle": "subtitles.gateway.origins.bow.throw"
+  },
+  "origins.bow.recharge": {
+    "sounds": [
+      {
+        "name": "minecraft:block/brewing_stand/brew1",
+        "pitch": 1.125
+      },
+      {
+        "name": "minecraft:block/brewing_stand/brew2",
+        "pitch": 1.125
+      }
+    ],
+    "subtitle": "subtitles.gateway.origins.bow.recharge"
+  },
+  "origins.will.bite": {
+    "sounds": [
+      "gateway:origins/will/bite/bite1",
+      "gateway:origins/will/bite/bite2"
+    ],
+    "subtitle": "subtitles.gateway.origins.will.bite"
   }
 }

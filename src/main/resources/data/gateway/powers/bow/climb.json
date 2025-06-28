@@ -1,0 +1,78 @@
+{
+    "name": "Fast Climber",
+    "description": "Using your sticky hands and feet, you are able to hone your climbing ability to its highest potential.",
+	"type": "origins:multiple",
+	"toggle": {
+		"type": "origins:toggle",
+		"key": {
+			"key": "key.origins.primary_active",
+			"continuous": false
+		}
+	},
+	"climbing": {
+		"type": "origins:climbing",
+		"condition": {
+			"type": "origins:all_of",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:*_toggle"
+				},
+				{
+					"type": "origins:any_of",
+					"conditions": [
+						{
+							"type": "origins:all_of",
+							"conditions": [
+								{
+									"type": "origins:sneaking",
+									"inverted": true
+								},
+								{
+									"type": "origins:collided_horizontally"
+								}
+							]
+						},
+						{
+							"type": "origins:all_of",
+							"conditions": [
+								{
+									"type": "origins:sneaking"
+								},
+								{
+									"type": "origins:any_of",
+									"conditions": [
+										{
+											"type": "origins:block_collision",
+											"offset_x": 0.01,
+											"offset_z": 0.01
+										},
+										{
+											"type": "origins:block_collision",
+											"offset_x": -0.01,
+											"offset_z": -0.01
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	},
+    "climb_speed": {
+        "comment": "thank you waoffs",
+        "type": "origins:modify_velocity",
+        "modifier": {
+          "amount": 0.75,
+          "operation": "apoli:multiply_base_multiplicative"
+        },
+        "axes": [
+          "y"
+        ],
+        "condition": {
+            "type": "origins:climbing"
+        }
+      }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Flammable",
+    "description": "You burn indefinitely unless put out.",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:set_on_fire",
+        "duration": 8
+    },
+    "interval": 140,
+    "condition": {
+        "type": "origins:on_fire"
+    }
+}

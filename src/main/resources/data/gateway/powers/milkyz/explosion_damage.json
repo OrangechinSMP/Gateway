@@ -1,0 +1,13 @@
+{
+    "name": "Blast Resilient",
+    "description": "Due to your explosive nature, you take less damage and knockback from explosions.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:is_explosion"
+    },
+    "modifier": {
+        "operation": "multiply_base_additive",
+        "amount": -0.16
+    }
+}

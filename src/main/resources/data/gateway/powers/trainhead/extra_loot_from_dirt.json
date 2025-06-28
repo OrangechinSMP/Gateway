@@ -1,0 +1,60 @@
+{
+    "name": "Scavenger",
+    "description": "Your expertise in scrapping allows you to find extra loot in unexpected places. You can find discared ores and tools in blocks like dirt, sand, and gravel.",
+    "type": "origins:multiple",
+
+    "dirt": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/dirt": "gateway:trainhead/blocks/dirt"
+        }
+    },
+    "coarse_dirt": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/coarse_dirt": "gateway:trainhead/blocks/coarse_dirt"
+        }
+    },
+    "grass_block": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/grass_block": "gateway:trainhead/blocks/grass_block"
+        }
+    },
+    "gravel": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/gravel": "gateway:trainhead/blocks/gravel"
+        }
+    },
+    "mud": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/mud": "gateway:trainhead/blocks/mud"
+        }
+    },
+    "mycelium": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/mycelium": "gateway:trainhead/blocks/mycelium"
+        }
+    },
+    "podzol": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/podzol": "gateway:trainhead/blocks/podzol"
+        }
+    },
+    "red_sand": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/red_sand": "gateway:trainhead/blocks/red_sand"
+        }
+    },
+    "sand": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:blocks/sand": "gateway:trainhead/blocks/sand"
+        }
+    }
+}

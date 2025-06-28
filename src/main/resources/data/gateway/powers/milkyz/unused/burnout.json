@@ -1,0 +1,32 @@
+{
+    "name": "Burn Out",
+    "description": "Overcharging your Combustion causes you to lose all your energy, making you slower and weaker for a short period of time.",
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+        {
+            "id": "*:*",
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "add_multiplied_total",
+            "amount": -0.65
+        },
+        {
+            "id": "*:*_damage",
+            "attribute": "minecraft:generic.attack_damage",
+            "operation": "add_value",
+            "amount": -2
+        },
+        {
+            "id": "*:*_jump",
+            "attribute": "minecraft:generic.jump_strength",
+            "operation": "add_value",
+            "amount": -0.05
+        }
+    ],
+    "tick_rate": 1,
+    "condition": {
+        "type": "origins:resource",
+        "resource": "gateway:milkyz/combustion_burnout",
+        "comparison": ">",
+        "compare_to": 0
+    }
+}

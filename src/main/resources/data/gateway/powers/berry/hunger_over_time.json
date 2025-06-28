@@ -1,0 +1,14 @@
+{
+    "name": "Photosynthesis",
+    "description": "Your hunger will occassionally satiated when exposed to the sun.",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:feed",
+        "nutrition": 1,
+        "saturation": 0.2
+    },
+    "interval": 200,
+    "condition": {
+        "type": "origins:exposed_to_sun"
+    }
+}

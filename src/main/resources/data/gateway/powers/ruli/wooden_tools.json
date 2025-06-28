@@ -1,0 +1,22 @@
+{
+    "name": "Stakes are High",
+    "description": "Wooden tools and sticks deal extra damage to you.",
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "amount": 1.5,
+        "operation": "multiply_total_multiplicative"
+    },
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "gateway:ruli/wooden_tools"
+                }
+            }
+        }
+    }
+}

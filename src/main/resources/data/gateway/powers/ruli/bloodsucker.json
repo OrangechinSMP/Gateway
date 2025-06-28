@@ -1,0 +1,47 @@
+{
+    "name": "Bloodsucker",
+    "description": "Killing mobs with 4 or more hearts will feed you and heal you.",
+    "type": "origins:self_action_on_kill",
+    "target_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:attribute",
+                "attribute": "minecraft:generic.max_health",
+                "comparison": ">=",
+                "compare_to": 8
+            },
+            {
+                "type": "origins:in_tag",
+                "tag": "minecraft:undead",
+                "inverted": true
+            }
+        ]
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:feed",
+                "nutrition": 3,
+                "saturation": 0.0
+            },
+            {
+                "type": "origins:heal",
+                "amount": 1
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "gateway:origins.ruli.bloodsucker",
+                "comment": "finished SOUND"
+            }
+        ]
+    },
+    "cooldown": 32,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "gateway:textures/gui/origins/resource_bar.png",
+        "bar_index": 7,
+        "comment": "BAR TEXTURE done"
+    }
+}

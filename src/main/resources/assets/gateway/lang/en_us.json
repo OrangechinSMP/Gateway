@@ -27,5 +27,18 @@
   "item.minecraft.lingering_potion.effect.absorption": "Lingering Potion of Gilding",
   "item.minecraft.tipped_arrow.effect.absorption": "Arrow of Gilding",
   "item.gateway.carmapellets": "Carmapellets",
-  "block.gateway.carmapellet_block": "Block of Carmapellets"
+  "block.gateway.carmapellet_block": "Block of Carmapellets",
+  "death.attack.bite": "%1$s was bit too hard by %2$s",
+  "subtitles.gateway.origins.rudy.eldritch_blast.cast": "Eldritch Blast cast",
+  "subtitles.gateway.origins.rudy.dagger_cloud.cast": "Cloud of Daggers cast",
+  "subtitles.gateway.origins.berry.fertilize": "Florian fertilizes land",
+  "subtitles.gateway.origins.genez.fake_death": "Harlequinian vanishes",
+  "subtitles.gateway.origins.hell.knockback": "Strong knockback attack",
+  "subtitles.gateway.origins.milkyz.launch": "Fuseborn blast jumps",
+  "subtitles.gateway.origins.jax.bite": "Zombiehare bites",
+  "subtitles.gateway.origins.ruli.transform": "Vampirian transforms",
+  "subtitles.gateway.origins.bow.throw": "Nudibranch throws bottle",
+  "subtitles.gateway.origins.bow.recharge": "Nudibranch bottle refills",
+  "subtitles.gateway.origins.will.bite": "Bugkin latches on",
+  "subtitles.gateway.origins.ruli.bloodsucker": "Vampirian sucks blood"
 }

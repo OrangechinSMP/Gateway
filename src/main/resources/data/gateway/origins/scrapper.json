@@ -1,0 +1,17 @@
+{
+    "name": "Scrapper",
+    "description": "A scrapyard worker from the future, travelled back in time to create their own scrap company to rival the one they worked for.",
+    "impact": 1,
+    "order": 6,
+    "icon": {
+        "id": "minecraft:gilded_blackstone"
+    },
+    "powers": [
+        "gateway:trainhead/extra_loot_from_dirt",
+        "gateway:trainhead/more_health",
+        "gateway:trainhead/extra_ingots",
+        "gateway:trainhead/damage_in_rain",
+        "gateway:trainhead/lose_drop"
+    ]
+}
+

@@ -1,0 +1,15 @@
+{
+    "name": "Rusty",
+    "description": "You take extra damage while exposed to rain.",
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "amount": 1.5,
+        "operation": "add_base_early"
+    },
+    "bientity_condition": {
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:in_rain"
+        }
+    }
+}

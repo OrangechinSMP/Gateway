@@ -1,0 +1,22 @@
+{
+    "name": "Nudibranch",
+    "description": "Blessed by the goddess of the sea, you were gifted a human-like body. You must experience life with human conscious.",
+    "impact": 3,
+    "order": 5,
+    "icon": {
+        "id": "minecraft:brain_coral_fan"
+    },
+    "powers": [
+        "gateway:bow/swim_fast",
+        "gateway:bow/break_underwater",
+        "gateway:bow/climb",
+        "gateway:bow/poison",
+        "gateway:bow/heal_potion",
+        "gateway:bow/smaller",
+        "gateway:bow/less_health",
+        "gateway:bow/armor_restrict",
+        "gateway:bow/no_shield",
+        "gateway:bow/diet",
+        "gateway:bow/extra_damage"
+    ]
+}

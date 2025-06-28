@@ -3,5 +3,18 @@
   "item.minecraft.field_masoned_banner_pattern": "Banner Pattern",
   "item.minecraft.field_masoned_banner_pattern.desc": "Field Masoned",
   "item.minecraft.bordure_indented_banner_pattern.desc": "Bordure Indented",
-  "item.minecraft.music_disc_tears": "Music Disc"
+  "item.minecraft.music_disc_tears": "Music Disc",
+  "subtitles.entity.wolf.ambient": "Wolf pants",
+  "subtitles.entity.wolf.bark": "Wolf barks",
+  "subtitles.entity.wolf.death": "Wolf dies",
+  "subtitles.entity.wolf.growl": "Wolf growls",
+  "subtitles.entity.wolf.hurt": "Wolf hurts",
+  "subtitles.entity.wolf.pant": "Wolf pants",
+  "subtitles.entity.wolf.shake": "Wolf shakes",
+  "subtitles.entity.wolf.whine": "Wolf whines",
+  "subtitles.ambient.sound": "Eerie noise",
+  "subtitles.block.generic.fall": "Something falls on a block",
+  "subtitles.block.dry_grass.ambient": "Windy sounds",
+  "subtitles.block.deadbush.idle": "Dry sounds",
+  "subtitles.block.sand.idle": "Sandy sounds"
 }

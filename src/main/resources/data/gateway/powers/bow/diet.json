@@ -1,0 +1,27 @@
+{
+    "name": "Specific Diet",
+    "description": "You can only eat sea food and edible poisonous items.",
+    "type": "origins:prevent_item_use",
+	"item_condition": {
+		"type": "origins:all_of",
+		"conditions": [
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "origins:ignore_diet"
+				},
+				"inverted": true
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "gateway:bow/diet"
+				},
+				"inverted": true
+			},
+			{
+				"type": "origins:food"
+			}
+		]
+	}
+}
