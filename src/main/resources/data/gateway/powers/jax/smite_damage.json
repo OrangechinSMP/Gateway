@@ -1,6 +1,0 @@
-{
-    "name": "Necrobane",
-    "description": "You take damage from the Smite enchantment.",
-    "type": "apoli:modify_type_tag",
-    "tag": "sensitive_to_smite"
-}
